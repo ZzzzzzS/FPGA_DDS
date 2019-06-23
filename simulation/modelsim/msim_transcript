@@ -84,10 +84,14 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # Loading work.top_vlg_tst
-# Loading work.PWMWave
-# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(37): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'reset'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/PWMWave.v(1).
+# Loading work.TriangularWave
+# Loading work.TriangularROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(37): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'reset'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/TriangularWave.v(1).
 # 
-#         Region: /top_vlg_tst/W1
+#         Region: /top_vlg_tst/T1
 # 
 # add wave *
 # view structure
