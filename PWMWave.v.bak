@@ -1,0 +1,2 @@
+module PWMWave(input clk,input [8:0]PWMDuty,output reg [15:0]PWMout);
+endmodule

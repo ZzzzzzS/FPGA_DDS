@@ -1,0 +1,7 @@
+module ControlPanel(SinIn,PWMIn,TriangularIn,PWMDuty,SignalOut,Switch,SwitchMicro,SwitchNano,OutMode);
+input [15:0] SinIn,PWMIn,TriangularIn;
+output reg [15:0] SignalOut;
+input [7:0] PWMDuty;
+input [1:0] OutMode;
+input [7:0] Switch,SwitchMicro,SwitchNano;
+endmodule

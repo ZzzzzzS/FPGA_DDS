@@ -1,0 +1,2 @@
+module ClockGenerator(input clk,input Switch,input SwitchMicro,input SwitchNano,output reg clk_N,input reset);
+endmodule

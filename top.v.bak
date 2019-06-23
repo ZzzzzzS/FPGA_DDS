@@ -1,0 +1,2 @@
+module top();
+reg clk;
