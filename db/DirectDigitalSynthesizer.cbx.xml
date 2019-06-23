@@ -2,5 +2,6 @@
 <LOG_ROOT>
 	<PROJECT NAME="DirectDigitalSynthesizer">
 		<CBX_INST_ENTRY INSTANCE_NAME="|top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_pe71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_3381.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
