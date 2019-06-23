@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Sun Jun 23 23:10:07 2019
+Sun Jun 23 23:22:46 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -13,20 +13,21 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated
- 13. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated
- 14. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
- 15. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
- 16. altsyncram Parameter Settings by Entity Instance
- 17. Port Connectivity Checks: "PWMWave:P2"
- 18. Port Connectivity Checks: "PWMWave:P1"
- 19. Elapsed Time Per Partition
- 20. Analysis & Synthesis Messages
- 21. Analysis & Synthesis Suppressed Messages
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated
+ 15. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated
+ 16. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "PWMWave:P2"
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -52,18 +53,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 23 23:10:07 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 23 23:22:46 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
+; Total logic elements               ; 17                                          ;
+;     Total combinational functions  ; 17                                          ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 36                                          ;
+; Total pins                         ; 35                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
+; Total memory bits                  ; 64                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -206,34 +207,59 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 17    ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 17    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 16    ;
 ;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- <=2 input functions                  ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
+;     -- normal mode                          ; 17    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 36    ;
+; I/O pins                                    ; 35    ;
+; Total memory bits                           ; 64    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; ~GND  ;
+; Maximum fan-out                             ; 32    ;
+; Total fan-out                               ; 112   ;
+; Average fan-out                             ; 1.33  ;
 +---------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |top                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |top                ;              ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; |top                                         ; 17 (1)            ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 35   ; 0            ; |top                                                                                                     ;              ;
+;    |ControlPanel:Control|                    ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ;              ;
+;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ;              ;
+;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ;              ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component                                              ;              ;
+;             |altsyncram_pe71:auto_generated| ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated               ;              ;
+;    |TriangularWave:T1|                       ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1                                                                                   ;              ;
+;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                ;              ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                ;              ;
+;             |altsyncram_3381:auto_generated| ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated ;              ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                      ;
++----------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------+
+; Name                                                                                                           ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                 ;
++----------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------+
+; SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ALTSYNCRAM               ; AUTO ; ROM  ; 128          ; 16           ; --           ; --           ; 2048 ; SineTable.mif       ;
+; TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 128          ; 16           ; --           ; --           ; 2048 ; TriangularTable.mif ;
++----------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -251,25 +277,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------+--------------------------------------+
 ; Register name                            ; Reason for Removal                   ;
 +------------------------------------------+--------------------------------------+
-; TriangularWave:T1|SynthesisedPhase[0..6] ; Lost fanout                          ;
-; SinWave:S1|SynthesisedPhase[0..6]        ; Lost fanout                          ;
+; PWMWave:P2|PWMout[0..15]                 ; Stuck at GND due to stuck port clock ;
+; PWMWave:P2|SynthesisedPhase[0..6]        ; Lost fanout                          ;
+; PWMWave:P2|address[0..6]                 ; Stuck at GND due to stuck port clock ;
+; PWMWave:P1|PWMout[0..15]                 ; Stuck at GND due to stuck port clock ;
+; PWMWave:P1|SynthesisedPhase[0..6]        ; Lost fanout                          ;
+; PWMWave:P1|address[0..6]                 ; Stuck at GND due to stuck port clock ;
+; TriangularWave:T1|SynthesisedPhase[0..6] ; Stuck at GND due to stuck port clock ;
 ; TriangularWave:T1|address[0..6]          ; Stuck at GND due to stuck port clock ;
+; SinWave:S1|SynthesisedPhase[0..6]        ; Stuck at GND due to stuck port clock ;
 ; SinWave:S1|address[0..6]                 ; Stuck at GND due to stuck port clock ;
 ; phase:phaseControler|phaseInter[0..6]    ; Lost fanout                          ;
-; Total Number of Removed Registers = 35   ;                                      ;
+; Total Number of Removed Registers = 95   ;                                      ;
 +------------------------------------------+--------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                          ;
-+---------------------------------------+--------------------+-------------------------------------------------------------------------+
-; Register name                         ; Reason for Removal ; Registers Removed due to This Register                                  ;
-+---------------------------------------+--------------------+-------------------------------------------------------------------------+
-; TriangularWave:T1|SynthesisedPhase[0] ; Lost Fanouts       ; phase:phaseControler|phaseInter[0], phase:phaseControler|phaseInter[6], ;
-;                                       ;                    ; phase:phaseControler|phaseInter[5], phase:phaseControler|phaseInter[4], ;
-;                                       ;                    ; phase:phaseControler|phaseInter[3], phase:phaseControler|phaseInter[2], ;
-;                                       ;                    ; phase:phaseControler|phaseInter[1]                                      ;
-+---------------------------------------+--------------------+-------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                              ;
++----------------------+-------------------------+-------------------------------------------------------------------------+
+; Register name        ; Reason for Removal      ; Registers Removed due to This Register                                  ;
++----------------------+-------------------------+-------------------------------------------------------------------------+
+; PWMWave:P2|PWMout[0] ; Stuck at GND            ; PWMWave:P2|SynthesisedPhase[6], phase:phaseControler|phaseInter[0],     ;
+;                      ; due to stuck port clock ; phase:phaseControler|phaseInter[6], phase:phaseControler|phaseInter[5], ;
+;                      ;                         ; phase:phaseControler|phaseInter[4], phase:phaseControler|phaseInter[3], ;
+;                      ;                         ; phase:phaseControler|phaseInter[2], phase:phaseControler|phaseInter[1]  ;
+; PWMWave:P1|PWMout[0] ; Stuck at GND            ; PWMWave:P1|SynthesisedPhase[6]                                          ;
+;                      ; due to stuck port clock ;                                                                         ;
++----------------------+-------------------------+-------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -285,6 +319,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux15 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
@@ -468,15 +511,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PWMWave:P1"                                                                                                                                                                        ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; PWMDuty ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (7 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+---------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -492,7 +526,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sun Jun 23 23:10:05 2019
+    Info: Processing started: Sun Jun 23 23:22:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file phase.v
@@ -561,64 +595,46 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_3381" for hierarchy "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated"
 Info (12128): Elaborating entity "PWMWave" for hierarchy "PWMWave:P1"
 Info (12128): Elaborating entity "ControlPanel" for hierarchy "ControlPanel:Control"
-Warning (10034): Output port "SignalOut" at ControlPanel.v(4) has no driver
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[0]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[1]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[2]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[3]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[4]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[5]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[6]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[7]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[8]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[9]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[10]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[11]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[12]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[13]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[14]"
-        Warning (14320): Synthesized away node "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|q_a[15]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[0]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[1]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[2]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[3]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[4]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[5]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[6]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[7]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[8]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[9]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[10]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[11]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[12]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[13]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[14]"
-        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[15]"
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SignalOut[0]" is stuck at GND
-    Warning (13410): Pin "SignalOut[1]" is stuck at GND
-    Warning (13410): Pin "SignalOut[2]" is stuck at GND
-    Warning (13410): Pin "SignalOut[3]" is stuck at GND
-    Warning (13410): Pin "SignalOut[4]" is stuck at GND
-    Warning (13410): Pin "SignalOut[5]" is stuck at GND
-    Warning (13410): Pin "SignalOut[6]" is stuck at GND
-    Warning (13410): Pin "SignalOut[7]" is stuck at GND
-    Warning (13410): Pin "SignalOut[8]" is stuck at GND
-    Warning (13410): Pin "SignalOut[9]" is stuck at GND
-    Warning (13410): Pin "SignalOut[10]" is stuck at GND
-    Warning (13410): Pin "SignalOut[11]" is stuck at GND
-    Warning (13410): Pin "SignalOut[12]" is stuck at GND
-    Warning (13410): Pin "SignalOut[13]" is stuck at GND
-    Warning (13410): Pin "SignalOut[14]" is stuck at GND
-    Warning (13410): Pin "SignalOut[15]" is stuck at GND
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (17049): 21 registers lost all their fanouts during netlist optimizations.
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ALTSYNCRAM"
+Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ALTSYNCRAM"
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 20 input pin(s) that do not drive logic
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a5" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a5" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a6" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a6" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a7" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a7" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a8" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a8" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a9" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a9" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a10" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a10" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a11" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a11" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a12" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a12" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a13" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a13" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a14" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a14" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a15" has a port clk0 that is stuck at GND
+Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a15" has a port clk0 that is stuck at GND
+Warning (21074): Design contains 17 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk"
     Warning (15610): No output dependent on input pin "PWMDuty[0]"
     Warning (15610): No output dependent on input pin "PWMDuty[1]"
@@ -627,24 +643,23 @@ Warning (21074): Design contains 20 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PWMDuty[4]"
     Warning (15610): No output dependent on input pin "PWMDuty[5]"
     Warning (15610): No output dependent on input pin "PWMDuty[6]"
-    Warning (15610): No output dependent on input pin "PWMDuty[7]"
     Warning (15610): No output dependent on input pin "Switch[0]"
     Warning (15610): No output dependent on input pin "Switch[1]"
     Warning (15610): No output dependent on input pin "SwitchMicro[0]"
     Warning (15610): No output dependent on input pin "SwitchMicro[1]"
     Warning (15610): No output dependent on input pin "SwitchNano[0]"
     Warning (15610): No output dependent on input pin "SwitchNano[1]"
-    Warning (15610): No output dependent on input pin "OutMode[0]"
-    Warning (15610): No output dependent on input pin "OutMode[1]"
     Warning (15610): No output dependent on input pin "reset"
     Warning (15610): No output dependent on input pin "phaseadd"
     Warning (15610): No output dependent on input pin "phasesub"
-Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 20 input pins
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
     Info (21059): Implemented 16 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 75 warnings
-    Info: Peak virtual memory: 4608 megabytes
-    Info: Processing ended: Sun Jun 23 23:10:07 2019
+    Info (21061): Implemented 17 logic cells
+    Info (21064): Implemented 32 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Sun Jun 23 23:22:46 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

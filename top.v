@@ -2,7 +2,7 @@ module top(clk,PWMDuty,SignalOut,Switch,SwitchMicro,SwitchNano,OutMode,reset,pha
 input reset;
 input clk;
 input [1:0]OutMode;
-input [7:0]PWMDuty;
+input [6:0]PWMDuty;
 input [1:0]Switch,SwitchMicro,SwitchNano;
 input phaseadd,phasesub;
 output [15:0]SignalOut;
