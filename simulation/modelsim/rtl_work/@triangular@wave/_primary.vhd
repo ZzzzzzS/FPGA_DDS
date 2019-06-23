@@ -5,6 +5,6 @@ entity TriangularWave is
         clk             : in     vl_logic;
         Triangularout   : out    vl_logic_vector(15 downto 0);
         reset           : in     vl_logic;
-        phase           : in     vl_logic_vector(7 downto 0)
+        phase           : in     vl_logic_vector(6 downto 0)
     );
 end TriangularWave;

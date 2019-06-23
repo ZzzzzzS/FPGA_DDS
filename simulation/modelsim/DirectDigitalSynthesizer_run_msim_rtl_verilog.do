@@ -12,4 +12,13 @@ vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/User
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/PWMWave.v}
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/ControlPanel.v}
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v}
+vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/SinROM.v}
 
+vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject/simulation/modelsim {C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  top_vlg_tst
+
+add wave *
+view structure
+view signals
+run -all

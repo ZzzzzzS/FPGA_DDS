@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Fri Jun 21 22:16:02 2019
+Sun Jun 23 12:43:30 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -13,10 +13,15 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "PWMWave:P2"
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated
+ 12. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
+ 13. altsyncram Parameter Settings by Entity Instance
+ 14. Port Connectivity Checks: "PWMWave:P2"
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -42,7 +47,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 21 22:16:02 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 23 12:43:30 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
@@ -161,19 +166,31 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                     ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
-; phase.v                          ; yes             ; User Verilog HDL File  ; C:/Users/m1899/Desktop/DDSProject/phase.v          ;         ;
-; TriangularWave.v                 ; yes             ; User Verilog HDL File  ; C:/Users/m1899/Desktop/DDSProject/TriangularWave.v ;         ;
-; top.v                            ; yes             ; User Verilog HDL File  ; C:/Users/m1899/Desktop/DDSProject/top.v            ;         ;
-; SinWave.v                        ; yes             ; User Verilog HDL File  ; C:/Users/m1899/Desktop/DDSProject/SinWave.v        ;         ;
-; PWMWave.v                        ; yes             ; User Verilog HDL File  ; C:/Users/m1899/Desktop/DDSProject/PWMWave.v        ;         ;
-; ControlPanel.v                   ; yes             ; User Verilog HDL File  ; C:/Users/m1899/Desktop/DDSProject/ControlPanel.v   ;         ;
-; ClockGenerator.v                 ; yes             ; User Verilog HDL File  ; C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
+; phase.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/phase.v                                         ;         ;
+; TriangularWave.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/TriangularWave.v                                ;         ;
+; top.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/top.v                                           ;         ;
+; SinWave.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/SinWave.v                                       ;         ;
+; PWMWave.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/PWMWave.v                                       ;         ;
+; ControlPanel.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/ControlPanel.v                                  ;         ;
+; ClockGenerator.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v                                ;         ;
+; SinROM.v                         ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/SinROM.v                                        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_pe71.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_pe71.tdf                          ;         ;
+; sinetable.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/sinetable.mif                                   ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -211,6 +228,26 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                    ;
++--------+--------------+---------+--------------+--------------+-----------------------------+--------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance             ; IP Include File                            ;
++--------+--------------+---------+--------------+--------------+-----------------------------+--------------------------------------------+
+; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |top|SinWave:S1|SinROM:ROM1 ; C:/Users/m1899/Desktop/DDSProject/SinROM.v ;
++--------+--------------+---------+--------------+--------------+-----------------------------+--------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                            ;
++----------------------------------------+--------------------------------------+
+; Register name                          ; Reason for Removal                   ;
++----------------------------------------+--------------------------------------+
+; SinWave:S1|SynthesisedPhase[0..6]      ; Lost fanout                          ;
+; SinWave:S1|address[0..6]               ; Stuck at GND due to stuck port clock ;
+; Total Number of Removed Registers = 14 ;                                      ;
++----------------------------------------+--------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
@@ -224,6 +261,96 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                             ;
++---------------------------------+--------------------+------+------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                              ;
++---------------------------------+--------------------+------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------+
+; Parameter Name                     ; Value                ; Type                                    ;
++------------------------------------+----------------------+-----------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                 ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                 ;
+; WIDTH_A                            ; 16                   ; Signed Integer                          ;
+; WIDTHAD_A                          ; 7                    ; Signed Integer                          ;
+; NUMWORDS_A                         ; 128                  ; Signed Integer                          ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                 ;
+; WIDTH_B                            ; 1                    ; Untyped                                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                          ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                 ;
+; INIT_FILE                          ; SineTable.mif        ; Untyped                                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                 ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                 ;
+; CBXI_PARAMETER                     ; altsyncram_pe71      ; Untyped                                 ;
++------------------------------------+----------------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                   ;
++-------------------------------------------+--------------------------------------------------------+
+; Name                                      ; Value                                                  ;
++-------------------------------------------+--------------------------------------------------------+
+; Number of entity instances                ; 1                                                      ;
+; Entity Instance                           ; SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                    ;
+;     -- WIDTH_A                            ; 16                                                     ;
+;     -- NUMWORDS_A                         ; 128                                                    ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                 ;
+;     -- WIDTH_B                            ; 1                                                      ;
+;     -- NUMWORDS_B                         ; 1                                                      ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                 ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                           ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                   ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                              ;
++-------------------------------------------+--------------------------------------------------------+
 
 
 +-------------------------------------------------+
@@ -251,7 +378,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri Jun 21 22:16:00 2019
+    Info: Processing started: Sun Jun 23 12:43:29 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file phase.v
@@ -268,19 +395,58 @@ Info (12021): Found 1 design units, including 1 entities, in source file control
     Info (12023): Found entity 1: ControlPanel
 Info (12021): Found 1 design units, including 1 entities, in source file clockgenerator.v
     Info (12023): Found entity 1: ClockGenerator
+Info (12021): Found 1 design units, including 1 entities, in source file sinrom.v
+    Info (12023): Found entity 1: SinROM
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "ClockGenerator" for hierarchy "ClockGenerator:C1"
 Warning (10034): Output port "clk_N" at ClockGenerator.v(1) has no driver
 Info (12128): Elaborating entity "phase" for hierarchy "phase:phaseControler"
 Warning (10034): Output port "phase" at phase.v(1) has no driver
 Info (12128): Elaborating entity "SinWave" for hierarchy "SinWave:S1"
-Warning (10034): Output port "Sinout" at SinWave.v(1) has no driver
+Info (12128): Elaborating entity "SinROM" for hierarchy "SinWave:S1|SinROM:ROM1"
+Info (12128): Elaborating entity "altsyncram" for hierarchy "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component"
+Info (12130): Elaborated megafunction instantiation "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component"
+Info (12133): Instantiated megafunction "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component" with the following parameter:
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "SineTable.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "128"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "widthad_a" = "7"
+    Info (12134): Parameter "width_a" = "16"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pe71.tdf
+    Info (12023): Found entity 1: altsyncram_pe71
+Info (12128): Elaborating entity "altsyncram_pe71" for hierarchy "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated"
 Info (12128): Elaborating entity "TriangularWave" for hierarchy "TriangularWave:T1"
 Warning (10034): Output port "Triangularout" at TriangularWave.v(1) has no driver
 Info (12128): Elaborating entity "PWMWave" for hierarchy "PWMWave:P1"
 Warning (10034): Output port "PWMout" at PWMWave.v(1) has no driver
 Info (12128): Elaborating entity "ControlPanel" for hierarchy "ControlPanel:Control"
 Warning (10034): Output port "SignalOut" at ControlPanel.v(4) has no driver
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[0]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[1]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[2]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[3]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[4]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[5]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[6]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[7]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[8]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[9]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[10]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[11]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[12]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[13]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[14]"
+        Warning (14320): Synthesized away node "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|q_a[15]"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SignalOut[0]" is stuck at GND
     Warning (13410): Pin "SignalOut[1]" is stuck at GND
@@ -298,6 +464,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SignalOut[13]" is stuck at GND
     Warning (13410): Pin "SignalOut[14]" is stuck at GND
     Warning (13410): Pin "SignalOut[15]" is stuck at GND
+Info (17049): 7 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 20 input pin(s) that do not drive logic
@@ -324,10 +491,10 @@ Warning (21074): Design contains 20 input pin(s) that do not drive logic
 Info (21057): Implemented 36 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 16 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 44 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 61 warnings
     Info: Peak virtual memory: 4608 megabytes
-    Info: Processing ended: Fri Jun 21 22:16:02 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Sun Jun 23 12:43:30 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

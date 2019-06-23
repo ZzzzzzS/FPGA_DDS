@@ -9,7 +9,7 @@ output [15:0]SignalOut;
 
 wire [15:0]SinWire,TriangularWire,PWMWire,RectangleWire;
 wire clk_N;
-wire [7:0]PhaseWire;
+wire [6:0]PhaseWire;
 
 ClockGenerator C1(	.clk(clk),
 										.Switch(Switch),
@@ -19,7 +19,7 @@ ClockGenerator C1(	.clk(clk),
 										.reset(reset));
 phase phaseControler( .add(phaseadd),
 							.sub(phasesub),
-							.phase(PhaseWire)
+							.phase(PhaseWire),
 							.reset(reset));
 										
 										

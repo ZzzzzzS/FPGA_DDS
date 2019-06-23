@@ -52,4 +52,46 @@
 # 
 # Top level modules:
 # 	ClockGenerator
+# vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/SinROM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module SinROM
 # 
+# Top level modules:
+# 	SinROM
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject/simulation/modelsim {C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module top_vlg_tst
+# 
+# Top level modules:
+# 	top_vlg_tst
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  top_vlg_tst
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps top_vlg_tst 
+# //  ModelSim ALTERA 10.1d Nov  2 2012 
+# //
+# //  Copyright 1991-2012 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.top_vlg_tst
+# Loading work.SinWave
+# Loading work.SinROM
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(46): [PCDPC] - Port size (7 or 7) does not match connection size (8) for port 'phase'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/SinWave.v(1).
+# 
+#         Region: /top_vlg_tst/i1
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ERROR: SineTable.mif, line 71, Invalid Altera-mif record.
+# Running testbench
