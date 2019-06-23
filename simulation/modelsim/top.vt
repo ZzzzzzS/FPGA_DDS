@@ -26,32 +26,21 @@
 
 `timescale 1 ps/ 1 ps
 module top_vlg_tst();
-// constants                                           
-// general purpose registers
-reg eachvec;
-// test vector input registers
-reg clk;
-reg [7:0] phase;
-reg reset;
-// wires                                               
-wire [15:0]  Sinout;
 
-// assign statements (if any)                          
-SinWave i1 (
-// port map - connection between master ports and signals/registers   
-	.Sinout(Sinout),
-	.clk(clk),
-	.phase(phase),
-	.reset(reset)
-);
+//PWMWave(input clk,input [6:0]PWMDuty,output reg [15:0]PWMout,input reset,input[6:0]phase);
+
+reg clk;
+reg [6:0]PWMDuty;
+wire [15:0]PWMout;
+reg [6:0]phase;
+
+PWMWave W1(.clk(clk),.PWMDuty(PWMDuty),.PWMout(PWMout),.phase(phase),.reset(1));
+
 initial                                                
-begin                                                  
-// code that executes only once                        
-// insert code here --> begin                          
+begin                                                                         
  clk=0;
- phase=6'd32;                                                      
-// --> end                                             
-$display("Running testbench");                       
+ phase=7'd32;                                                      
+ PWMDuty=7'd32;                   
 end                                                    
 always #10 clk=~clk;                                                                 
 endmodule

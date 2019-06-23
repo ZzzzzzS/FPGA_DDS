@@ -58,6 +58,12 @@
 # 
 # Top level modules:
 # 	SinROM
+# vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/TriangularROM.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module TriangularROM
+# 
+# Top level modules:
+# 	TriangularROM
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject/simulation/modelsim {C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -78,14 +84,10 @@
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
 # Loading work.top_vlg_tst
-# Loading work.SinWave
-# Loading work.SinROM
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(46): [PCDPC] - Port size (7 or 7) does not match connection size (8) for port 'phase'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/SinWave.v(1).
+# Loading work.PWMWave
+# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(37): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'reset'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/PWMWave.v(1).
 # 
-#         Region: /top_vlg_tst/i1
+#         Region: /top_vlg_tst/W1
 # 
 # add wave *
 # view structure
@@ -93,5 +95,3 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ERROR: SineTable.mif, line 71, Invalid Altera-mif record.
-# Running testbench
