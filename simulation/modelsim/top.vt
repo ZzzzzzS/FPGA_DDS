@@ -29,17 +29,18 @@ module top_vlg_tst();
 
 //PWMWave(input clk,input [6:0]PWMDuty,output reg [15:0]PWMout,input reset,input[6:0]phase);
 //TriangularWave(input clk,output [15:0]Triangularout,input reset,input[6:0]phase);
+//module phase (input add,input sub,output reg [6:0]phase,input reset);
 reg clk;
 reg [6:0]PWMDuty;
 wire [15:0]PWMout;
-reg [6:0]phase;
+wire [6:0]phase;
 
-TriangularWave T1(.clk(clk),.Triangularout(PWMout),.reset(1),.phase(phase));
+phase P1(.add(clk),.sub(1),.phase(phase),.reset(1));
 
 initial                                                
 begin                                                                         
  clk=0;
- phase=7'd32;                                                      
+ //phase=7'd32;                                                      
  PWMDuty=7'd32;                   
 end                                                    
 always #10 clk=~clk;                                                                 

@@ -50,27 +50,27 @@ reset => ~NO_FANOUT~
 
 
 |top|phase:phaseControler
-add => phase[0]~reg0.ALOAD
-add => phase[1]~reg0.ALOAD
-add => phase[2]~reg0.ALOAD
-add => phase[3]~reg0.ALOAD
-add => phase[4]~reg0.ALOAD
-add => phase[5]~reg0.ALOAD
-add => phase[6]~reg0.ALOAD
-sub => phase[0]~reg0.CLK
-sub => phase[1]~reg0.CLK
-sub => phase[2]~reg0.CLK
-sub => phase[3]~reg0.CLK
-sub => phase[4]~reg0.CLK
-sub => phase[5]~reg0.CLK
-sub => phase[6]~reg0.CLK
-phase[0] <= phase[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-phase[1] <= phase[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-phase[2] <= phase[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-phase[3] <= phase[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-phase[4] <= phase[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-phase[5] <= phase[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-phase[6] <= phase[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+add => phaseInter[0].ALOAD
+add => phaseInter[1].ALOAD
+add => phaseInter[2].ALOAD
+add => phaseInter[3].ALOAD
+add => phaseInter[4].ALOAD
+add => phaseInter[5].ALOAD
+add => phaseInter[6].ALOAD
+sub => phaseInter[0].CLK
+sub => phaseInter[1].CLK
+sub => phaseInter[2].CLK
+sub => phaseInter[3].CLK
+sub => phaseInter[4].CLK
+sub => phaseInter[5].CLK
+sub => phaseInter[6].CLK
+phase[0] <= phaseInter[0].DB_MAX_OUTPUT_PORT_TYPE
+phase[1] <= phaseInter[1].DB_MAX_OUTPUT_PORT_TYPE
+phase[2] <= phaseInter[2].DB_MAX_OUTPUT_PORT_TYPE
+phase[3] <= phaseInter[3].DB_MAX_OUTPUT_PORT_TYPE
+phase[4] <= phaseInter[4].DB_MAX_OUTPUT_PORT_TYPE
+phase[5] <= phaseInter[5].DB_MAX_OUTPUT_PORT_TYPE
+phase[6] <= phaseInter[6].DB_MAX_OUTPUT_PORT_TYPE
 reset => ~NO_FANOUT~
 
 
