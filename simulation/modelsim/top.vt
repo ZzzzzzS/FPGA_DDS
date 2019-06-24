@@ -30,19 +30,22 @@ module top_vlg_tst();
 //PWMWave(input clk,input [6:0]PWMDuty,output reg [15:0]PWMout,input reset,input[6:0]phase);
 //TriangularWave(input clk,output [15:0]Triangularout,input reset,input[6:0]phase);
 //module phase (input add,input sub,output reg [6:0]phase,input reset);
+//module ControlPanel(SinIn,PWMIn,TriangularIn,rectangleIn,SignalOut,OutMode,reset);
+//module SinWave(input clk,output[15:0]Sinout,input reset,input[6:0]phase);
 reg clk;
-reg [6:0]PWMDuty;
-wire [15:0]PWMout;
-wire [6:0]phase;
+wire [6:0]PWMWire,sinwire;
+wire [6:0]out;
 
-phase P1(.add(clk),.sub(1),.phase(phase),.reset(1));
+PWMWave P1(.clk(clk),.PWMDuty(7'd64),.PWMout(PWMWire),.reset(1),.phase(7'd0));
+TriangularWave S1(.clk(clk),.Triangularout(sinwire),.phase(7'd0));
 
-initial                                                
-begin                                                                         
- clk=0;
- //phase=7'd32;                                                      
- PWMDuty=7'd32;                   
-end                                                    
+ControlPanel C1(.PWMIn(PWMWire),.SinIn(sinwire),.OutMode(2'b01),.SignalOut(out));
+
+initial
+begin
+clk=0;
+end
+
 always #10 clk=~clk;                                                                 
 endmodule
 
