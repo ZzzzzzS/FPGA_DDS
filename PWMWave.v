@@ -1,16 +1,16 @@
-module PWMWave(input clk,input [6:0]PWMDuty,output reg [15:0]PWMout,input reset,input[6:0]phase,input[22:0]Step);
+module PWMWave(input clk,input [31:0]PWMDuty,output reg [15:0]PWMout,input reset,input[31:0]phase,input[31:0]Step);
 
-reg [6:0]address;
-reg [6:0]SynthesisedPhase;
+reg [31:0]address;
+reg [31:0]SynthesisedPhase;
 
 initial
     begin
-        address=7'd0;
+        address=32'd0;
     end
 
 always@(negedge clk)
 begin
-    address<=address+1'b1;
+    address<=address+Step;
     SynthesisedPhase<=address+phase;
     if (SynthesisedPhase<=PWMDuty) 
         begin

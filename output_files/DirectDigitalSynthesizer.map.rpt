@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Wed Jun 26 20:58:41 2019
+Wed Jun 26 23:32:55 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -15,8 +15,8 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. Removed Registers Triggering Further Register Optimizations
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
  14. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated
@@ -25,9 +25,11 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
  17. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
  18. altsyncram Parameter Settings by Entity Instance
  19. Port Connectivity Checks: "PWMWave:P2"
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
- 22. Analysis & Synthesis Suppressed Messages
+ 20. Port Connectivity Checks: "TriangularWave:T1|TriangularROM:ROM1"
+ 21. Port Connectivity Checks: "SinWave:S1|SinROM:ROM1"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,18 +55,18 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 26 20:58:41 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 26 23:32:55 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 17                                          ;
-;     Total combinational functions  ; 17                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 35                                          ;
+; Total logic elements               ; 669                                         ;
+;     Total combinational functions  ; 669                                         ;
+;     Dedicated logic registers      ; 105                                         ;
+; Total registers                    ; 105                                         ;
+; Total pins                         ; 60                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 64                                          ;
+; Total memory bits                  ; 4,096                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -207,29 +209,29 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 17    ;
+; Estimated Total logic elements              ; 669   ;
 ;                                             ;       ;
-; Total combinational functions               ; 17    ;
+; Total combinational functions               ; 669   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 16    ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 1     ;
+;     -- 4 input functions                    ; 183   ;
+;     -- 3 input functions                    ; 188   ;
+;     -- <=2 input functions                  ; 298   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 17    ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 337   ;
+;     -- arithmetic mode                      ; 332   ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 105   ;
+;     -- Dedicated logic registers            ; 105   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 35    ;
-; Total memory bits                           ; 64    ;
+; I/O pins                                    ; 60    ;
+; Total memory bits                           ; 4096  ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; ~GND  ;
-; Maximum fan-out                             ; 32    ;
-; Total fan-out                               ; 112   ;
-; Average fan-out                             ; 1.33  ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 105   ;
+; Total fan-out                               ; 2397  ;
+; Average fan-out                             ; 2.77  ;
 +---------------------------------------------+-------+
 
 
@@ -238,16 +240,20 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |top                                         ; 17 (1)            ; 0 (0)        ; 64          ; 0            ; 0       ; 0         ; 35   ; 0            ; |top                                                                                                     ;              ;
-;    |ControlPanel:Control|                    ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ;              ;
-;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ;              ;
-;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ;              ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component                                              ;              ;
-;             |altsyncram_pe71:auto_generated| ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated               ;              ;
-;    |TriangularWave:T1|                       ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1                                                                                   ;              ;
-;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                ;              ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                ;              ;
-;             |altsyncram_3381:auto_generated| ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated ;              ;
+; |top                                         ; 669 (0)           ; 105 (0)      ; 4096        ; 0            ; 0       ; 0         ; 60   ; 0            ; |top                                                                                                     ;              ;
+;    |ClockGenerator:C1|                       ; 362 (362)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ;              ;
+;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ;              ;
+;    |PWMWave:P1|                              ; 97 (97)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ;              ;
+;    |PWMWave:P2|                              ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                          ;              ;
+;    |SinWave:S1|                              ; 7 (7)             ; 7 (7)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ;              ;
+;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ;              ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component                                              ;              ;
+;             |altsyncram_pe71:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated               ;              ;
+;    |TriangularWave:T1|                       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1                                                                                   ;              ;
+;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                ;              ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                ;              ;
+;             |altsyncram_3381:auto_generated| ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated ;              ;
+;    |phase:phaseControler|                    ; 159 (159)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|phase:phaseControler                                                                                ;              ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -272,38 +278,192 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------------------------+---------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+------------------------------------------+--------------------------------------+
-; Register name                            ; Reason for Removal                   ;
-+------------------------------------------+--------------------------------------+
-; PWMWave:P2|PWMout[0..15]                 ; Stuck at GND due to stuck port clock ;
-; PWMWave:P2|SynthesisedPhase[0..6]        ; Lost fanout                          ;
-; PWMWave:P2|address[0..6]                 ; Stuck at GND due to stuck port clock ;
-; PWMWave:P1|PWMout[0..15]                 ; Stuck at GND due to stuck port clock ;
-; PWMWave:P1|SynthesisedPhase[0..6]        ; Lost fanout                          ;
-; PWMWave:P1|address[0..6]                 ; Stuck at GND due to stuck port clock ;
-; TriangularWave:T1|SynthesisedPhase[0..6] ; Stuck at GND due to stuck port clock ;
-; TriangularWave:T1|address[0..6]          ; Stuck at GND due to stuck port clock ;
-; SinWave:S1|SynthesisedPhase[0..6]        ; Stuck at GND due to stuck port clock ;
-; SinWave:S1|address[0..6]                 ; Stuck at GND due to stuck port clock ;
-; phase:phaseControler|phaseInter[0..6]    ; Lost fanout                          ;
-; Total Number of Removed Registers = 95   ;                                      ;
-+------------------------------------------+--------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                       ;
++-----------------------------------------------------+----------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
++-----------------------------------------------------+----------------------------+------------------------+
+; ClockGenerator:C1|Step[0]                           ; ClockGenerator:C1|Step[2]  ; yes                    ;
+; ClockGenerator:C1|Step[1]                           ; ClockGenerator:C1|Step[2]  ; yes                    ;
+; ClockGenerator:C1|Step[2]                           ; ClockGenerator:C1|Step[2]  ; yes                    ;
+; ClockGenerator:C1|Step[3]                           ; ClockGenerator:C1|Step[3]  ; yes                    ;
+; ClockGenerator:C1|Step[4]                           ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[5]                           ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[6]                           ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[7]                           ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[8]                           ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[9]                           ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[10]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[11]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[12]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[13]                          ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[14]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[15]                          ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[16]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[17]                          ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[18]                          ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[19]                          ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[20]                          ; ClockGenerator:C1|Step[31] ; no                     ;
+; ClockGenerator:C1|Step[21]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[22]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[23]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[24]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[25]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[26]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[27]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[28]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[29]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[30]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; ClockGenerator:C1|Step[31]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
+; Number of user-specified and inferred latches = 32  ;                            ;                        ;
++-----------------------------------------------------+----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                              ;
-+----------------------+-------------------------+-------------------------------------------------------------------------+
-; Register name        ; Reason for Removal      ; Registers Removed due to This Register                                  ;
-+----------------------+-------------------------+-------------------------------------------------------------------------+
-; PWMWave:P2|PWMout[0] ; Stuck at GND            ; PWMWave:P2|SynthesisedPhase[6], phase:phaseControler|phaseInter[0],     ;
-;                      ; due to stuck port clock ; phase:phaseControler|phaseInter[6], phase:phaseControler|phaseInter[5], ;
-;                      ;                         ; phase:phaseControler|phaseInter[4], phase:phaseControler|phaseInter[3], ;
-;                      ;                         ; phase:phaseControler|phaseInter[2], phase:phaseControler|phaseInter[1]  ;
-; PWMWave:P1|PWMout[0] ; Stuck at GND            ; PWMWave:P1|SynthesisedPhase[6]                                          ;
-;                      ; due to stuck port clock ;                                                                         ;
-+----------------------+-------------------------+-------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; PWMWave:P2|PWMout[1..15]                ; Merged with PWMWave:P2|PWMout[0]            ;
+; PWMWave:P1|PWMout[1..15]                ; Merged with PWMWave:P1|PWMout[0]            ;
+; PWMWave:P2|SynthesisedPhase[0]          ; Merged with PWMWave:P1|SynthesisedPhase[0]  ;
+; PWMWave:P2|SynthesisedPhase[1]          ; Merged with PWMWave:P1|SynthesisedPhase[1]  ;
+; PWMWave:P2|SynthesisedPhase[2]          ; Merged with PWMWave:P1|SynthesisedPhase[2]  ;
+; PWMWave:P2|SynthesisedPhase[3]          ; Merged with PWMWave:P1|SynthesisedPhase[3]  ;
+; PWMWave:P2|SynthesisedPhase[4]          ; Merged with PWMWave:P1|SynthesisedPhase[4]  ;
+; PWMWave:P2|SynthesisedPhase[5]          ; Merged with PWMWave:P1|SynthesisedPhase[5]  ;
+; PWMWave:P2|SynthesisedPhase[6]          ; Merged with PWMWave:P1|SynthesisedPhase[6]  ;
+; PWMWave:P2|SynthesisedPhase[7]          ; Merged with PWMWave:P1|SynthesisedPhase[7]  ;
+; PWMWave:P2|SynthesisedPhase[8]          ; Merged with PWMWave:P1|SynthesisedPhase[8]  ;
+; PWMWave:P2|SynthesisedPhase[9]          ; Merged with PWMWave:P1|SynthesisedPhase[9]  ;
+; PWMWave:P2|SynthesisedPhase[10]         ; Merged with PWMWave:P1|SynthesisedPhase[10] ;
+; PWMWave:P2|SynthesisedPhase[11]         ; Merged with PWMWave:P1|SynthesisedPhase[11] ;
+; PWMWave:P2|SynthesisedPhase[12]         ; Merged with PWMWave:P1|SynthesisedPhase[12] ;
+; PWMWave:P2|SynthesisedPhase[13]         ; Merged with PWMWave:P1|SynthesisedPhase[13] ;
+; PWMWave:P2|SynthesisedPhase[14]         ; Merged with PWMWave:P1|SynthesisedPhase[14] ;
+; PWMWave:P2|SynthesisedPhase[15]         ; Merged with PWMWave:P1|SynthesisedPhase[15] ;
+; PWMWave:P2|SynthesisedPhase[16]         ; Merged with PWMWave:P1|SynthesisedPhase[16] ;
+; PWMWave:P2|SynthesisedPhase[17]         ; Merged with PWMWave:P1|SynthesisedPhase[17] ;
+; PWMWave:P2|SynthesisedPhase[18]         ; Merged with PWMWave:P1|SynthesisedPhase[18] ;
+; PWMWave:P2|SynthesisedPhase[19]         ; Merged with PWMWave:P1|SynthesisedPhase[19] ;
+; PWMWave:P2|SynthesisedPhase[20]         ; Merged with PWMWave:P1|SynthesisedPhase[20] ;
+; PWMWave:P2|SynthesisedPhase[21]         ; Merged with PWMWave:P1|SynthesisedPhase[21] ;
+; PWMWave:P2|SynthesisedPhase[22]         ; Merged with PWMWave:P1|SynthesisedPhase[22] ;
+; PWMWave:P2|SynthesisedPhase[23]         ; Merged with PWMWave:P1|SynthesisedPhase[23] ;
+; PWMWave:P2|SynthesisedPhase[24]         ; Merged with PWMWave:P1|SynthesisedPhase[24] ;
+; PWMWave:P2|SynthesisedPhase[25]         ; Merged with PWMWave:P1|SynthesisedPhase[25] ;
+; PWMWave:P2|SynthesisedPhase[26]         ; Merged with PWMWave:P1|SynthesisedPhase[26] ;
+; PWMWave:P2|SynthesisedPhase[27]         ; Merged with PWMWave:P1|SynthesisedPhase[27] ;
+; PWMWave:P2|SynthesisedPhase[28]         ; Merged with PWMWave:P1|SynthesisedPhase[28] ;
+; PWMWave:P2|SynthesisedPhase[29]         ; Merged with PWMWave:P1|SynthesisedPhase[29] ;
+; PWMWave:P2|SynthesisedPhase[30]         ; Merged with PWMWave:P1|SynthesisedPhase[30] ;
+; PWMWave:P2|SynthesisedPhase[31]         ; Merged with PWMWave:P1|SynthesisedPhase[31] ;
+; PWMWave:P2|address[0]                   ; Merged with PWMWave:P1|address[0]           ;
+; SinWave:S1|address[0]                   ; Merged with PWMWave:P1|address[0]           ;
+; TriangularWave:T1|address[0]            ; Merged with PWMWave:P1|address[0]           ;
+; PWMWave:P2|address[1]                   ; Merged with PWMWave:P1|address[1]           ;
+; SinWave:S1|address[1]                   ; Merged with PWMWave:P1|address[1]           ;
+; TriangularWave:T1|address[1]            ; Merged with PWMWave:P1|address[1]           ;
+; PWMWave:P2|address[2]                   ; Merged with PWMWave:P1|address[2]           ;
+; SinWave:S1|address[2]                   ; Merged with PWMWave:P1|address[2]           ;
+; TriangularWave:T1|address[2]            ; Merged with PWMWave:P1|address[2]           ;
+; PWMWave:P2|address[3]                   ; Merged with PWMWave:P1|address[3]           ;
+; SinWave:S1|address[3]                   ; Merged with PWMWave:P1|address[3]           ;
+; TriangularWave:T1|address[3]            ; Merged with PWMWave:P1|address[3]           ;
+; PWMWave:P2|address[4]                   ; Merged with PWMWave:P1|address[4]           ;
+; SinWave:S1|address[4]                   ; Merged with PWMWave:P1|address[4]           ;
+; TriangularWave:T1|address[4]            ; Merged with PWMWave:P1|address[4]           ;
+; PWMWave:P2|address[5]                   ; Merged with PWMWave:P1|address[5]           ;
+; SinWave:S1|address[5]                   ; Merged with PWMWave:P1|address[5]           ;
+; TriangularWave:T1|address[5]            ; Merged with PWMWave:P1|address[5]           ;
+; PWMWave:P2|address[6]                   ; Merged with PWMWave:P1|address[6]           ;
+; SinWave:S1|address[6]                   ; Merged with PWMWave:P1|address[6]           ;
+; TriangularWave:T1|address[6]            ; Merged with PWMWave:P1|address[6]           ;
+; PWMWave:P2|address[7]                   ; Merged with PWMWave:P1|address[7]           ;
+; SinWave:S1|address[7]                   ; Merged with PWMWave:P1|address[7]           ;
+; TriangularWave:T1|address[7]            ; Merged with PWMWave:P1|address[7]           ;
+; PWMWave:P2|address[8]                   ; Merged with PWMWave:P1|address[8]           ;
+; SinWave:S1|address[8]                   ; Merged with PWMWave:P1|address[8]           ;
+; TriangularWave:T1|address[8]            ; Merged with PWMWave:P1|address[8]           ;
+; PWMWave:P2|address[9]                   ; Merged with PWMWave:P1|address[9]           ;
+; SinWave:S1|address[9]                   ; Merged with PWMWave:P1|address[9]           ;
+; TriangularWave:T1|address[9]            ; Merged with PWMWave:P1|address[9]           ;
+; PWMWave:P2|address[10]                  ; Merged with PWMWave:P1|address[10]          ;
+; SinWave:S1|address[10]                  ; Merged with PWMWave:P1|address[10]          ;
+; TriangularWave:T1|address[10]           ; Merged with PWMWave:P1|address[10]          ;
+; PWMWave:P2|address[11]                  ; Merged with PWMWave:P1|address[11]          ;
+; SinWave:S1|address[11]                  ; Merged with PWMWave:P1|address[11]          ;
+; TriangularWave:T1|address[11]           ; Merged with PWMWave:P1|address[11]          ;
+; PWMWave:P2|address[12]                  ; Merged with PWMWave:P1|address[12]          ;
+; SinWave:S1|address[12]                  ; Merged with PWMWave:P1|address[12]          ;
+; TriangularWave:T1|address[12]           ; Merged with PWMWave:P1|address[12]          ;
+; PWMWave:P2|address[13]                  ; Merged with PWMWave:P1|address[13]          ;
+; SinWave:S1|address[13]                  ; Merged with PWMWave:P1|address[13]          ;
+; TriangularWave:T1|address[13]           ; Merged with PWMWave:P1|address[13]          ;
+; PWMWave:P2|address[14]                  ; Merged with PWMWave:P1|address[14]          ;
+; SinWave:S1|address[14]                  ; Merged with PWMWave:P1|address[14]          ;
+; TriangularWave:T1|address[14]           ; Merged with PWMWave:P1|address[14]          ;
+; PWMWave:P2|address[15]                  ; Merged with PWMWave:P1|address[15]          ;
+; SinWave:S1|address[15]                  ; Merged with PWMWave:P1|address[15]          ;
+; TriangularWave:T1|address[15]           ; Merged with PWMWave:P1|address[15]          ;
+; PWMWave:P2|address[16]                  ; Merged with PWMWave:P1|address[16]          ;
+; SinWave:S1|address[16]                  ; Merged with PWMWave:P1|address[16]          ;
+; TriangularWave:T1|address[16]           ; Merged with PWMWave:P1|address[16]          ;
+; PWMWave:P2|address[17]                  ; Merged with PWMWave:P1|address[17]          ;
+; SinWave:S1|address[17]                  ; Merged with PWMWave:P1|address[17]          ;
+; TriangularWave:T1|address[17]           ; Merged with PWMWave:P1|address[17]          ;
+; PWMWave:P2|address[18]                  ; Merged with PWMWave:P1|address[18]          ;
+; SinWave:S1|address[18]                  ; Merged with PWMWave:P1|address[18]          ;
+; TriangularWave:T1|address[18]           ; Merged with PWMWave:P1|address[18]          ;
+; PWMWave:P2|address[19]                  ; Merged with PWMWave:P1|address[19]          ;
+; SinWave:S1|address[19]                  ; Merged with PWMWave:P1|address[19]          ;
+; TriangularWave:T1|address[19]           ; Merged with PWMWave:P1|address[19]          ;
+; PWMWave:P2|address[20]                  ; Merged with PWMWave:P1|address[20]          ;
+; SinWave:S1|address[20]                  ; Merged with PWMWave:P1|address[20]          ;
+; TriangularWave:T1|address[20]           ; Merged with PWMWave:P1|address[20]          ;
+; PWMWave:P2|address[21]                  ; Merged with PWMWave:P1|address[21]          ;
+; SinWave:S1|address[21]                  ; Merged with PWMWave:P1|address[21]          ;
+; TriangularWave:T1|address[21]           ; Merged with PWMWave:P1|address[21]          ;
+; PWMWave:P2|address[22]                  ; Merged with PWMWave:P1|address[22]          ;
+; SinWave:S1|address[22]                  ; Merged with PWMWave:P1|address[22]          ;
+; TriangularWave:T1|address[22]           ; Merged with PWMWave:P1|address[22]          ;
+; PWMWave:P2|address[23]                  ; Merged with PWMWave:P1|address[23]          ;
+; SinWave:S1|address[23]                  ; Merged with PWMWave:P1|address[23]          ;
+; TriangularWave:T1|address[23]           ; Merged with PWMWave:P1|address[23]          ;
+; PWMWave:P2|address[24]                  ; Merged with PWMWave:P1|address[24]          ;
+; SinWave:S1|address[24]                  ; Merged with PWMWave:P1|address[24]          ;
+; TriangularWave:T1|address[24]           ; Merged with PWMWave:P1|address[24]          ;
+; PWMWave:P2|address[25]                  ; Merged with PWMWave:P1|address[25]          ;
+; SinWave:S1|address[25]                  ; Merged with PWMWave:P1|address[25]          ;
+; TriangularWave:T1|address[25]           ; Merged with PWMWave:P1|address[25]          ;
+; PWMWave:P2|address[26]                  ; Merged with PWMWave:P1|address[26]          ;
+; SinWave:S1|address[26]                  ; Merged with PWMWave:P1|address[26]          ;
+; TriangularWave:T1|address[26]           ; Merged with PWMWave:P1|address[26]          ;
+; PWMWave:P2|address[27]                  ; Merged with PWMWave:P1|address[27]          ;
+; SinWave:S1|address[27]                  ; Merged with PWMWave:P1|address[27]          ;
+; TriangularWave:T1|address[27]           ; Merged with PWMWave:P1|address[27]          ;
+; PWMWave:P2|address[28]                  ; Merged with PWMWave:P1|address[28]          ;
+; SinWave:S1|address[28]                  ; Merged with PWMWave:P1|address[28]          ;
+; TriangularWave:T1|address[28]           ; Merged with PWMWave:P1|address[28]          ;
+; PWMWave:P2|address[29]                  ; Merged with PWMWave:P1|address[29]          ;
+; SinWave:S1|address[29]                  ; Merged with PWMWave:P1|address[29]          ;
+; TriangularWave:T1|address[29]           ; Merged with PWMWave:P1|address[29]          ;
+; PWMWave:P2|address[30]                  ; Merged with PWMWave:P1|address[30]          ;
+; SinWave:S1|address[30]                  ; Merged with PWMWave:P1|address[30]          ;
+; TriangularWave:T1|address[30]           ; Merged with PWMWave:P1|address[30]          ;
+; PWMWave:P2|address[31]                  ; Merged with PWMWave:P1|address[31]          ;
+; SinWave:S1|address[31]                  ; Merged with PWMWave:P1|address[31]          ;
+; TriangularWave:T1|address[31]           ; Merged with PWMWave:P1|address[31]          ;
+; TriangularWave:T1|SynthesisedPhase[0]   ; Merged with SinWave:S1|SynthesisedPhase[0]  ;
+; TriangularWave:T1|SynthesisedPhase[1]   ; Merged with SinWave:S1|SynthesisedPhase[1]  ;
+; TriangularWave:T1|SynthesisedPhase[2]   ; Merged with SinWave:S1|SynthesisedPhase[2]  ;
+; TriangularWave:T1|SynthesisedPhase[3]   ; Merged with SinWave:S1|SynthesisedPhase[3]  ;
+; TriangularWave:T1|SynthesisedPhase[4]   ; Merged with SinWave:S1|SynthesisedPhase[4]  ;
+; TriangularWave:T1|SynthesisedPhase[5]   ; Merged with SinWave:S1|SynthesisedPhase[5]  ;
+; TriangularWave:T1|SynthesisedPhase[6]   ; Merged with SinWave:S1|SynthesisedPhase[6]  ;
+; Total Number of Removed Registers = 165 ;                                             ;
++-----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -311,10 +471,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 105   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -326,7 +486,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux15 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux3  ;
+; 6:1                ; 28 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Step[10] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -501,14 +662,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PWMWave:P2"                                                                                                                                                                              ;
-+---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port          ; Type  ; Severity ; Details                                                                                                                                                                          ;
-+---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; PWMDuty       ; Input ; Warning  ; Input port expression (8 bits) is wider than the input port (7 bits) it drives.  The 1 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; PWMDuty[6..0] ; Input ; Info     ; Stuck at GND                                                                                                                                                                     ;
-+---------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------+
+; Port Connectivity Checks: "PWMWave:P2"           ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; PWMDuty[30..0] ; Input ; Info     ; Stuck at GND ;
+; PWMDuty[31]    ; Input ; Info     ; Stuck at VCC ;
++----------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "TriangularWave:T1|TriangularROM:ROM1"                                                                                                                                                ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "SinWave:S1|SinROM:ROM1"                                                                                                                                                              ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (7 bits) it drives.  The 25 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -516,7 +695,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -526,7 +705,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Wed Jun 26 20:58:39 2019
+    Info: Processing started: Wed Jun 26 23:32:52 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file phase.v
@@ -549,7 +728,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file triangu
     Info (12023): Found entity 1: TriangularROM
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "ClockGenerator" for hierarchy "ClockGenerator:C1"
-Warning (10034): Output port "clk_N" at ClockGenerator.v(1) has no driver
+Warning (10240): Verilog HDL Always Construct warning at ClockGenerator.v(17): inferring latch(es) for variable "Step", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Step[0]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[1]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[2]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[3]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[4]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[5]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[6]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[7]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[8]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[9]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[10]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[11]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[12]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[13]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[14]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[15]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[16]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[17]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[18]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[19]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[20]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[21]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[22]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[23]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[24]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[25]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[26]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[27]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[28]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[29]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[30]" at ClockGenerator.v(17)
+Info (10041): Inferred latch for "Step[31]" at ClockGenerator.v(17)
 Info (12128): Elaborating entity "phase" for hierarchy "phase:phaseControler"
 Info (12128): Elaborating entity "SinWave" for hierarchy "SinWave:S1"
 Info (12128): Elaborating entity "SinROM" for hierarchy "SinWave:S1|SinROM:ROM1"
@@ -595,73 +806,119 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_3381" for hierarchy "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated"
 Info (12128): Elaborating entity "PWMWave" for hierarchy "PWMWave:P1"
 Info (12128): Elaborating entity "ControlPanel" for hierarchy "ControlPanel:Control"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (17049): 21 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ALTSYNCRAM"
-Info (17036): Removed 6 MSB VCC or GND address nodes from RAM block "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ALTSYNCRAM"
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch ClockGenerator:C1|Step[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13012): Latch ClockGenerator:C1|Step[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
+    Warning (13310): Register "phase:phaseControler|phaseInter[0]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[0]~_emulated" and latch "phase:phaseControler|phaseInter[0]~1"
+    Warning (13310): Register "phase:phaseControler|phaseInter[1]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[1]~_emulated" and latch "phase:phaseControler|phaseInter[1]~5"
+    Warning (13310): Register "phase:phaseControler|phaseInter[2]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[2]~_emulated" and latch "phase:phaseControler|phaseInter[2]~9"
+    Warning (13310): Register "phase:phaseControler|phaseInter[3]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[3]~_emulated" and latch "phase:phaseControler|phaseInter[3]~13"
+    Warning (13310): Register "phase:phaseControler|phaseInter[4]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[4]~_emulated" and latch "phase:phaseControler|phaseInter[4]~17"
+    Warning (13310): Register "phase:phaseControler|phaseInter[5]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[5]~_emulated" and latch "phase:phaseControler|phaseInter[5]~21"
+    Warning (13310): Register "phase:phaseControler|phaseInter[6]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[6]~_emulated" and latch "phase:phaseControler|phaseInter[6]~25"
+    Warning (13310): Register "phase:phaseControler|phaseInter[7]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[7]~_emulated" and latch "phase:phaseControler|phaseInter[7]~29"
+    Warning (13310): Register "phase:phaseControler|phaseInter[8]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[8]~_emulated" and latch "phase:phaseControler|phaseInter[8]~33"
+    Warning (13310): Register "phase:phaseControler|phaseInter[9]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[9]~_emulated" and latch "phase:phaseControler|phaseInter[9]~37"
+    Warning (13310): Register "phase:phaseControler|phaseInter[10]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[10]~_emulated" and latch "phase:phaseControler|phaseInter[10]~41"
+    Warning (13310): Register "phase:phaseControler|phaseInter[11]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[11]~_emulated" and latch "phase:phaseControler|phaseInter[11]~45"
+    Warning (13310): Register "phase:phaseControler|phaseInter[12]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[12]~_emulated" and latch "phase:phaseControler|phaseInter[12]~49"
+    Warning (13310): Register "phase:phaseControler|phaseInter[13]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[13]~_emulated" and latch "phase:phaseControler|phaseInter[13]~53"
+    Warning (13310): Register "phase:phaseControler|phaseInter[14]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[14]~_emulated" and latch "phase:phaseControler|phaseInter[14]~57"
+    Warning (13310): Register "phase:phaseControler|phaseInter[15]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[15]~_emulated" and latch "phase:phaseControler|phaseInter[15]~61"
+    Warning (13310): Register "phase:phaseControler|phaseInter[16]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[16]~_emulated" and latch "phase:phaseControler|phaseInter[16]~65"
+    Warning (13310): Register "phase:phaseControler|phaseInter[17]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[17]~_emulated" and latch "phase:phaseControler|phaseInter[17]~69"
+    Warning (13310): Register "phase:phaseControler|phaseInter[18]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[18]~_emulated" and latch "phase:phaseControler|phaseInter[18]~73"
+    Warning (13310): Register "phase:phaseControler|phaseInter[19]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[19]~_emulated" and latch "phase:phaseControler|phaseInter[19]~77"
+    Warning (13310): Register "phase:phaseControler|phaseInter[20]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[20]~_emulated" and latch "phase:phaseControler|phaseInter[20]~81"
+    Warning (13310): Register "phase:phaseControler|phaseInter[21]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[21]~_emulated" and latch "phase:phaseControler|phaseInter[21]~85"
+    Warning (13310): Register "phase:phaseControler|phaseInter[22]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[22]~_emulated" and latch "phase:phaseControler|phaseInter[22]~89"
+    Warning (13310): Register "phase:phaseControler|phaseInter[23]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[23]~_emulated" and latch "phase:phaseControler|phaseInter[23]~93"
+    Warning (13310): Register "phase:phaseControler|phaseInter[24]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[24]~_emulated" and latch "phase:phaseControler|phaseInter[24]~97"
+    Warning (13310): Register "phase:phaseControler|phaseInter[25]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[25]~_emulated" and latch "phase:phaseControler|phaseInter[25]~101"
+    Warning (13310): Register "phase:phaseControler|phaseInter[26]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[26]~_emulated" and latch "phase:phaseControler|phaseInter[26]~105"
+    Warning (13310): Register "phase:phaseControler|phaseInter[27]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[27]~_emulated" and latch "phase:phaseControler|phaseInter[27]~109"
+    Warning (13310): Register "phase:phaseControler|phaseInter[28]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[28]~_emulated" and latch "phase:phaseControler|phaseInter[28]~113"
+    Warning (13310): Register "phase:phaseControler|phaseInter[29]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[29]~_emulated" and latch "phase:phaseControler|phaseInter[29]~117"
+    Warning (13310): Register "phase:phaseControler|phaseInter[30]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[30]~_emulated" and latch "phase:phaseControler|phaseInter[30]~121"
+    Warning (13310): Register "phase:phaseControler|phaseInter[31]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[31]~_emulated" and latch "phase:phaseControler|phaseInter[31]~125"
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a0" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a1" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a2" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a3" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a4" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a5" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a5" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a6" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a6" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a7" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a7" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a8" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a8" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a9" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a9" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a10" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a10" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a11" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a11" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a12" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a12" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a13" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a13" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a14" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a14" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_3381:auto_generated|ram_block1a15" has a port clk0 that is stuck at GND
-Warning (15400): WYSIWYG primitive "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_pe71:auto_generated|ram_block1a15" has a port clk0 that is stuck at GND
-Warning (21074): Design contains 17 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "PWMDuty[0]"
-    Warning (15610): No output dependent on input pin "PWMDuty[1]"
-    Warning (15610): No output dependent on input pin "PWMDuty[2]"
-    Warning (15610): No output dependent on input pin "PWMDuty[3]"
-    Warning (15610): No output dependent on input pin "PWMDuty[4]"
-    Warning (15610): No output dependent on input pin "PWMDuty[5]"
-    Warning (15610): No output dependent on input pin "PWMDuty[6]"
-    Warning (15610): No output dependent on input pin "Switch[0]"
-    Warning (15610): No output dependent on input pin "Switch[1]"
-    Warning (15610): No output dependent on input pin "SwitchMicro[0]"
-    Warning (15610): No output dependent on input pin "SwitchMicro[1]"
-    Warning (15610): No output dependent on input pin "SwitchNano[0]"
-    Warning (15610): No output dependent on input pin "SwitchNano[1]"
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
-    Warning (15610): No output dependent on input pin "phaseadd"
-    Warning (15610): No output dependent on input pin "phasesub"
-Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
+Info (21057): Implemented 761 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 44 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 17 logic cells
+    Info (21061): Implemented 669 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 52 warnings
-    Info: Peak virtual memory: 4623 megabytes
-    Info: Processing ended: Wed Jun 26 20:58:41 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 101 warnings
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Wed Jun 26 23:32:55 2019
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
 +------------------------------------------+

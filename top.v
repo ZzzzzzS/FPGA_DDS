@@ -1,58 +1,70 @@
-module top(clk,PWMDuty,SignalOut,Switch,SwitchMicro,SwitchNano,OutMode,reset,phaseadd,phasesub);
-input reset;
-input clk;
-input [1:0]OutMode;
-input [6:0]PWMDuty;
-input [1:0]Switch,SwitchMicro,SwitchNano;
-input phaseadd,phasesub;
-output [15:0]SignalOut;
+module top(	input clk,
+			input  [31:0]PWMDuty,
+			output [15:0]SignalOut,
+			input  Switchadd,
+            input  Switchsub,
+            input  SwitchMicroadd,
+            input  SwitchMicrosub,
+            input  SwitchNanoadd,
+            input  SwitchNanosub,
+			input  [1:0]OutMode,
+			input  reset,
+			input  phaseadd,
+			input  phasesub);
 
 wire [15:0]SinWire,TriangularWire,PWMWire,RectangleWire;
-wire clk_N;
-wire [6:0]PhaseWire;
+wire [31:0]Step;
+wire [31:0]PhaseWire;
 
-ClockGenerator C1(	.clk(clk),
-										.Switch(Switch),
-										.SwitchMicro(SwitchMicro),
-										.SwitchNano(SwitchNano),
-										.clk_N(clk_N),
-										.reset(reset));
-phase phaseControler( .add(phaseadd),
-							.sub(phasesub),
-							.phase(PhaseWire),
-							.reset(reset));
+ClockGenerator C1(	.Switchadd(Switchadd),
+					.Switchsub(Switchsub),
+					.SwitchMicroadd(SwitchMicroadd),
+					.SwitchMicrosub(SwitchMicrosub),
+					.SwitchNanoadd(SwitchNanoadd),
+					.SwitchNanosub(SwitchNanosub),
+					.Step(Step),
+					.reset(reset));
+
+phase phaseControler( 	.add(phaseadd),
+						.sub(phasesub),
+						.phase(PhaseWire),
+						.reset(reset));
 										
 										
-SinWave S1(	.clk(clk_N),
-							.Sinout(SinWire),
-							.reset(reset),
-							.phase(PhaseWire));
+SinWave S1(				.clk(clk),
+						.Sinout(SinWire),
+						.reset(reset),
+						.phase(PhaseWire),
+						.Step(Step));
 
 
-TriangularWave T1(		.clk(clk_N),
-											.Triangularout(TriangularWire),
-											.reset(reset),
-											.phase(PhaseWire));
+TriangularWave T1(		.clk(clk),
+						.Triangularout(TriangularWire),
+						.reset(reset),
+						.phase(PhaseWire),
+						.Step(Step));
 						
-PWMWave P1(	.clk(clk_N),
-								.PWMDuty(PWMDuty),
-								.PWMout(PWMWire),
-								.reset(reset),
-								.phase(PhaseWire));
+PWMWave P1(				.clk(clk),
+						.PWMDuty(PWMDuty),
+						.PWMout(PWMWire),
+						.reset(reset),
+						.phase(PhaseWire),
+						.Step(Step));
 
-PWMWave P2(	.clk(clk_N),
-								.PWMDuty(8'd128),
-								.PWMout(RectangleWire),
-								.reset(reset),
-								.phase(PhaseWire));
+PWMWave P2(				.clk(clk),
+						.PWMDuty(32'd2147483648), //这个还需要根据具体步进带宽进行调节
+						.PWMout(RectangleWire),
+						.reset(reset),
+						.phase(PhaseWire),
+						.Step(Step));
 
-ControlPanel Control(.SinIn(SinWire),
-										.rectangleIn(RectangleWire),
-										.PWMIn(PWMWire),
-										.TriangularIn(TriangularWire),
-										.SignalOut(SignalOut),
-										.OutMode(OutMode),
-										.reset(reset));
+ControlPanel Control(	.SinIn(SinWire),
+						.rectangleIn(RectangleWire),
+						.PWMIn(PWMWire),
+						.TriangularIn(TriangularWire),
+						.SignalOut(SignalOut),
+						.OutMode(OutMode),
+						.reset(reset));
 						
 									
 endmodule
