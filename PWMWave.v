@@ -1,4 +1,4 @@
-module PWMWave(input clk,input [6:0]PWMDuty,output reg [15:0]PWMout,input reset,input[6:0]phase);
+module PWMWave(input clk,input [6:0]PWMDuty,output reg [15:0]PWMout,input reset,input[6:0]phase,input[22:0]Step);
 
 reg [6:0]address;
 reg [6:0]SynthesisedPhase;

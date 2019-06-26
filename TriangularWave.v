@@ -1,6 +1,6 @@
-module TriangularWave(input clk,output [15:0]Triangularout,input reset,input[6:0]phase);
-reg [6:0]address;
-reg [6:0]SynthesisedPhase;
+module TriangularWave(input clk,output [15:0]Triangularout,input reset,input[6:0]phase,input[22:0]Step);
+reg [22:0]address;
+reg [22:0]SynthesisedPhase;
 initial
     begin
         address=7'd0;
