@@ -90,38 +90,26 @@
 # Loading altera_mf_ver.altsyncram
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.SinWave
+# Loading work.SinROM
 # Loading work.ControlPanel
-# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(39): [PCDPC] - Port size (16 or 16) does not match connection size (7) for port 'PWMout'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/PWMWave.v(1).
-# 
-#         Region: /top_vlg_tst/P1
 # ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(39): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'reset'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/PWMWave.v(1).
 # 
 #         Region: /top_vlg_tst/P1
 # ** Warning: (vsim-3017) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(40): [TFMPC] - Too few port connections. Expected 4, found 3.
 # 
-#         Region: /top_vlg_tst/S1
-# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(40): [PCDPC] - Port size (16 or 16) does not match connection size (7) for port 'Triangularout'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/TriangularWave.v(1).
-# 
-#         Region: /top_vlg_tst/S1
+#         Region: /top_vlg_tst/T1
 # ** Warning: (vsim-3722) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(40): [TFMPC] - Missing connection for port 'reset'.
 # 
-# ** Warning: (vsim-3017) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(42): [TFMPC] - Too few port connections. Expected 7, found 4.
+# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(41): [PCDPC] - Port size (1 or 1) does not match connection size (32) for port 'reset'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/SinWave.v(1).
+# 
+#         Region: /top_vlg_tst/S1
+# ** Warning: (vsim-3017) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(43): [TFMPC] - Too few port connections. Expected 7, found 5.
 # 
 #         Region: /top_vlg_tst/C1
-# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(42): [PCDPC] - Port size (16 or 16) does not match connection size (7) for port 'PWMIn'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/ControlPanel.v(1).
+# ** Warning: (vsim-3722) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(43): [TFMPC] - Missing connection for port 'rectangleIn'.
 # 
-#         Region: /top_vlg_tst/C1
-# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(42): [PCDPC] - Port size (16 or 16) does not match connection size (7) for port 'SinIn'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/ControlPanel.v(1).
-# 
-#         Region: /top_vlg_tst/C1
-# ** Warning: (vsim-3015) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(42): [PCDPC] - Port size (16 or 16) does not match connection size (7) for port 'SignalOut'. The port definition is at: C:/Users/m1899/Desktop/DDSProject/ControlPanel.v(1).
-# 
-#         Region: /top_vlg_tst/C1
-# ** Warning: (vsim-3722) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(42): [TFMPC] - Missing connection for port 'TriangularIn'.
-# 
-# ** Warning: (vsim-3722) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(42): [TFMPC] - Missing connection for port 'rectangleIn'.
-# 
-# ** Warning: (vsim-3722) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(42): [TFMPC] - Missing connection for port 'reset'.
+# ** Warning: (vsim-3722) C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt(43): [TFMPC] - Missing connection for port 'reset'.
 # 
 # 
 # add wave *
@@ -130,5 +118,4 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-add wave -position end  sim:/top_vlg_tst/S1/Triangularout
-run -all
+# ERROR: SineTable.mif, line 71, Invalid Altera-mif record.

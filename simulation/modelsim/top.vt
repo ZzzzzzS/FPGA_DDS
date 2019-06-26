@@ -33,13 +33,14 @@ module top_vlg_tst();
 //module ControlPanel(SinIn,PWMIn,TriangularIn,rectangleIn,SignalOut,OutMode,reset);
 //module SinWave(input clk,output[15:0]Sinout,input reset,input[6:0]phase);
 reg clk;
-wire [6:0]PWMWire,sinwire;
-wire [6:0]out;
+wire [15:0]PWMWire,sinwire,TriangularWire;
+wire [15:0]out;
 
 PWMWave P1(.clk(clk),.PWMDuty(7'd64),.PWMout(PWMWire),.reset(1),.phase(7'd0));
-TriangularWave S1(.clk(clk),.Triangularout(sinwire),.phase(7'd0));
+TriangularWave T1(.clk(clk),.Triangularout(TriangularWire),.phase(7'd64));
+SinWave S1(.clk(clk),.Sinout(sinwire),.reset(1),.phase(7'd32));
 
-ControlPanel C1(.PWMIn(PWMWire),.SinIn(sinwire),.OutMode(2'b01),.SignalOut(out));
+ControlPanel C1(.PWMIn(PWMWire),.SinIn(sinwire),.TriangularIn(TriangularWire),.OutMode(2'b01),.SignalOut(out));
 
 initial
 begin
