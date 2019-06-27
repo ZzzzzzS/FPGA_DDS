@@ -82,7 +82,6 @@ phasesub=1;
 $display("Running testbench");                       
 end                                                    
 
-always #1 clk=~clk;
-                                               
+always #1 clk=~clk;                                             
 endmodule
 
