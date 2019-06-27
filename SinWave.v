@@ -5,15 +5,15 @@ initial
     begin
         address=32'd0;
     end
-
+/**********调用SinROM************/
 SinROM ROM1(.address(SynthesisedPhase[31:20]),
              .clock(clk),
              .q(Sinout));
 
 always@(negedge clk)
     begin
-        address<=address+Step;
-        SynthesisedPhase<=address+phase;
+        address<=address+Step;//频率
+        SynthesisedPhase<=address+phase;//相位
         if (reset==0) 
         begin
             address<=32'd0;
