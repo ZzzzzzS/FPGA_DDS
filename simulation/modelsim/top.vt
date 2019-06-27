@@ -67,7 +67,7 @@ begin
 // code that executes only once                        
 // insert code here --> begin 
 clk=0;                         
-PWMDuty=32'd2147483648;
+PWMDuty=32'd3221225472;
 OutMode=2'b01;
 SwitchMicroadd=1;
 SwitchMicrosub=1;

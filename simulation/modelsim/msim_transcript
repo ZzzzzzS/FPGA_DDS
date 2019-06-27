@@ -104,5 +104,3 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Running testbench
-add wave -position end  sim:/top_vlg_tst/i1/S1/Sinout
-run -all

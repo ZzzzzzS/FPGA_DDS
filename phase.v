@@ -3,7 +3,7 @@ reg [31:0]phaseInter;
 assign phase=phaseInter;
 
 initial
-	phaseInter=32'd0;
+	phaseInter=32'd3221225472;
 
 always@(negedge add or negedge sub)
     begin

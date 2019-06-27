@@ -1,5 +1,5 @@
 Flow report for DirectDigitalSynthesizer
-Thu Jun 27 11:07:13 2019
+Thu Jun 27 11:23:55 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Jun 27 11:07:13 2019       ;
+; Flow Status                        ; Successful - Thu Jun 27 11:23:55 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+--------------------------+
 ; Option            ; Setting                  ;
 +-------------------+--------------------------+
-; Start date & time ; 06/27/2019 11:07:11      ;
+; Start date & time ; 06/27/2019 11:23:52      ;
 ; Main task         ; Compilation              ;
 ; Revision Name     ; DirectDigitalSynthesizer ;
 +-------------------+--------------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+--------------------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value            ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+--------------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 62488679679181.156160483006012        ; --                       ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 62488679679181.156160583216788        ; --                       ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --                       ; --          ; top_vlg_tst    ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; top_vlg_tst                           ; --                       ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --                       ; --          ; eda_simulation ;
@@ -108,8 +108,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4602 MB             ; 00:00:02                           ;
-; Total                ; 00:00:03     ; --                      ; --                  ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4602 MB             ; 00:00:02                           ;
+; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

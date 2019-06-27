@@ -9,7 +9,7 @@ module ClockGenerator(  input Switchadd,
 
 initial
 begin
-    Step=32'd10000;
+    Step=32'd429496729;
 end
 
 always@(*)
