@@ -6,7 +6,7 @@ initial
         address=32'd0;
     end
 
-SinROM ROM1(.address(SynthesisedPhase[31:16]),
+SinROM ROM1(.address(SynthesisedPhase[31:20]),
              .clock(clk),
              .q(Sinout));
 

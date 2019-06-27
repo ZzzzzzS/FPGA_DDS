@@ -6,7 +6,7 @@ initial
         address=32'd0;
     end
 
-TriangularROM ROM1(.address(SynthesisedPhase[31:16]),
+TriangularROM ROM1(.address(SynthesisedPhase[31:21]),
              .clock(clk),
              .q(Triangularout));
 
