@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Thu Jun 27 11:23:55 2019
+Thu Jun 27 16:44:10 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -53,15 +53,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 27 11:23:55 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 27 16:44:10 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 662                                         ;
-;     Total combinational functions  ; 662                                         ;
-;     Dedicated logic registers      ; 98                                          ;
-; Total registers                    ; 98                                          ;
+; Total logic elements               ; 545                                         ;
+;     Total combinational functions  ; 545                                         ;
+;     Dedicated logic registers      ; 66                                          ;
+; Total registers                    ; 66                                          ;
 ; Total pins                         ; 60                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 98,304                                      ;
@@ -207,20 +207,20 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 662   ;
+; Estimated Total logic elements              ; 545   ;
 ;                                             ;       ;
-; Total combinational functions               ; 662   ;
+; Total combinational functions               ; 545   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 183   ;
-;     -- 3 input functions                    ; 182   ;
-;     -- <=2 input functions                  ; 297   ;
+;     -- 4 input functions                    ; 126   ;
+;     -- 3 input functions                    ; 201   ;
+;     -- <=2 input functions                  ; 218   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 336   ;
-;     -- arithmetic mode                      ; 326   ;
+;     -- normal mode                          ; 246   ;
+;     -- arithmetic mode                      ; 299   ;
 ;                                             ;       ;
-; Total registers                             ; 98    ;
-;     -- Dedicated logic registers            ; 98    ;
+; Total registers                             ; 66    ;
+;     -- Dedicated logic registers            ; 66    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 60    ;
@@ -228,8 +228,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 98    ;
-; Total fan-out                               ; 2507  ;
-; Average fan-out                             ; 2.94  ;
+; Total fan-out                               ; 2083  ;
+; Average fan-out                             ; 2.96  ;
 +---------------------------------------------+-------+
 
 
@@ -238,10 +238,10 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |top                                         ; 662 (0)           ; 98 (0)       ; 98304       ; 0            ; 0       ; 0         ; 60   ; 0            ; |top                                                                                                     ;              ;
-;    |ClockGenerator:C1|                       ; 362 (362)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ;              ;
+; |top                                         ; 545 (0)           ; 66 (0)       ; 98304       ; 0            ; 0       ; 0         ; 60   ; 0            ; |top                                                                                                     ;              ;
+;    |ClockGenerator:C1|                       ; 348 (348)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ;              ;
 ;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ;              ;
-;    |PWMWave:P1|                              ; 97 (97)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ;              ;
+;    |PWMWave:P1|                              ; 98 (98)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ;              ;
 ;    |PWMWave:P2|                              ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                          ;              ;
 ;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ;              ;
 ;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ;              ;
@@ -251,7 +251,7 @@ applicable agreement for further details.
 ;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                ;              ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                ;              ;
 ;             |altsyncram_1681:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated ;              ;
-;    |phase:phaseControler|                    ; 159 (159)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|phase:phaseControler                                                                                ;              ;
+;    |phase:phaseControler|                    ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|phase:phaseControler                                                                                ;              ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -276,45 +276,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+-------------------------------------------+---------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal        ; Free of Timing Hazards ;
-+-----------------------------------------------------+----------------------------+------------------------+
-; ClockGenerator:C1|Step[0]                           ; ClockGenerator:C1|Step[2]  ; yes                    ;
-; ClockGenerator:C1|Step[1]                           ; ClockGenerator:C1|Step[2]  ; yes                    ;
-; ClockGenerator:C1|Step[2]                           ; ClockGenerator:C1|Step[2]  ; yes                    ;
-; ClockGenerator:C1|Step[3]                           ; ClockGenerator:C1|Step[3]  ; yes                    ;
-; ClockGenerator:C1|Step[4]                           ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[5]                           ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[6]                           ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[7]                           ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[8]                           ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[9]                           ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[10]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[11]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[12]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[13]                          ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[14]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[15]                          ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[16]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[17]                          ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[18]                          ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[19]                          ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[20]                          ; ClockGenerator:C1|Step[31] ; no                     ;
-; ClockGenerator:C1|Step[21]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[22]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[23]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[24]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[25]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[26]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[27]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[28]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[29]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[30]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; ClockGenerator:C1|Step[31]                          ; ClockGenerator:C1|Step[31] ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                            ;                        ;
-+-----------------------------------------------------+----------------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; phase:phaseControler|phase[5]                       ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[6]                       ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[7]                       ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[8]                       ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[9]                       ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[10]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[11]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[12]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[13]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[14]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[15]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[16]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[17]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[18]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[19]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[20]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[21]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[22]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[23]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[24]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[25]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[26]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[27]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[28]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[29]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[30]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; phase:phaseControler|phase[31]                      ; phase:phaseControler|phase[31] ; yes                    ;
+; ClockGenerator:C1|Step[0]                           ; ClockGenerator:C1|Step[0]      ; yes                    ;
+; ClockGenerator:C1|Step[1]                           ; ClockGenerator:C1|Step[1]      ; yes                    ;
+; ClockGenerator:C1|Step[2]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[3]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[4]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[5]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[6]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[7]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[8]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[9]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[10]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[11]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[12]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[13]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[14]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[15]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[16]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[17]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[18]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[19]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[20]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[21]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[22]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[23]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[24]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[25]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[26]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[27]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[28]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[29]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[30]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[31]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; Number of user-specified and inferred latches = 59  ;                                ;                        ;
++-----------------------------------------------------+--------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -485,10 +512,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 98    ;
+; Total registers                              ; 66    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -501,7 +528,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux3  ;
-; 6:1                ; 28 bits   ; 112 LEs       ; 112 LEs              ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Step[10] ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Step[12] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -701,7 +728,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 27 11:23:52 2019
+    Info: Processing started: Thu Jun 27 16:44:07 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file phase.v
@@ -724,40 +751,68 @@ Info (12021): Found 1 design units, including 1 entities, in source file triangu
     Info (12023): Found entity 1: TriangularROM
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "ClockGenerator" for hierarchy "ClockGenerator:C1"
-Warning (10240): Verilog HDL Always Construct warning at ClockGenerator.v(17): inferring latch(es) for variable "Step", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Step[0]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[1]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[2]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[3]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[4]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[5]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[6]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[7]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[8]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[9]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[10]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[11]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[12]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[13]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[14]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[15]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[16]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[17]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[18]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[19]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[20]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[21]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[22]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[23]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[24]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[25]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[26]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[27]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[28]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[29]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[30]" at ClockGenerator.v(17)
-Info (10041): Inferred latch for "Step[31]" at ClockGenerator.v(17)
+Warning (10240): Verilog HDL Always Construct warning at ClockGenerator.v(15): inferring latch(es) for variable "Step", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Step[0]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[1]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[2]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[3]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[4]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[5]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[6]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[7]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[8]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[9]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[10]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[11]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[12]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[13]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[14]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[15]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[16]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[17]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[18]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[19]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[20]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[21]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[22]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[23]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[24]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[25]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[26]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[27]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[28]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[29]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[30]" at ClockGenerator.v(15)
+Info (10041): Inferred latch for "Step[31]" at ClockGenerator.v(15)
 Info (12128): Elaborating entity "phase" for hierarchy "phase:phaseControler"
+Warning (10240): Verilog HDL Always Construct warning at phase.v(7): inferring latch(es) for variable "phase", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "phase[5]" at phase.v(7)
+Info (10041): Inferred latch for "phase[6]" at phase.v(7)
+Info (10041): Inferred latch for "phase[7]" at phase.v(7)
+Info (10041): Inferred latch for "phase[8]" at phase.v(7)
+Info (10041): Inferred latch for "phase[9]" at phase.v(7)
+Info (10041): Inferred latch for "phase[10]" at phase.v(7)
+Info (10041): Inferred latch for "phase[11]" at phase.v(7)
+Info (10041): Inferred latch for "phase[12]" at phase.v(7)
+Info (10041): Inferred latch for "phase[13]" at phase.v(7)
+Info (10041): Inferred latch for "phase[14]" at phase.v(7)
+Info (10041): Inferred latch for "phase[15]" at phase.v(7)
+Info (10041): Inferred latch for "phase[16]" at phase.v(7)
+Info (10041): Inferred latch for "phase[17]" at phase.v(7)
+Info (10041): Inferred latch for "phase[18]" at phase.v(7)
+Info (10041): Inferred latch for "phase[19]" at phase.v(7)
+Info (10041): Inferred latch for "phase[20]" at phase.v(7)
+Info (10041): Inferred latch for "phase[21]" at phase.v(7)
+Info (10041): Inferred latch for "phase[22]" at phase.v(7)
+Info (10041): Inferred latch for "phase[23]" at phase.v(7)
+Info (10041): Inferred latch for "phase[24]" at phase.v(7)
+Info (10041): Inferred latch for "phase[25]" at phase.v(7)
+Info (10041): Inferred latch for "phase[26]" at phase.v(7)
+Info (10041): Inferred latch for "phase[27]" at phase.v(7)
+Info (10041): Inferred latch for "phase[28]" at phase.v(7)
+Info (10041): Inferred latch for "phase[29]" at phase.v(7)
+Info (10041): Inferred latch for "phase[30]" at phase.v(7)
+Info (10041): Inferred latch for "phase[31]" at phase.v(7)
 Info (12128): Elaborating entity "SinWave" for hierarchy "SinWave:S1"
 Info (12128): Elaborating entity "SinROM" for hierarchy "SinWave:S1|SinROM:ROM1"
 Info (12128): Elaborating entity "altsyncram" for hierarchy "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component"
@@ -803,117 +858,84 @@ Info (12128): Elaborating entity "altsyncram_1681" for hierarchy "TriangularWave
 Info (12128): Elaborating entity "PWMWave" for hierarchy "PWMWave:P1"
 Info (12128): Elaborating entity "ControlPanel" for hierarchy "ControlPanel:Control"
 Warning (13012): Latch ClockGenerator:C1|Step[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Switchsub
 Warning (13012): Latch ClockGenerator:C1|Step[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanoadd
-Warning (13004): Presettable and clearable registers converted to equivalent circuits with latches. Registers power-up to an undefined state, and DEVCLRn places the registers in an undefined state.
-    Warning (13310): Register "phase:phaseControler|phaseInter[0]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[0]~_emulated" and latch "phase:phaseControler|phaseInter[0]~1"
-    Warning (13310): Register "phase:phaseControler|phaseInter[1]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[1]~_emulated" and latch "phase:phaseControler|phaseInter[1]~5"
-    Warning (13310): Register "phase:phaseControler|phaseInter[2]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[2]~_emulated" and latch "phase:phaseControler|phaseInter[2]~9"
-    Warning (13310): Register "phase:phaseControler|phaseInter[3]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[3]~_emulated" and latch "phase:phaseControler|phaseInter[3]~13"
-    Warning (13310): Register "phase:phaseControler|phaseInter[4]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[4]~_emulated" and latch "phase:phaseControler|phaseInter[4]~17"
-    Warning (13310): Register "phase:phaseControler|phaseInter[5]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[5]~_emulated" and latch "phase:phaseControler|phaseInter[5]~21"
-    Warning (13310): Register "phase:phaseControler|phaseInter[6]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[6]~_emulated" and latch "phase:phaseControler|phaseInter[6]~25"
-    Warning (13310): Register "phase:phaseControler|phaseInter[7]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[7]~_emulated" and latch "phase:phaseControler|phaseInter[7]~29"
-    Warning (13310): Register "phase:phaseControler|phaseInter[8]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[8]~_emulated" and latch "phase:phaseControler|phaseInter[8]~33"
-    Warning (13310): Register "phase:phaseControler|phaseInter[9]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[9]~_emulated" and latch "phase:phaseControler|phaseInter[9]~37"
-    Warning (13310): Register "phase:phaseControler|phaseInter[10]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[10]~_emulated" and latch "phase:phaseControler|phaseInter[10]~41"
-    Warning (13310): Register "phase:phaseControler|phaseInter[11]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[11]~_emulated" and latch "phase:phaseControler|phaseInter[11]~45"
-    Warning (13310): Register "phase:phaseControler|phaseInter[12]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[12]~_emulated" and latch "phase:phaseControler|phaseInter[12]~49"
-    Warning (13310): Register "phase:phaseControler|phaseInter[13]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[13]~_emulated" and latch "phase:phaseControler|phaseInter[13]~53"
-    Warning (13310): Register "phase:phaseControler|phaseInter[14]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[14]~_emulated" and latch "phase:phaseControler|phaseInter[14]~57"
-    Warning (13310): Register "phase:phaseControler|phaseInter[15]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[15]~_emulated" and latch "phase:phaseControler|phaseInter[15]~61"
-    Warning (13310): Register "phase:phaseControler|phaseInter[16]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[16]~_emulated" and latch "phase:phaseControler|phaseInter[16]~65"
-    Warning (13310): Register "phase:phaseControler|phaseInter[17]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[17]~_emulated" and latch "phase:phaseControler|phaseInter[17]~69"
-    Warning (13310): Register "phase:phaseControler|phaseInter[18]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[18]~_emulated" and latch "phase:phaseControler|phaseInter[18]~73"
-    Warning (13310): Register "phase:phaseControler|phaseInter[19]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[19]~_emulated" and latch "phase:phaseControler|phaseInter[19]~77"
-    Warning (13310): Register "phase:phaseControler|phaseInter[20]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[20]~_emulated" and latch "phase:phaseControler|phaseInter[20]~81"
-    Warning (13310): Register "phase:phaseControler|phaseInter[21]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[21]~_emulated" and latch "phase:phaseControler|phaseInter[21]~85"
-    Warning (13310): Register "phase:phaseControler|phaseInter[22]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[22]~_emulated" and latch "phase:phaseControler|phaseInter[22]~89"
-    Warning (13310): Register "phase:phaseControler|phaseInter[23]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[23]~_emulated" and latch "phase:phaseControler|phaseInter[23]~93"
-    Warning (13310): Register "phase:phaseControler|phaseInter[24]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[24]~_emulated" and latch "phase:phaseControler|phaseInter[24]~97"
-    Warning (13310): Register "phase:phaseControler|phaseInter[25]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[25]~_emulated" and latch "phase:phaseControler|phaseInter[25]~101"
-    Warning (13310): Register "phase:phaseControler|phaseInter[26]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[26]~_emulated" and latch "phase:phaseControler|phaseInter[26]~105"
-    Warning (13310): Register "phase:phaseControler|phaseInter[27]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[27]~_emulated" and latch "phase:phaseControler|phaseInter[27]~109"
-    Warning (13310): Register "phase:phaseControler|phaseInter[28]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[28]~_emulated" and latch "phase:phaseControler|phaseInter[28]~113"
-    Warning (13310): Register "phase:phaseControler|phaseInter[29]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[29]~_emulated" and latch "phase:phaseControler|phaseInter[29]~117"
-    Warning (13310): Register "phase:phaseControler|phaseInter[30]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[30]~_emulated" and latch "phase:phaseControler|phaseInter[30]~121"
-    Warning (13310): Register "phase:phaseControler|phaseInter[31]" is converted into an equivalent circuit using register "phase:phaseControler|phaseInter[31]~_emulated" and latch "phase:phaseControler|phaseInter[31]~125"
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal SwitchNanosub
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "reset"
-Info (21057): Implemented 754 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 637 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 44 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 662 logic cells
+    Info (21061): Implemented 545 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 100 warnings
-    Info: Peak virtual memory: 4612 megabytes
-    Info: Processing ended: Thu Jun 27 11:23:55 2019
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 4611 megabytes
+    Info: Processing ended: Thu Jun 27 16:44:10 2019
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
 +------------------------------------------+
