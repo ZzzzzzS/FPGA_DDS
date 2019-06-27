@@ -67,4 +67,4 @@ ControlPanel Control(	.SinIn(SinWire),
 						.reset(reset));
 						
 									
-endmodule
+endmodule 
