@@ -82,7 +82,24 @@ phasesub=1;
 $display("Running testbench");                       
 end                                                    
 
-always #1 clk=~clk;
-                                               
+always #1 clk=~clk;                                             
 endmodule
+
+/*module top_vlg_tst();
+
+reg add,sub;
+wire [31:0]out;
+
+phase p1(.add(add),.sub(sub),.phase(out));
+	
+initial
+begin
+add=1;
+sub=0;
+end
+
+always #1 sub=~sub;
+
+endmodule*/
+
 

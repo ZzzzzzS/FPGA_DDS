@@ -4,10 +4,10 @@ K3
 cModel Technology
 Z0 dC:\Users\m1899\Desktop\DDSProject\simulation\modelsim
 vClockGenerator
-IOWH@50zNocTRGLDW4C_QN3
+I6SdI<eomfmRi;<b@k<GT@2
 VfTT@c0cG^?FZJQlHkmAdl1
 Z1 dC:\Users\m1899\Desktop\DDSProject\simulation\modelsim
-w1561605522
+w1561623049
 8C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v
 FC:/Users/m1899/Desktop/DDSProject/ClockGenerator.v
 L0 1
@@ -18,9 +18,9 @@ Z3 o-vlog01compat -work work -O0
 Z4 !s92 -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject -O0
 n@clock@generator
 !i10b 1
-!s100 Ybl4b^nYjC4WL_X5@XPEL2
+!s100 6hAWGPb4OAGUagMQ]CoXD2
 !s85 0
-!s108 1561605943.227000
+!s108 1561625118.558000
 !s107 C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v|
 !s101 -O0
@@ -41,15 +41,15 @@ n@control@panel
 !i10b 1
 !s100 Q5z>:7M7Um7_0BLDNIhCI1
 !s85 0
-!s108 1561605943.131000
+!s108 1561625118.473000
 !s107 C:/Users/m1899/Desktop/DDSProject/ControlPanel.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/ControlPanel.v|
 !s101 -O0
 vphase
-IlR21DWl>`9PYz`5BW_3H?0
+IabBmD>enjAIKH6dU72=Mm3
 V;]ZX7Z^EG>MDJIlEk7Y=i0
 R1
-w1561605829
+w1561625043
 8C:/Users/m1899/Desktop/DDSProject/phase.v
 FC:/Users/m1899/Desktop/DDSProject/phase.v
 L0 1
@@ -59,9 +59,9 @@ r1
 R3
 R4
 !i10b 1
-!s100 zDzXRhAUCO>U@JRB`:fEK3
+!s100 gO06M]>klcc`O^G;_oO0F0
 !s85 0
-!s108 1561605942.652000
+!s108 1561625117.972000
 !s107 C:/Users/m1899/Desktop/DDSProject/phase.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/phase.v|
 !s101 -O0
@@ -82,7 +82,7 @@ n@p@w@m@wave
 !i10b 1
 !s100 E28?1Q0ccB_Fi?gM138J=3
 !s85 0
-!s108 1561605943.033000
+!s108 1561625118.373000
 !s107 C:/Users/m1899/Desktop/DDSProject/PWMWave.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/PWMWave.v|
 !s101 -O0
@@ -90,7 +90,7 @@ vSinROM
 I6dEJP_YDKlJJmoLdg67^M3
 VZ9CARS7RM0=YTVM:LnSI;3
 R1
-w1561603806
+Z5 w1561606465
 8C:/Users/m1899/Desktop/DDSProject/SinROM.v
 FC:/Users/m1899/Desktop/DDSProject/SinROM.v
 L0 39
@@ -103,7 +103,7 @@ n@sin@r@o@m
 !i10b 1
 !s100 Cb6g8E^UXWNXcgFD[ZTjj0
 !s85 0
-!s108 1561605943.327000
+!s108 1561625118.666000
 !s107 C:/Users/m1899/Desktop/DDSProject/SinROM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/SinROM.v|
 !s101 -O0
@@ -111,7 +111,7 @@ vSinWave
 ITn5HDNhfG4[Xnc4K[CDNa3
 V2Ud9@Ti=54;TD`4d04`E01
 R1
-w1561604095
+R5
 8C:/Users/m1899/Desktop/DDSProject/SinWave.v
 FC:/Users/m1899/Desktop/DDSProject/SinWave.v
 L0 1
@@ -124,7 +124,7 @@ n@sin@wave
 !i10b 1
 !s100 68Af<3S]5`Q?V^G3a16Lf3
 !s85 0
-!s108 1561605942.941000
+!s108 1561625118.288000
 !s107 C:/Users/m1899/Desktop/DDSProject/SinWave.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/SinWave.v|
 !s101 -O0
@@ -144,17 +144,17 @@ R4
 !i10b 1
 !s100 ]iYV6XH=jBNo=UjnkNzBL1
 !s85 0
-!s108 1561605942.840000
+!s108 1561625118.188000
 !s107 C:/Users/m1899/Desktop/DDSProject/top.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/top.v|
 !s101 -O0
 vtop_vlg_tst
 !i10b 1
-!s100 W`MmYlQgEIeZ<KGGHDLfe2
-IV_PD=P=TzAZUiGd[Xn4OO2
+!s100 4[zo5IcbcPM4e_kEgVaB_3
+I;m_^0V^=I^?d5LnV3Ik2V2
 VWH`X8iAJ@;Z6_Z>8HHbjI2
 R1
-w1561605924
+w1561624755
 8C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt
 FC:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt
 L0 28
@@ -162,7 +162,7 @@ R2
 r1
 !s85 0
 31
-!s108 1561605943.531000
+!s108 1561625118.874000
 !s107 C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject/simulation/modelsim|C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt|
 !s101 -O0
@@ -172,7 +172,7 @@ vTriangularROM
 ILmcnkoZH:Zi^9BFQig`0A1
 Vo?j@BN3m:X2M[X_`GkVbm1
 R1
-w1561603856
+R5
 8C:/Users/m1899/Desktop/DDSProject/TriangularROM.v
 FC:/Users/m1899/Desktop/DDSProject/TriangularROM.v
 L0 39
@@ -185,7 +185,7 @@ n@triangular@r@o@m
 !i10b 1
 !s100 oU3oOm^TmA2^;nIYg`noh0
 !s85 0
-!s108 1561605943.433000
+!s108 1561625118.759000
 !s107 C:/Users/m1899/Desktop/DDSProject/TriangularROM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/TriangularROM.v|
 !s101 -O0
@@ -193,7 +193,7 @@ vTriangularWave
 I2PAAgg?Uzmon@m=M7EeEg2
 VczfZ7LQG=`8V9So7f`H6?2
 R1
-w1561604054
+R5
 8C:/Users/m1899/Desktop/DDSProject/TriangularWave.v
 FC:/Users/m1899/Desktop/DDSProject/TriangularWave.v
 L0 1
@@ -206,7 +206,7 @@ n@triangular@wave
 !i10b 1
 !s100 =XMoXj0<zRHfIn6m7Vhhj0
 !s85 0
-!s108 1561605942.749000
+!s108 1561625118.103000
 !s107 C:/Users/m1899/Desktop/DDSProject/TriangularWave.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/m1899/Desktop/DDSProject|C:/Users/m1899/Desktop/DDSProject/TriangularWave.v|
 !s101 -O0
