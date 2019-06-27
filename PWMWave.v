@@ -20,5 +20,10 @@ begin
         begin
             PWMout=16'h0000;
         end
+    if (reset==0) 
+        begin
+            address<=32'd0;
+            SynthesisedPhase<=32'd0;
+        end
 end
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Thu Jun 27 16:44:10 2019
+Thu Jun 27 17:50:29 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -53,13 +53,13 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 27 16:44:10 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 27 17:50:29 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 545                                         ;
-;     Total combinational functions  ; 545                                         ;
+; Total logic elements               ; 546                                         ;
+;     Total combinational functions  ; 546                                         ;
 ;     Dedicated logic registers      ; 66                                          ;
 ; Total registers                    ; 66                                          ;
 ; Total pins                         ; 60                                          ;
@@ -207,17 +207,17 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 545   ;
+; Estimated Total logic elements              ; 546   ;
 ;                                             ;       ;
-; Total combinational functions               ; 545   ;
+; Total combinational functions               ; 546   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 126   ;
-;     -- 3 input functions                    ; 201   ;
-;     -- <=2 input functions                  ; 218   ;
+;     -- 4 input functions                    ; 152   ;
+;     -- 3 input functions                    ; 178   ;
+;     -- <=2 input functions                  ; 216   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 246   ;
-;     -- arithmetic mode                      ; 299   ;
+;     -- normal mode                          ; 252   ;
+;     -- arithmetic mode                      ; 294   ;
 ;                                             ;       ;
 ; Total registers                             ; 66    ;
 ;     -- Dedicated logic registers            ; 66    ;
@@ -228,8 +228,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 98    ;
-; Total fan-out                               ; 2083  ;
-; Average fan-out                             ; 2.96  ;
+; Total fan-out                               ; 2174  ;
+; Average fan-out                             ; 3.09  ;
 +---------------------------------------------+-------+
 
 
@@ -238,10 +238,10 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |top                                         ; 545 (0)           ; 66 (0)       ; 98304       ; 0            ; 0       ; 0         ; 60   ; 0            ; |top                                                                                                     ;              ;
-;    |ClockGenerator:C1|                       ; 348 (348)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ;              ;
+; |top                                         ; 546 (0)           ; 66 (0)       ; 98304       ; 0            ; 0       ; 0         ; 60   ; 0            ; |top                                                                                                     ;              ;
+;    |ClockGenerator:C1|                       ; 350 (350)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ;              ;
 ;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ;              ;
-;    |PWMWave:P1|                              ; 98 (98)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ;              ;
+;    |PWMWave:P1|                              ; 97 (97)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ;              ;
 ;    |PWMWave:P2|                              ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                          ;              ;
 ;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ;              ;
 ;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ;              ;
@@ -513,7 +513,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 66    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Clear  ; 59    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -527,8 +527,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux3  ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Step[12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux9  ;
+; 7:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Step[14] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
@@ -728,7 +728,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 27 16:44:07 2019
+    Info: Processing started: Thu Jun 27 17:50:27 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file phase.v
@@ -786,6 +786,11 @@ Info (10041): Inferred latch for "Step[30]" at ClockGenerator.v(15)
 Info (10041): Inferred latch for "Step[31]" at ClockGenerator.v(15)
 Info (12128): Elaborating entity "phase" for hierarchy "phase:phaseControler"
 Warning (10240): Verilog HDL Always Construct warning at phase.v(7): inferring latch(es) for variable "phase", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "phase[0]" at phase.v(7)
+Info (10041): Inferred latch for "phase[1]" at phase.v(7)
+Info (10041): Inferred latch for "phase[2]" at phase.v(7)
+Info (10041): Inferred latch for "phase[3]" at phase.v(7)
+Info (10041): Inferred latch for "phase[4]" at phase.v(7)
 Info (10041): Inferred latch for "phase[5]" at phase.v(7)
 Info (10041): Inferred latch for "phase[6]" at phase.v(7)
 Info (10041): Inferred latch for "phase[7]" at phase.v(7)
@@ -924,17 +929,15 @@ Warning (13012): Latch ClockGenerator:C1|Step[31] has unsafe behavior
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "reset"
-Info (21057): Implemented 637 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 638 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 44 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 545 logic cells
+    Info (21061): Implemented 546 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 4611 megabytes
-    Info: Processing ended: Thu Jun 27 16:44:10 2019
-    Info: Elapsed time: 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 66 warnings
+    Info: Peak virtual memory: 4627 megabytes
+    Info: Processing ended: Thu Jun 27 17:50:29 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

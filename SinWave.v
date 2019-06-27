@@ -14,6 +14,11 @@ always@(negedge clk)
     begin
         address<=address+Step;
         SynthesisedPhase<=address+phase;
+        if (reset==0) 
+        begin
+            address<=32'd0;
+            SynthesisedPhase<=32'd0;
+        end
     end
 
 endmodule

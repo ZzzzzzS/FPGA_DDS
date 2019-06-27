@@ -14,8 +14,13 @@ end
 
 always@(	negedge SwitchMicroadd or negedge SwitchMicrosub or
 					negedge SwitchNanoadd or negedge SwitchNanosub or
-					negedge Switchadd or negedge Switchsub)
+					negedge Switchadd or negedge Switchsub or negedge reset)
 begin
+ if (reset==0) 
+        begin
+            Step<=32'd2147483;
+        end   
+
 /**********粗调节************/
     if (Switchadd==0) 
     begin
@@ -56,5 +61,9 @@ begin
         Step<=Step-32'd214;
     end
 	 
+	/* if(reset==0)
+    begin
+       Step<=32'd2147483; 
+    end&*/
 end
 endmodule
