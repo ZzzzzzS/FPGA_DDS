@@ -5,14 +5,19 @@ initial
     begin
         address=32'd0;
     end
-
+/**********调用TriangularROM************/
 TriangularROM ROM1(.address(SynthesisedPhase[31:21]),
              .clock(clk),
              .q(Triangularout));
 
 always@(negedge clk)
     begin
-        address<=address+Step;
-        SynthesisedPhase<=address+phase;
+        address<=address+Step;//频率
+        SynthesisedPhase<=address+phase;//相位
+        if (reset==0) 
+        begin
+            address<=32'd0;
+            SynthesisedPhase<=32'd0;
+        end
     end
 endmodule

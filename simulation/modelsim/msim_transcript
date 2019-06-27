@@ -10,6 +10,12 @@
 # ** Warning: Copied C:\ProgramFiles\altera\13.0\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/Button.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Button
+# 
+# Top level modules:
+# 	Button
 # vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/phase.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module phase
@@ -85,6 +91,7 @@
 # //
 # Loading work.top_vlg_tst
 # Loading work.top
+# Loading work.Button
 # Loading work.ClockGenerator
 # Loading work.phase
 # Loading work.SinWave
@@ -104,3 +111,5 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Running testbench
+run -all
+run -all

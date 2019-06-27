@@ -1,20 +1,33 @@
 module top(	input clk,
-			input  [31:0]PWMDuty,
 			output [15:0]SignalOut,
-			input  Switchadd,
-            input  Switchsub,
-            input  SwitchMicroadd,
-            input  SwitchMicrosub,
-            input  SwitchNanoadd,
-            input  SwitchNanosub,
 			input  [1:0]OutMode,
-			input  reset,
-			input  phaseadd,
-			input  phasesub);
-
+			input  reset,			
+			input  FreqPhaseSelect,
+			input  UpDownSelect,
+			input  [2:0]PushButton
+			);
+/**********寄存器之间的链接************/
 wire [15:0]SinWire,TriangularWire,PWMWire,RectangleWire;
 wire [31:0]Step;
 wire [31:0]PhaseWire;
+wire [31:0]PWMDuty;
+wire SwitchMicroadd,SwitchMicrosub,SwitchNanoadd,SwitchNanosub,Switchadd,Switchsub;
+wire phaseadd,phasesub;
+/**********各个寄存器链接************/
+Button B1(	.FreqPhaseSelect(FreqPhaseSelect),  //=1选择频率，=0选择相位
+        	.UpDownSelect(UpDownSelect),     //=1上升，=0下降
+        	.PushButton(PushButton),
+        	.reset(reset),
+            
+        	.Switchadd(Switchadd),
+        	.Switchsub(Switchsub),
+        	.SwitchMicroadd(SwitchMicroadd),
+        	.SwitchMicrosub(SwitchMicrosub),
+        	.SwitchNanoadd(SwitchNanoadd),
+        	.SwitchNanosub(SwitchNanosub),
+        	.Phaseadd(phaseadd),
+        	.Phasesub(phasesub),
+        	.PWMDuty(PWMDuty));
 
 ClockGenerator C1(	.Switchadd(Switchadd),
 					.Switchsub(Switchsub),
@@ -52,7 +65,7 @@ PWMWave P1(				.clk(clk),
 						.Step(Step));
 
 PWMWave P2(				.clk(clk),
-						.PWMDuty(32'd2147483648), //这个还需要根据具体步进带宽进行调节
+						.PWMDuty(32'd2147483648), //占空比50%的PWM=方波
 						.PWMout(RectangleWire),
 						.reset(reset),
 						.phase(PhaseWire),
