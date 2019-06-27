@@ -61,6 +61,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME top_vlg_tst -section_id eda_simu
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id top_vlg_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME top_vlg_tst -section_id top_vlg_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/top.vt -section_id top_vlg_tst
+set_global_assignment -name VERILOG_FILE Button.v
 set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/top.vt
 set_global_assignment -name VERILOG_FILE phase.v
 set_global_assignment -name VERILOG_FILE TriangularWave.v

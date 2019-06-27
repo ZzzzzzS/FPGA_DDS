@@ -1,20 +1,33 @@
 module top(	input clk,
-			input  [31:0]PWMDuty,
 			output [15:0]SignalOut,
-			input  Switchadd,
-            input  Switchsub,
-            input  SwitchMicroadd,
-            input  SwitchMicrosub,
-            input  SwitchNanoadd,
-            input  SwitchNanosub,
 			input  [1:0]OutMode,
-			input  reset,
-			input  phaseadd,
-			input  phasesub);
+			input  reset,			
+			input  FreqPhaseSelect,
+			input  UpDownSelect,
+			input  [3:0]PushButton
+			);
 
 wire [15:0]SinWire,TriangularWire,PWMWire,RectangleWire;
 wire [31:0]Step;
 wire [31:0]PhaseWire;
+wire [31:0]PWMDuty;
+wire SwitchMicroadd,SwitchMicrosub,SwitchNanoadd,SwitchNanosub,Switchadd,Switchsub;
+wire phaseadd,phasesub;
+
+Button B1(	.FreqPhaseSelect(FreqPhaseSelect),  //=1选择频率，=0选择相位
+        	.UpDownSelect(UpDownSelect),     //=1上升，=0下降
+        	.PushButton(PushButton),
+        	.reset(reset),
+            
+        	.Switchadd(Switchadd),
+        	.Switchsub(Switchsub),
+        	.SwitchMicroadd(SwitchMicroadd),
+        	.SwitchMicrosub(SwitchMicrosub),
+        	.SwitchNanoadd(SwitchNanoadd),
+        	.SwitchNanosub(SwitchNanosub),
+        	.Phaseadd(phaseadd),
+        	.Phasesub(phasesub),
+        	.PWMDuty(PWMDuty));
 
 ClockGenerator C1(	.Switchadd(Switchadd),
 					.Switchsub(Switchsub),
