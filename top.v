@@ -4,7 +4,7 @@ module top(	input clk,
 			input  reset,			
 			input  FreqPhaseSelect,
 			input  UpDownSelect,
-			input  [3:0]PushButton
+			input  [2:0]PushButton
 			);
 
 wire [15:0]SinWire,TriangularWire,PWMWire,RectangleWire;

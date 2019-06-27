@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "06/27/2019 11:01:19"
+// Generated on "06/27/2019 23:14:49"
                                                                                 
 // Verilog Test Bench template for design : top
 // 
@@ -30,17 +30,11 @@ module top_vlg_tst();
 // general purpose registers
 reg eachvec;
 // test vector input registers
+reg FreqPhaseSelect;
 reg [1:0] OutMode;
-reg [31:0] PWMDuty;
-reg SwitchMicroadd;
-reg SwitchMicrosub;
-reg SwitchNanoadd;
-reg SwitchNanosub;
-reg Switchadd;
-reg Switchsub;
+reg [2:0] PushButton;
+reg UpDownSelect;
 reg clk;
-reg phaseadd;
-reg phasesub;
 reg reset;
 // wires                                               
 wire [15:0]  SignalOut;
@@ -48,58 +42,29 @@ wire [15:0]  SignalOut;
 // assign statements (if any)                          
 top i1 (
 // port map - connection between master ports and signals/registers   
+	.FreqPhaseSelect(FreqPhaseSelect),
 	.OutMode(OutMode),
-	.PWMDuty(PWMDuty),
+	.PushButton(PushButton),
 	.SignalOut(SignalOut),
-	.SwitchMicroadd(SwitchMicroadd),
-	.SwitchMicrosub(SwitchMicrosub),
-	.SwitchNanoadd(SwitchNanoadd),
-	.SwitchNanosub(SwitchNanosub),
-	.Switchadd(Switchadd),
-	.Switchsub(Switchsub),
+	.UpDownSelect(UpDownSelect),
 	.clk(clk),
-	.phaseadd(phaseadd),
-	.phasesub(phasesub),
 	.reset(reset)
 );
 initial                                                
 begin                                                  
 // code that executes only once                        
-// insert code here --> begin 
-clk=0;                         
-PWMDuty=32'd3221225472;
-OutMode=2'b01;
-SwitchMicroadd=1;
-SwitchMicrosub=1;
-SwitchNanoadd=1;
-SwitchNanosub=1;
-Switchadd=1;
-Switchsub=1;
-reset=1;
-phaseadd=1;
-phasesub=1;
+// insert code here --> begin                          
+FreqPhaseSelect=0;
+OutMode=2'b10;
+PushButton=3'b111;
+UpDownSelect=1;
+clk=1;
+reset=1; 
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
 
-always #1 clk=~clk;                                             
+always #1 begin clk=~clk; PushButton[0]=~PushButton[0];end
+                                                  
 endmodule
-
-/*module top_vlg_tst();
-
-reg add,sub;
-wire [31:0]out;
-
-phase p1(.add(add),.sub(sub),.phase(out));
-	
-initial
-begin
-add=1;
-sub=0;
-end
-
-always #1 sub=~sub;
-
-endmodule*/
-
 

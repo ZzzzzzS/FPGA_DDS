@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Thu Jun 27 20:51:27 2019
+Thu Jun 27 23:43:54 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -11,23 +11,24 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
   5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
+  6. Analysis & Synthesis IP Cores Summary
+  7. Partition Status Summary
+  8. Dependent File Changes for Partition Top
+  9. Partition for Top-Level Resource Utilization by Entity
  10. User-Specified and Inferred Latches
  11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated
- 15. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated
- 16. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
- 17. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
- 18. altsyncram Parameter Settings by Entity Instance
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated
+ 14. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated
+ 15. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
+ 17. Partition Dependent Files
+ 18. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
  19. Port Connectivity Checks: "PWMWave:P2"
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
- 22. Analysis & Synthesis Suppressed Messages
+ 20. SignalTap II Logic Analyzer Settings
+ 21. Elapsed Time Per Partition
+ 22. Analysis & Synthesis Messages
+ 23. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,20 +54,20 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 27 20:51:27 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jun 27 23:43:54 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone II                                  ;
-; Total logic elements               ; 639                                         ;
-;     Total combinational functions  ; 639                                         ;
-;     Dedicated logic registers      ; 66                                          ;
-; Total registers                    ; 66                                          ;
-; Total pins                         ; 26                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 98,304                                      ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -163,109 +164,83 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Average used               ; 1.33        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;  33.3%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
-; Button.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/Button.v                                        ;         ;
-; phase.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/phase.v                                         ;         ;
-; TriangularWave.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/TriangularWave.v                                ;         ;
-; top.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/top.v                                           ;         ;
-; SinWave.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/SinWave.v                                       ;         ;
-; PWMWave.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/PWMWave.v                                       ;         ;
-; ControlPanel.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/ControlPanel.v                                  ;         ;
-; ClockGenerator.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v                                ;         ;
-; SinROM.v                         ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/SinROM.v                                        ;         ;
-; TriangularROM.v                  ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/TriangularROM.v                                 ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_th71.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_th71.tdf                          ;         ;
-; sinetable.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/sinetable.mif                                   ;         ;
-; db/altsyncram_1681.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_1681.tdf                          ;         ;
-; triangulartable.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/triangulartable.mif                             ;         ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 639   ;
-;                                             ;       ;
-; Total combinational functions               ; 639   ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 169   ;
-;     -- 3 input functions                    ; 251   ;
-;     -- <=2 input functions                  ; 219   ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 314   ;
-;     -- arithmetic mode                      ; 325   ;
-;                                             ;       ;
-; Total registers                             ; 66    ;
-;     -- Dedicated logic registers            ; 66    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 26    ;
-; Total memory bits                           ; 98304 ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 98    ;
-; Total fan-out                               ; 2467  ;
-; Average fan-out                             ; 3.23  ;
-+---------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |top                                         ; 639 (0)           ; 66 (0)       ; 98304       ; 0            ; 0       ; 0         ; 26   ; 0            ; |top                                                                                                     ;              ;
-;    |Button:B1|                               ; 93 (93)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1                                                                                           ;              ;
-;    |ClockGenerator:C1|                       ; 350 (350)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ;              ;
-;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ;              ;
-;    |PWMWave:P1|                              ; 97 (97)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ;              ;
-;    |PWMWave:P2|                              ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                          ;              ;
-;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ;              ;
-;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ;              ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component                                              ;              ;
-;             |altsyncram_th71:auto_generated| ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated               ;              ;
-;    |TriangularWave:T1|                       ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1                                                                                   ;              ;
-;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                ;              ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                ;              ;
-;             |altsyncram_1681:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated ;              ;
-;    |phase:phaseControler|                    ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|phase:phaseControler                                                                                ;              ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                       ;
-+----------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------+
-; Name                                                                                                           ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                 ;
-+----------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------+
-; SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|ALTSYNCRAM               ; AUTO ; ROM  ; 4096         ; 16           ; --           ; --           ; 65536 ; SineTable.mif       ;
-; TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 2048         ; 16           ; --           ; --           ; 32768 ; TriangularTable.mif ;
-+----------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                           ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
+; Button.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/Button.v                                               ;         ;
+; phase.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/phase.v                                                ;         ;
+; TriangularWave.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/TriangularWave.v                                       ;         ;
+; top.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/top.v                                                  ;         ;
+; SinWave.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/SinWave.v                                              ;         ;
+; PWMWave.v                        ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/PWMWave.v                                              ;         ;
+; ControlPanel.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/ControlPanel.v                                         ;         ;
+; ClockGenerator.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v                                       ;         ;
+; SinROM.v                         ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/SinROM.v                                               ;         ;
+; TriangularROM.v                  ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/TriangularROM.v                                        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/aglobal130.inc               ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altrom.inc                   ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altram.inc                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
+; db/altsyncram_th71.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_th71.tdf                                 ;         ;
+; sinetable.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/sinetable.mif                                          ;         ;
+; db/altsyncram_1681.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_1681.tdf                                 ;         ;
+; triangulartable.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/triangulartable.mif                                    ;         ;
+; sld_signaltap.vhd                ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_signaltap.vhd            ;         ;
+; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd       ;         ;
+; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_ela_control.vhd          ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_constant.inc             ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/dffeea.inc                   ;         ;
+; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_mbpmg.vhd                ;         ;
+; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd ;         ;
+; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_buffer_manager.vhd       ;         ;
+; db/altsyncram_sp14.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_sp14.tdf                                 ;         ;
+; altdpram.tdf                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altdpram.tdf                 ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/others/maxplus2/memmodes.inc               ;         ;
+; a_hdffe.inc                      ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/a_hdffe.inc                  ;         ;
+; alt_le_rden_reg.inc              ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/alt_le_rden_reg.inc          ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altsyncram.inc               ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; db/mux_aoc.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/mux_aoc.tdf                                         ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_decode.tdf               ;         ;
+; declut.inc                       ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/declut.inc                   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
+; db/decode_rqf.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/decode_rqf.tdf                                      ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_counter.tdf              ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/cmpconst.inc                 ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;         ;
+; db/cntr_tbi.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/cntr_tbi.tdf                                        ;         ;
+; db/cntr_02j.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/cntr_02j.tdf                                        ;         ;
+; db/cntr_sbi.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/cntr_sbi.tdf                                        ;         ;
+; db/cmpr_8cc.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/cmpr_8cc.tdf                                        ;         ;
+; db/cntr_gui.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/cntr_gui.tdf                                        ;         ;
+; db/cmpr_5cc.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/cmpr_5cc.tdf                                        ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_hub.vhd                  ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd             ;         ;
++----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -276,6 +251,50 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |top|SinWave:S1|SinROM:ROM1               ; C:/Users/m1899/Desktop/DDSProject/SinROM.v        ;
 ; Altera ; ROM: 1-PORT  ; 13.0    ; N/A          ; N/A          ; |top|TriangularWave:T1|TriangularROM:ROM1 ; C:/Users/m1899/Desktop/DDSProject/TriangularROM.v ;
 +--------+--------------+---------+--------------+--------------+-------------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Partition Status Summary                                               ;
++--------------------------------+-------------+-------------------------+
+; Partition Name                 ; Synthesized ; Reason                  ;
++--------------------------------+-------------+-------------------------+
+; Top                            ; yes         ; Dependent files changed ;
+; sld_hub:auto_hub               ; yes         ; Parameters changed      ;
+; sld_signaltap:auto_signaltap_0 ; no          ; No relevant changes     ;
++--------------------------------+-------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Dependent File Changes for Partition Top                                                                                   ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+; Hierarchy ; File Name ; Relative Location ; Change   ; Old                              ; New                              ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+; Button:B1 ; Button.v  ; Project Directory ; Checksum ; 2c251ff450d370b6b647ee343b67e6d9 ; 23590c41d5bb9fce9bfca20cf577c830 ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                             ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+; |top                                         ; 390 (0)           ; 66 (0)       ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top                                                                                                     ; work         ;
+;    |Button:B1|                               ; 89 (89)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1                                                                                           ; work         ;
+;    |ClockGenerator:C1|                       ; 105 (105)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ; work         ;
+;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ; work         ;
+;    |PWMWave:P1|                              ; 97 (97)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ; work         ;
+;    |PWMWave:P2|                              ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                          ; work         ;
+;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ; work         ;
+;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component                                              ; work         ;
+;             |altsyncram_th71:auto_generated| ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated               ; work         ;
+;    |TriangularWave:T1|                       ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1                                                                                   ; work         ;
+;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                ; work         ;
+;             |altsyncram_1681:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated ; work         ;
+;    |phase:phaseControler|                    ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|phase:phaseControler                                                                                ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 +---------------------------------------------------------------------------------------------------------------+
@@ -342,14 +361,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; phase:phaseControler|phase[29]                      ; phase:phaseControler|phase[31] ; yes                    ;
 ; phase:phaseControler|phase[30]                      ; phase:phaseControler|phase[31] ; yes                    ;
 ; phase:phaseControler|phase[31]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; ClockGenerator:C1|Step[0]                           ; ClockGenerator:C1|Step[0]      ; yes                    ;
-; ClockGenerator:C1|Step[1]                           ; ClockGenerator:C1|Step[1]      ; yes                    ;
+; ClockGenerator:C1|Step[0]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
+; ClockGenerator:C1|Step[1]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[2]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[3]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[4]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[5]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; Button:B1|Phasesub                                  ; Button:B1|Phasesub             ; yes                    ;
 ; Button:B1|Phaseadd                                  ; Button:B1|Phaseadd             ; yes                    ;
+; Button:B1|Phasesub                                  ; Button:B1|Phasesub             ; yes                    ;
 ; ClockGenerator:C1|Step[6]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[7]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[8]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
@@ -376,12 +395,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ClockGenerator:C1|Step[29]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[30]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[31]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; Button:B1|Switchadd                                 ; Button:B1|Switchadd            ; yes                    ;
-; Button:B1|Switchsub                                 ; Button:B1|Switchsub            ; yes                    ;
 ; Button:B1|SwitchNanosub                             ; Button:B1|SwitchNanosub        ; yes                    ;
-; Button:B1|SwitchNanoadd                             ; Button:B1|SwitchNanoadd        ; yes                    ;
 ; Button:B1|SwitchMicrosub                            ; Button:B1|SwitchMicrosub       ; yes                    ;
+; Button:B1|Switchsub                                 ; Button:B1|Switchsub            ; yes                    ;
+; Button:B1|SwitchNanoadd                             ; Button:B1|SwitchNanoadd        ; yes                    ;
 ; Button:B1|SwitchMicroadd                            ; Button:B1|SwitchMicroadd       ; yes                    ;
+; Button:B1|Switchadd                                 ; Button:B1|Switchadd            ; yes                    ;
 ; Number of user-specified and inferred latches = 99  ;                                ;                        ;
 +-----------------------------------------------------+--------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
@@ -549,29 +568,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 66    ;
-; Number of registers using Synchronous Clear  ; 59    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux9 ;
-; 7:1                ; 30 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Step[3] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux0  ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Add0     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Add0     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Add0     ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; No         ; |top|ClockGenerator:C1|Step[10] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
@@ -714,35 +721,95 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                 ;
-+-------------------------------------------+----------------------------------------------------------------------+
-; Name                                      ; Value                                                                ;
-+-------------------------------------------+----------------------------------------------------------------------+
-; Number of entity instances                ; 2                                                                    ;
-; Entity Instance                           ; SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component               ;
-;     -- OPERATION_MODE                     ; ROM                                                                  ;
-;     -- WIDTH_A                            ; 16                                                                   ;
-;     -- NUMWORDS_A                         ; 4096                                                                 ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                                               ;
-;     -- WIDTH_B                            ; 1                                                                    ;
-;     -- NUMWORDS_B                         ; 1                                                                    ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                               ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                         ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                 ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                            ;
-; Entity Instance                           ; TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                                  ;
-;     -- WIDTH_A                            ; 16                                                                   ;
-;     -- NUMWORDS_A                         ; 2048                                                                 ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                                               ;
-;     -- WIDTH_B                            ; 1                                                                    ;
-;     -- NUMWORDS_B                         ; 1                                                                    ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                               ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                         ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                 ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                            ;
-+-------------------------------------------+----------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Partition Dependent Files                                                                                       ;
++-----------------------------------------------+--------------------+---------+----------------------------------+
+; File                                          ; Location           ; Library ; Checksum                         ;
++-----------------------------------------------+--------------------+---------+----------------------------------+
+; libraries/megafunctions/a_rdenreg.inc         ; Quartus II Install ; work    ; 3fcdce7559590d5a8afbe64788d201fb ;
+; libraries/megafunctions/aglobal130.inc        ; Quartus II Install ; work    ; 6fc5170a475a9c6f00c3fd7627b30d31 ;
+; libraries/megafunctions/altdpram.inc          ; Quartus II Install ; work    ; 2f9e6727b678ffd76e72bc5a95a26300 ;
+; libraries/megafunctions/altram.inc            ; Quartus II Install ; work    ; ad5518b39ffd3cf1df377e6360d1c9b6 ;
+; libraries/megafunctions/altrom.inc            ; Quartus II Install ; work    ; 192b74eafa8debf2248ea73881e77f91 ;
+; libraries/megafunctions/altsyncram.tdf        ; Quartus II Install ; work    ; 2d180e92194c1b32bb16b4887ae417e4 ;
+; libraries/megafunctions/lpm_decode.inc        ; Quartus II Install ; work    ; 10da69a8bbd590d66779e7a142f73790 ;
+; libraries/megafunctions/lpm_mux.inc           ; Quartus II Install ; work    ; dd87bed90959d6126db09970164b7ba6 ;
+; libraries/megafunctions/stratix_ram_block.inc ; Quartus II Install ; work    ; e3a03868917f0b3dd57b6ed1dd195f22 ;
+; Button.v                                      ; Project Directory  ; work    ; 23590c41d5bb9fce9bfca20cf577c830 ;
+; ClockGenerator.v                              ; Project Directory  ; work    ; e9190861a009bed849d81be0ef9fd150 ;
+; ControlPanel.v                                ; Project Directory  ; work    ; 925a4275351b25d21e2c6e3da02c1552 ;
+; db/altsyncram_1681.tdf                        ; Project Directory  ; work    ; 12caaca11b0f2ac2cb9f1f88b3b20440 ;
+; db/altsyncram_th71.tdf                        ; Project Directory  ; work    ; f439e92a321e26546025b1d590ccaac1 ;
+; phase.v                                       ; Project Directory  ; work    ; 63c8a38f17e1ceaa4f6fd8c2ed0c43ad ;
+; PWMWave.v                                     ; Project Directory  ; work    ; 42afdf83ae3fabfd83a497523950a8d3 ;
+; sinetable.mif                                 ; Project Directory  ; work    ; 279962eeab1b4aa7ca2f764c4eb16326 ;
+; SinROM.v                                      ; Project Directory  ; work    ; 3707bf811f83d64491b760e05cdbb71e ;
+; SinWave.v                                     ; Project Directory  ; work    ; 794a587cbd530bc6abc270c0d06ce13b ;
+; top.v                                         ; Project Directory  ; work    ; 49fcc19e62110e882dc49803ba21896b ;
+; TriangularROM.v                               ; Project Directory  ; work    ; 4ecc1f8b259d8e6176f5c1203fe0a9e6 ;
+; triangulartable.mif                           ; Project Directory  ; work    ; 62de3d3ea96820ba11d2a0f14d8bd5d5 ;
+; TriangularWave.v                              ; Project Directory  ; work    ; 21a7b3931fa4ec4722d0b5012d083981 ;
++-----------------------------------------------+--------------------+---------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0                                                          ;
++-------------------------------------------------+-----------------------------------------------------------------------+----------------+
+; Parameter Name                                  ; Value                                                                 ; Type           ;
++-------------------------------------------------+-----------------------------------------------------------------------+----------------+
+; lpm_type                                        ; sld_signaltap                                                         ; String         ;
+; sld_node_info                                   ; 805334528                                                             ; Untyped        ;
+; SLD_IP_VERSION                                  ; 6                                                                     ; Signed Integer ;
+; SLD_IP_MINOR_VERSION                            ; 0                                                                     ; Signed Integer ;
+; SLD_COMMON_IP_VERSION                           ; 0                                                                     ; Signed Integer ;
+; sld_data_bits                                   ; 16                                                                    ; Untyped        ;
+; sld_trigger_bits                                ; 16                                                                    ; Untyped        ;
+; SLD_NODE_CRC_BITS                               ; 32                                                                    ; Signed Integer ;
+; sld_node_crc_hiword                             ; 60419                                                                 ; Untyped        ;
+; sld_node_crc_loword                             ; 52744                                                                 ; Untyped        ;
+; SLD_INCREMENTAL_ROUTING                         ; 0                                                                     ; Signed Integer ;
+; sld_sample_depth                                ; 128                                                                   ; Untyped        ;
+; sld_segment_size                                ; 128                                                                   ; Untyped        ;
+; SLD_RAM_BLOCK_TYPE                              ; AUTO                                                                  ; String         ;
+; sld_state_bits                                  ; 11                                                                    ; Untyped        ;
+; sld_buffer_full_stop                            ; 1                                                                     ; Untyped        ;
+; SLD_MEM_ADDRESS_BITS                            ; 7                                                                     ; Signed Integer ;
+; SLD_DATA_BIT_CNTR_BITS                          ; 4                                                                     ; Signed Integer ;
+; sld_trigger_level                               ; 1                                                                     ; Untyped        ;
+; sld_trigger_in_enabled                          ; 0                                                                     ; Untyped        ;
+; SLD_HPS_TRIGGER_IN_ENABLED                      ; 0                                                                     ; Signed Integer ;
+; SLD_HPS_TRIGGER_OUT_ENABLED                     ; 0                                                                     ; Signed Integer ;
+; SLD_HPS_EVENT_ENABLED                           ; 0                                                                     ; Signed Integer ;
+; SLD_HPS_EVENT_ID                                ; 0                                                                     ; Signed Integer ;
+; sld_advanced_trigger_entity                     ; basic,1,                                                              ; Untyped        ;
+; sld_trigger_level_pipeline                      ; 1                                                                     ; Untyped        ;
+; sld_enable_advanced_trigger                     ; 0                                                                     ; Untyped        ;
+; SLD_ADVANCED_TRIGGER_1                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_2                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_3                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_4                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_5                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_6                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_7                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_8                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_9                          ; NONE                                                                  ; String         ;
+; SLD_ADVANCED_TRIGGER_10                         ; NONE                                                                  ; String         ;
+; sld_inversion_mask_length                       ; 69                                                                    ; Untyped        ;
+; sld_inversion_mask                              ; 000000000000000000000000000000000000000000000000000000000000000000000 ; Untyped        ;
+; sld_power_up_trigger                            ; 0                                                                     ; Untyped        ;
+; SLD_STATE_FLOW_MGR_ENTITY                       ; state_flow_mgr_entity.vhd                                             ; String         ;
+; sld_state_flow_use_generated                    ; 0                                                                     ; Untyped        ;
+; sld_current_resource_width                      ; 1                                                                     ; Untyped        ;
+; sld_attribute_mem_mode                          ; OFF                                                                   ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_BITS                      ; 1                                                                     ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_GAP_RECORD                ; 0                                                                     ; Signed Integer ;
+; SLD_STORAGE_QUALIFIER_MODE                      ; OFF                                                                   ; String         ;
+; SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION ; 0                                                                     ; Signed Integer ;
+; sld_storage_qualifier_inversion_mask_length     ; 0                                                                     ; Untyped        ;
+; SLD_STORAGE_QUALIFIER_ADVANCED_CONDITION_ENTITY ; basic                                                                 ; String         ;
+; SLD_STORAGE_QUALIFIER_PIPELINE                  ; 0                                                                     ; Signed Integer ;
++-------------------------------------------------+-----------------------------------------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------+
@@ -755,13 +822,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+----------+--------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; SignalTap II Logic Analyzer Settings                                                                                                                                                                                                                                    ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; Instance Index ; Instance Name    ; Trigger Input Width ; Data Input Width ; Sample Depth ; Segments ; Storage Qualifier Type ; Trigger Flow Control ; Trigger Conditions ; Advanced Trigger Conditions ; Trigger In Used ; Trigger Out Used ; Power-Up Trigger Enabled ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+; 0              ; auto_signaltap_0 ; 16                  ; 16               ; 128          ; 1        ; continuous             ; sequential           ; 1                  ; 0                           ; no              ; no               ; no                       ;
++----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:02     ;
+; sld_hub:auto_hub ; 00:00:02     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -770,7 +847,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 27 20:51:24 2019
+    Info: Processing started: Thu Jun 27 23:43:46 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file button.v
@@ -795,55 +872,55 @@ Info (12021): Found 1 design units, including 1 entities, in source file triangu
     Info (12023): Found entity 1: TriangularROM
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "Button" for hierarchy "Button:B1"
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "SwitchNanoadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "SwitchNanosub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "Phaseadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "Phasesub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(26): inferring latch(es) for variable "PWMDuty", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(59)
-Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(59)
-Info (10041): Inferred latch for "Phasesub" at Button.v(59)
-Info (10041): Inferred latch for "Phaseadd" at Button.v(59)
-Info (10041): Inferred latch for "SwitchNanosub" at Button.v(59)
-Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(59)
-Info (10041): Inferred latch for "Switchsub" at Button.v(59)
-Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(59)
-Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(59)
-Info (10041): Inferred latch for "Switchadd" at Button.v(59)
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchNanoadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchNanosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "PWMDuty", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Phaseadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Phasesub", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Phasesub" at Button.v(61)
+Info (10041): Inferred latch for "Phaseadd" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(61)
+Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(61)
+Info (10041): Inferred latch for "SwitchNanosub" at Button.v(61)
+Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(61)
+Info (10041): Inferred latch for "Switchsub" at Button.v(61)
+Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(61)
+Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(61)
+Info (10041): Inferred latch for "Switchadd" at Button.v(61)
 Info (12128): Elaborating entity "ClockGenerator" for hierarchy "ClockGenerator:C1"
 Warning (10240): Verilog HDL Always Construct warning at ClockGenerator.v(15): inferring latch(es) for variable "Step", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "Step[0]" at ClockGenerator.v(15)
@@ -956,8 +1033,39 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_1681" for hierarchy "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated"
 Info (12128): Elaborating entity "PWMWave" for hierarchy "PWMWave:P1"
 Info (12128): Elaborating entity "ControlPanel" for hierarchy "ControlPanel:Control"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_sp14.tdf
+    Info (12023): Found entity 1: altsyncram_sp14
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_aoc.tdf
+    Info (12023): Found entity 1: mux_aoc
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_rqf.tdf
+    Info (12023): Found entity 1: decode_rqf
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_tbi.tdf
+    Info (12023): Found entity 1: cntr_tbi
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_02j.tdf
+    Info (12023): Found entity 1: cntr_02j
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_sbi.tdf
+    Info (12023): Found entity 1: cntr_sbi
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_8cc.tdf
+    Info (12023): Found entity 1: cmpr_8cc
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_gui.tdf
+    Info (12023): Found entity 1: cntr_gui
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_5cc.tdf
+    Info (12023): Found entity 1: cmpr_5cc
+Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
+Info (12206): 2 design partitions require synthesis
+    Info (12211): Partition "Top" requires synthesis because there were changes to its dependent source files
+    Info (12217): Partition "sld_hub:auto_hub" requires synthesis because there were changes made to the parameters on the partition's root instance
+Info (12207): 1 design partition does not require synthesis
+    Info (12229): Partition "sld_signaltap:auto_signaltap_0" does not require synthesis because there were no relevant design changes
+Info (281037): Using 4 processors to synthesize 2 partitions in parallel
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Thu Jun 27 23:43:51 2019
+Info: Command: quartus_map --parallel=1 --helper=0 --partition=Top DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+Info (281020): Starting Logic Optimization and Technology Mapping for Top Partition
 Warning (13012): Latch ClockGenerator:C1|Step[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|Switchsub
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[1] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[2] has unsafe behavior
@@ -968,10 +1076,10 @@ Warning (13012): Latch ClockGenerator:C1|Step[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[5] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch Button:B1|Phasesub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal PushButton[0]
 Warning (13012): Latch Button:B1|Phaseadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal PushButton[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal UpDownSelect
+Warning (13012): Latch Button:B1|Phasesub has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal UpDownSelect
 Warning (13012): Latch ClockGenerator:C1|Step[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[7] has unsafe behavior
@@ -1024,31 +1132,54 @@ Warning (13012): Latch ClockGenerator:C1|Step[30] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
 Warning (13012): Latch ClockGenerator:C1|Step[31] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch Button:B1|Switchadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|Switchsub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch Button:B1|SwitchNanosub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|SwitchNanoadd has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch Button:B1|SwitchMicrosub has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
+Warning (13012): Latch Button:B1|Switchsub has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
+Warning (13012): Latch Button:B1|SwitchNanoadd has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch Button:B1|SwitchMicroadd has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 697 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 10 input pins
+Warning (13012): Latch Button:B1|Switchadd has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
+Info (21057): Implemented 447 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 639 logic cells
+    Info (21061): Implemented 390 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 91 warnings
-    Info: Peak virtual memory: 4612 megabytes
-    Info: Processing ended: Thu Jun 27 20:51:27 2019
-    Info: Elapsed time: 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 80 warnings
+    Info: Peak virtual memory: 4592 megabytes
+    Info: Processing ended: Thu Jun 27 23:43:53 2019
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Thu Jun 27 23:43:51 2019
+Info: Command: quartus_map --parallel=1 --helper=2 --partition=sld_hub:auto_hub DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+Info (281019): Starting Logic Optimization and Technology Mapping for Partition sld_hub:auto_hub
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
+Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 37 output pins
+    Info (21061): Implemented 145 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4592 megabytes
+    Info: Processing ended: Thu Jun 27 23:43:53 2019
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+Info (281038): Finished parallel synthesis of all partitions
+Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 93 warnings
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Thu Jun 27 23:43:54 2019
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+

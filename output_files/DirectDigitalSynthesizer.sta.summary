@@ -2,76 +2,12 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'SwitchMicroadd'
-Slack : -11.353
-TNS   : -292.493
-
-Type  : Slow Model Setup 'clk'
-Slack : -7.071
-TNS   : -987.542
-
-Type  : Slow Model Setup 'phaseadd'
-Slack : -5.196
-TNS   : -108.461
-
-Type  : Slow Model Hold 'clk'
-Slack : 0.753
+Type  : Slow Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 97.223
 TNS   : 0.000
 
-Type  : Slow Model Hold 'SwitchMicroadd'
-Slack : 1.140
+Type  : Fast Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 97.778
 TNS   : 0.000
-
-Type  : Slow Model Hold 'phaseadd'
-Slack : 1.738
-TNS   : 0.000
-
-Type  : Slow Model Minimum Pulse Width 'clk'
-Slack : -2.277
-TNS   : -1520.733
-
-Type  : Slow Model Minimum Pulse Width 'SwitchMicroadd'
-Slack : -1.777
-TNS   : -1.777
-
-Type  : Slow Model Minimum Pulse Width 'phaseadd'
-Slack : -1.777
-TNS   : -1.777
-
-Type  : Fast Model Setup 'SwitchMicroadd'
-Slack : -2.989
-TNS   : -69.229
-
-Type  : Fast Model Setup 'clk'
-Slack : -2.074
-TNS   : -200.565
-
-Type  : Fast Model Setup 'phaseadd'
-Slack : -1.068
-TNS   : -15.978
-
-Type  : Fast Model Hold 'SwitchMicroadd'
-Slack : -0.003
-TNS   : -0.003
-
-Type  : Fast Model Hold 'clk'
-Slack : 0.243
-TNS   : 0.000
-
-Type  : Fast Model Hold 'phaseadd'
-Slack : 0.504
-TNS   : 0.000
-
-Type  : Fast Model Minimum Pulse Width 'clk'
-Slack : -1.423
-TNS   : -955.332
-
-Type  : Fast Model Minimum Pulse Width 'SwitchMicroadd'
-Slack : -1.222
-TNS   : -1.222
-
-Type  : Fast Model Minimum Pulse Width 'phaseadd'
-Slack : -1.222
-TNS   : -1.222
 
 ------------------------------------------------------------
