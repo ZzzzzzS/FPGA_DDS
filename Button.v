@@ -1,8 +1,9 @@
 module Button(
         input FreqPhaseSelect,  //=1频率0相位
         input UpDownSelect,     //=1上升0下降
-        input [2:0]PushButton,
+        input [2:0]PushButtonbefore,
         input reset,
+        input clk,
 
         output reg Switchadd,
         output reg Switchsub,
@@ -14,6 +15,12 @@ module Button(
         output reg Phasesub,
         output reg [31:0]PWMDuty
 );
+
+wire [2:0]PushButton;
+debounce PushButton0(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[0]),.key_out(PushButton[0]));
+debounce PushButton1(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[1]),.key_out(PushButton[1]));
+debounce PushButton2(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[2]),.key_out(PushButton[2]));
+
 
 
 initial

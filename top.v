@@ -12,11 +12,12 @@ wire [31:0]PWMDuty;
 wire [31:0]PhaseWire;
 wire SwitchMicroadd,SwitchMicrosub,SwitchNanoadd,SwitchNanosub,Switchadd,Switchsub;
 wire phaseadd,phasesub;
-/**********鍚勪釜瀵勫瓨鍣ㄩ摼鎺***********/
-Button B1(	.FreqPhaseSelect(FreqPhaseSelect),  //=1閫夋嫨棰戠巼锛0閫夋嫨鐩镐綅
-        	.UpDownSelect(UpDownSelect),     //=1涓婂崌锛0涓嬮檷
-        	.PushButton(PushButton),
+/**********閸氬嫪閲滅€靛嫬鐡ㄩ崳銊╂懠閹**********/
+Button B1(	.FreqPhaseSelect(FreqPhaseSelect),  //=1闁瀚ㄦ０鎴犲芳閿闁瀚ㄩ惄闀愮秴
+        	.UpDownSelect(UpDownSelect),     //=1娑撳﹤宕岄敍0娑撳妾
+        	.PushButtonbefore(PushButton),
         	.reset(reset),
+			.clk(clk),
             
         	.Switchadd(Switchadd),
         	.Switchsub(Switchsub),
@@ -64,7 +65,7 @@ PWMWave P1(				.clk(clk),
 						.Step(Step));
 
 PWMWave P2(				.clk(clk),
-						.PWMDuty(32'd2147483648), //鍗犵┖姣0%鐨凱WM=鏂规尝
+						.PWMDuty(32'd2147483648), //閸楃姷鈹栧В0%閻ㄥ嚤WM=閺傝灏
 						.PWMout(RectangleWire),
 						.reset(reset),
 						.phase(PhaseWire),

@@ -25,12 +25,16 @@ begin
     if (Switchadd==0) 
     begin
         Step<=Step+32'd858993;
+        if(Step>32'd171798691) //限制最高频率
+            Step<=32'd171798691;
     end
 	 
 		
     if (Switchsub==0) 
 	begin
         Step<=Step-32'd858993;
+        if(Step<=32'd858993) //限制最低频率
+            Step<=32'd858993;
     end
 	 
 
@@ -39,12 +43,16 @@ begin
     if (SwitchMicroadd==0) 
     begin
         Step<=Step+32'd85899;
+        if(Step>32'd171798691) //限制最高频率
+            Step<=32'd171798691;
     end
 	 
 		
     if (SwitchMicrosub==0)
     begin
         Step<=Step-32'd85899;
+        if(Step<=32'd858993) //限制最低频率
+            Step<=32'd858993;
     end
 	
 
@@ -53,6 +61,8 @@ begin
     if (SwitchNanoadd==0) 
     begin
         Step<=Step+32'd85;
+        if(Step>32'd171798691) //限制最高频率
+            Step<=32'd171798691;
     end
 	 
 
@@ -60,6 +70,8 @@ begin
     if (SwitchNanosub==0)
 	 begin
         Step<=Step-32'd85;
+        if(Step<=32'd858993) //限制最低频率
+            Step<=32'd858993;
     end
 	 
 end

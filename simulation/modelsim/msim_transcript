@@ -10,6 +10,12 @@
 # ** Warning: Copied C:\ProgramFiles\altera\13.0\modelsim_ae\win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/debounce.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module debounce
+# 
+# Top level modules:
+# 	debounce
 # vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/Button.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module Button
@@ -92,6 +98,7 @@
 # Loading work.top_vlg_tst
 # Loading work.top
 # Loading work.Button
+# Loading work.debounce
 # Loading work.ClockGenerator
 # Loading work.phase
 # Loading work.SinWave
@@ -103,11 +110,3 @@
 # Loading work.TriangularROM
 # Loading work.PWMWave
 # Loading work.ControlPanel
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# Running testbench

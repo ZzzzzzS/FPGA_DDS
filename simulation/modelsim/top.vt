@@ -68,6 +68,6 @@ end
 
 always #1 begin clk=~clk; end
 
-always #1000 begin PushButton[1]=~PushButton[1]; end                                          
+always #2000 begin PushButton[1]=~PushButton[1]; end                                          
 endmodule
 
