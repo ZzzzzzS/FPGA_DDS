@@ -96,7 +96,7 @@ VCCIO1                       : 29        : power  :                   : 3.3V    
 GND*                         : 30        :        :                   :         : 1         :                
 GND*                         : 31        :        :                   :         : 1         :                
 GND*                         : 32        :        :                   :         : 1         :                
-GND*                         : 33        :        :                   :         : 1         :                
+Step[28]                     : 33        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 34        :        :                   :         : 1         :                
 GND*                         : 35        :        :                   :         : 1         :                
 GND*                         : 36        :        :                   :         : 1         :                
@@ -126,81 +126,81 @@ GND*                         : 59        :        :                   :         
 GND*                         : 60        :        :                   :         : 4         :                
 GND*                         : 61        :        :                   :         : 4         :                
 VCCIO4                       : 62        : power  :                   : 3.3V    : 4         :                
-UpDownSelect                 : 63        : input  : 3.3-V LVTTL       :         : 4         : N              
+UpDownSelect                 : 63        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND*                         : 64        :        :                   :         : 4         :                
 GND                          : 65        : gnd    :                   :         :           :                
 VCCINT                       : 66        : power  :                   : 1.2V    :           :                
 FreqPhaseSelect              : 67        : input  : 3.3-V LVTTL       :         : 4         : Y              
-GND*                         : 68        :        :                   :         : 4         :                
+Step[26]                     : 68        : output : 3.3-V LVTTL       :         : 4         : N              
 OutMode[1]                   : 69        : input  : 3.3-V LVTTL       :         : 4         : Y              
-GND*                         : 70        :        :                   :         : 4         :                
+Step[27]                     : 70        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 71        : power  :                   : 3.3V    : 4         :                
 OutMode[0]                   : 72        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 73        : gnd    :                   :         :           :                
-GND*                         : 74        :        :                   :         : 4         :                
-reset                        : 75        : input  : 3.3-V LVTTL       :         : 4         : Y              
-GND*                         : 76        :        :                   :         : 4         :                
+Step[19]                     : 74        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[16]                     : 75        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[22]                     : 76        : output : 3.3-V LVTTL       :         : 4         : N              
 PushButton[2]                : 77        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 78        : gnd    :                   :         :           :                
 VCCINT                       : 79        : power  :                   : 1.2V    :           :                
-GND*                         : 80        :        :                   :         : 4         :                
+Step[18]                     : 80        : output : 3.3-V LVTTL       :         : 4         : N              
 PushButton[1]                : 81        : input  : 3.3-V LVTTL       :         : 4         : Y              
-SignalOut[5]                 : 82        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[3]                      : 82        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 83        : power  :                   : 3.3V    : 4         :                
 PushButton[0]                : 84        : input  : 3.3-V LVTTL       :         : 4         : Y              
 GND                          : 85        : gnd    :                   :         :           :                
-SignalOut[14]                : 86        : output : 3.3-V LVTTL       :         : 4         : N              
-SignalOut[6]                 : 87        : output : 3.3-V LVTTL       :         : 4         : N              
-SignalOut[12]                : 88        : output : 3.3-V LVTTL       :         : 4         : N              
-SignalOut[3]                 : 89        : output : 3.3-V LVTTL       :         : 4         : N              
-SignalOut[2]                 : 90        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[29]                     : 86        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[23]                     : 87        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[17]                     : 88        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[20]                     : 89        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[0]                      : 90        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 91        : power  :                   : 3.3V    : 4         :                
-SignalOut[1]                 : 92        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[14]                     : 92        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 93        : gnd    :                   :         :           :                
-SignalOut[11]                : 94        : output : 3.3-V LVTTL       :         : 4         : N              
-GND*                         : 95        :        :                   :         : 4         :                
-GND*                         : 96        :        :                   :         : 4         :                
-GND*                         : 97        :        :                   :         : 4         :                
+Step[4]                      : 94        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[1]                      : 95        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[31]                     : 96        : output : 3.3-V LVTTL       :         : 4         : N              
+Step[25]                     : 97        : output : 3.3-V LVTTL       :         : 4         : N              
 VCCIO4                       : 98        : power  :                   : 3.3V    : 4         :                
-GND*                         : 99        :        :                   :         : 4         :                
+Step[24]                     : 99        : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : 100       : gnd    :                   :         :           :                
 GND*                         : 101       :        :                   :         : 4         :                
-GND*                         : 102       :        :                   :         : 4         :                
+SignalOut[4]                 : 102       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : 103       :        :                   :         : 4         :                
-GND*                         : 104       :        :                   :         : 4         :                
+SignalOut[10]                : 104       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : 105       :        :                   :         : 3         :                
-GND*                         : 106       :        :                   :         : 3         :                
-GND*                         : 107       :        :                   :         : 3         :                
+SignalOut[5]                 : 106       : output : 3.3-V LVTTL       :         : 3         : N              
+Step[8]                      : 107       : output : 3.3-V LVTTL       :         : 3         : N              
 ~LVDS41p/nCEO~               : 108       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 109       : power  :                   : 3.3V    : 3         :                
-GND*                         : 110       :        :                   :         : 3         :                
+SignalOut[0]                 : 110       : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : 111       : gnd    :                   :         :           :                
-GND*                         : 112       :        :                   :         : 3         :                
-GND*                         : 113       :        :                   :         : 3         :                
-SignalOut[9]                 : 114       : output : 3.3-V LVTTL       :         : 3         : N              
-SignalOut[8]                 : 115       : output : 3.3-V LVTTL       :         : 3         : N              
-SignalOut[7]                 : 116       : output : 3.3-V LVTTL       :         : 3         : N              
-SignalOut[10]                : 117       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[3]                 : 112       : output : 3.3-V LVTTL       :         : 3         : N              
+Step[2]                      : 113       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[15]                : 114       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[6]                 : 115       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[14]                : 116       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[2]                 : 117       : output : 3.3-V LVTTL       :         : 3         : N              
 SignalOut[13]                : 118       : output : 3.3-V LVTTL       :         : 3         : N              
-SignalOut[15]                : 119       : output : 3.3-V LVTTL       :         : 3         : N              
-SignalOut[0]                 : 120       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[8]                 : 119       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[9]                 : 120       : output : 3.3-V LVTTL       :         : 3         : N              
 nSTATUS                      : 121       :        :                   :         : 3         :                
 VCCIO3                       : 122       : power  :                   : 3.3V    : 3         :                
 CONF_DONE                    : 123       :        :                   :         : 3         :                
 GND                          : 124       : gnd    :                   :         :           :                
 MSEL1                        : 125       :        :                   :         : 3         :                
 MSEL0                        : 126       :        :                   :         : 3         :                
-SignalOut[4]                 : 127       : output : 3.3-V LVTTL       :         : 3         : N              
-GND*                         : 128       :        :                   :         : 3         :                
-GND+                         : 129       :        :                   :         : 3         :                
+SignalOut[1]                 : 127       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[12]                : 128       : output : 3.3-V LVTTL       :         : 3         : N              
+reset                        : 129       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : 130       :        :                   :         : 3         :                
 GND+                         : 131       :        :                   :         : 3         :                
 clk                          : 132       : input  : 3.3-V LVTTL       :         : 3         : Y              
-GND*                         : 133       :        :                   :         : 3         :                
-GND*                         : 134       :        :                   :         : 3         :                
-GND*                         : 135       :        :                   :         : 3         :                
+Step[11]                     : 133       : output : 3.3-V LVTTL       :         : 3         : N              
+SignalOut[7]                 : 134       : output : 3.3-V LVTTL       :         : 3         : N              
+Step[12]                     : 135       : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : 136       : power  :                   : 3.3V    : 3         :                
-GND*                         : 137       :        :                   :         : 3         :                
+SignalOut[11]                : 137       : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : 138       :        :                   :         : 3         :                
 GND*                         : 139       :        :                   :         : 3         :                
 GND                          : 140       : gnd    :                   :         :           :                
@@ -234,24 +234,24 @@ GND                          : 167       : gnd    :                   :         
 GND*                         : 168       :        :                   :         : 2         :                
 GND*                         : 169       :        :                   :         : 2         :                
 GND*                         : 170       :        :                   :         : 2         :                
-GND*                         : 171       :        :                   :         : 2         :                
+Step[10]                     : 171       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 172       : power  :                   : 3.3V    : 2         :                
-GND*                         : 173       :        :                   :         : 2         :                
+Step[9]                      : 173       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 174       : gnd    :                   :         :           :                
 GND*                         : 175       :        :                   :         : 2         :                
-GND*                         : 176       :        :                   :         : 2         :                
+Step[6]                      : 176       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 177       : gnd    :                   :         :           :                
 VCCINT                       : 178       : power  :                   : 1.2V    :           :                
-GND*                         : 179       :        :                   :         : 2         :                
-GND*                         : 180       :        :                   :         : 2         :                
-GND*                         : 181       :        :                   :         : 2         :                
-GND*                         : 182       :        :                   :         : 2         :                
+Step[30]                     : 179       : output : 3.3-V LVTTL       :         : 2         : N              
+Step[5]                      : 180       : output : 3.3-V LVTTL       :         : 2         : N              
+Step[21]                     : 181       : output : 3.3-V LVTTL       :         : 2         : N              
+Step[15]                     : 182       : output : 3.3-V LVTTL       :         : 2         : N              
 VCCIO2                       : 183       : power  :                   : 3.3V    : 2         :                
 GND                          : 184       : gnd    :                   :         :           :                
-GND*                         : 185       :        :                   :         : 2         :                
+Step[7]                      : 185       : output : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 186       : gnd    :                   :         :           :                
 GND*                         : 187       :        :                   :         : 2         :                
-GND*                         : 188       :        :                   :         : 2         :                
+Step[13]                     : 188       : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : 189       :        :                   :         : 2         :                
 VCCINT                       : 190       : power  :                   : 1.2V    :           :                
 GND*                         : 191       :        :                   :         : 2         :                

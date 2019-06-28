@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for DirectDigitalSynthesizer
-Thu Jun 27 21:51:54 2019
+Fri Jun 28 11:26:09 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -149,38 +149,38 @@ No paths to report.
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; OutMode[0] ; SignalOut[0]  ; 14.215 ; 14.265 ; 14.265 ; 14.215 ;
-; OutMode[0] ; SignalOut[1]  ; 14.484 ; 14.252 ; 14.252 ; 14.484 ;
-; OutMode[0] ; SignalOut[2]  ; 14.047 ; 14.656 ; 14.656 ; 14.047 ;
-; OutMode[0] ; SignalOut[3]  ; 14.068 ; 13.611 ; 13.611 ; 14.068 ;
-; OutMode[0] ; SignalOut[4]  ; 13.910 ; 14.659 ; 14.659 ; 13.910 ;
-; OutMode[0] ; SignalOut[5]  ; 14.044 ; 13.579 ; 13.579 ; 14.044 ;
-; OutMode[0] ; SignalOut[6]  ; 14.024 ; 13.564 ; 13.564 ; 14.024 ;
-; OutMode[0] ; SignalOut[7]  ; 13.949 ; 14.708 ; 14.708 ; 13.949 ;
-; OutMode[0] ; SignalOut[8]  ; 14.067 ; 14.653 ; 14.653 ; 14.067 ;
-; OutMode[0] ; SignalOut[9]  ; 14.393 ; 14.668 ; 14.668 ; 14.393 ;
-; OutMode[0] ; SignalOut[10] ; 13.525 ; 14.270 ; 14.270 ; 13.525 ;
-; OutMode[0] ; SignalOut[11] ; 14.335 ; 14.383 ; 14.383 ; 14.335 ;
-; OutMode[0] ; SignalOut[12] ; 14.432 ; 14.384 ; 14.384 ; 14.432 ;
-; OutMode[0] ; SignalOut[13] ; 14.117 ; 14.555 ; 14.555 ; 14.117 ;
-; OutMode[0] ; SignalOut[14] ; 14.021 ; 13.553 ; 13.553 ; 14.021 ;
-; OutMode[0] ; SignalOut[15] ; 13.512 ; 14.264 ; 14.264 ; 13.512 ;
-; OutMode[1] ; SignalOut[0]  ; 14.677 ; 14.677 ; 14.677 ; 14.677 ;
-; OutMode[1] ; SignalOut[1]  ; 14.645 ; 14.645 ; 14.645 ; 14.645 ;
-; OutMode[1] ; SignalOut[2]  ; 14.922 ; 14.922 ; 14.922 ; 14.922 ;
-; OutMode[1] ; SignalOut[3]  ; 14.255 ; 14.255 ; 14.255 ; 14.255 ;
-; OutMode[1] ; SignalOut[4]  ; 14.925 ; 14.925 ; 14.925 ; 14.925 ;
-; OutMode[1] ; SignalOut[5]  ; 14.231 ; 14.231 ; 14.231 ; 14.231 ;
-; OutMode[1] ; SignalOut[6]  ; 14.514 ; 14.514 ; 14.514 ; 14.514 ;
-; OutMode[1] ; SignalOut[7]  ; 14.974 ; 14.974 ; 14.974 ; 14.974 ;
-; OutMode[1] ; SignalOut[8]  ; 14.919 ; 14.919 ; 14.919 ; 14.919 ;
-; OutMode[1] ; SignalOut[9]  ; 14.934 ; 14.934 ; 14.934 ; 14.934 ;
-; OutMode[1] ; SignalOut[10] ; 14.536 ; 14.536 ; 14.536 ; 14.536 ;
-; OutMode[1] ; SignalOut[11] ; 14.649 ; 14.649 ; 14.649 ; 14.649 ;
-; OutMode[1] ; SignalOut[12] ; 14.650 ; 14.650 ; 14.650 ; 14.650 ;
-; OutMode[1] ; SignalOut[13] ; 14.821 ; 14.821 ; 14.821 ; 14.821 ;
-; OutMode[1] ; SignalOut[14] ; 14.209 ; 14.209 ; 14.209 ; 14.209 ;
-; OutMode[1] ; SignalOut[15] ; 14.530 ; 14.530 ; 14.530 ; 14.530 ;
+; OutMode[0] ; SignalOut[0]  ; 14.339 ; 15.533 ; 15.533 ; 14.339 ;
+; OutMode[0] ; SignalOut[1]  ; 13.929 ; 15.903 ; 15.903 ; 13.929 ;
+; OutMode[0] ; SignalOut[2]  ; 14.589 ; 16.278 ; 16.278 ; 14.589 ;
+; OutMode[0] ; SignalOut[3]  ; 14.761 ; 16.331 ; 16.331 ; 14.761 ;
+; OutMode[0] ; SignalOut[4]  ; 14.117 ; 16.218 ; 16.218 ; 14.117 ;
+; OutMode[0] ; SignalOut[5]  ; 13.991 ; 16.088 ; 16.088 ; 13.991 ;
+; OutMode[0] ; SignalOut[6]  ; 14.708 ; 14.289 ; 14.289 ; 14.708 ;
+; OutMode[0] ; SignalOut[7]  ; 14.781 ; 16.288 ; 16.288 ; 14.781 ;
+; OutMode[0] ; SignalOut[8]  ; 15.126 ; 16.329 ; 16.329 ; 15.126 ;
+; OutMode[0] ; SignalOut[9]  ; 13.542 ; 15.640 ; 15.640 ; 13.542 ;
+; OutMode[0] ; SignalOut[10] ; 14.589 ; 16.038 ; 16.038 ; 14.589 ;
+; OutMode[0] ; SignalOut[11] ; 14.098 ; 15.543 ; 15.543 ; 14.098 ;
+; OutMode[0] ; SignalOut[12] ; 13.876 ; 15.869 ; 15.869 ; 13.876 ;
+; OutMode[0] ; SignalOut[13] ; 13.994 ; 15.123 ; 15.123 ; 13.994 ;
+; OutMode[0] ; SignalOut[14] ; 14.331 ; 15.516 ; 15.516 ; 14.331 ;
+; OutMode[0] ; SignalOut[15] ; 14.777 ; 16.284 ; 16.284 ; 14.777 ;
+; OutMode[1] ; SignalOut[0]  ; 15.943 ; 15.943 ; 15.943 ; 15.943 ;
+; OutMode[1] ; SignalOut[1]  ; 16.313 ; 16.313 ; 16.313 ; 16.313 ;
+; OutMode[1] ; SignalOut[2]  ; 16.688 ; 16.688 ; 16.688 ; 16.688 ;
+; OutMode[1] ; SignalOut[3]  ; 16.741 ; 16.741 ; 16.741 ; 16.741 ;
+; OutMode[1] ; SignalOut[4]  ; 16.628 ; 16.628 ; 16.628 ; 16.628 ;
+; OutMode[1] ; SignalOut[5]  ; 16.498 ; 16.498 ; 16.498 ; 16.498 ;
+; OutMode[1] ; SignalOut[6]  ; 15.165 ; 15.165 ; 15.165 ; 15.165 ;
+; OutMode[1] ; SignalOut[7]  ; 16.698 ; 16.698 ; 16.698 ; 16.698 ;
+; OutMode[1] ; SignalOut[8]  ; 16.739 ; 16.739 ; 16.739 ; 16.739 ;
+; OutMode[1] ; SignalOut[9]  ; 16.050 ; 16.050 ; 16.050 ; 16.050 ;
+; OutMode[1] ; SignalOut[10] ; 16.448 ; 16.448 ; 16.448 ; 16.448 ;
+; OutMode[1] ; SignalOut[11] ; 15.953 ; 15.953 ; 15.953 ; 15.953 ;
+; OutMode[1] ; SignalOut[12] ; 16.279 ; 16.279 ; 16.279 ; 16.279 ;
+; OutMode[1] ; SignalOut[13] ; 15.533 ; 15.533 ; 15.533 ; 15.533 ;
+; OutMode[1] ; SignalOut[14] ; 15.926 ; 15.926 ; 15.926 ; 15.926 ;
+; OutMode[1] ; SignalOut[15] ; 16.694 ; 16.694 ; 16.694 ; 16.694 ;
 +------------+---------------+--------+--------+--------+--------+
 
 
@@ -189,38 +189,38 @@ No paths to report.
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; OutMode[0] ; SignalOut[0]  ; 14.215 ; 14.265 ; 14.265 ; 14.215 ;
-; OutMode[0] ; SignalOut[1]  ; 14.484 ; 14.252 ; 14.252 ; 14.484 ;
-; OutMode[0] ; SignalOut[2]  ; 14.047 ; 14.656 ; 14.656 ; 14.047 ;
-; OutMode[0] ; SignalOut[3]  ; 14.068 ; 13.611 ; 13.611 ; 14.068 ;
-; OutMode[0] ; SignalOut[4]  ; 13.910 ; 14.659 ; 14.659 ; 13.910 ;
-; OutMode[0] ; SignalOut[5]  ; 14.044 ; 13.579 ; 13.579 ; 14.044 ;
-; OutMode[0] ; SignalOut[6]  ; 14.024 ; 13.564 ; 13.564 ; 14.024 ;
-; OutMode[0] ; SignalOut[7]  ; 13.949 ; 14.708 ; 14.708 ; 13.949 ;
-; OutMode[0] ; SignalOut[8]  ; 14.067 ; 14.653 ; 14.653 ; 14.067 ;
-; OutMode[0] ; SignalOut[9]  ; 14.393 ; 14.668 ; 14.668 ; 14.393 ;
-; OutMode[0] ; SignalOut[10] ; 13.525 ; 14.270 ; 14.270 ; 13.525 ;
-; OutMode[0] ; SignalOut[11] ; 14.335 ; 14.383 ; 14.383 ; 14.335 ;
-; OutMode[0] ; SignalOut[12] ; 14.432 ; 14.384 ; 14.384 ; 14.432 ;
-; OutMode[0] ; SignalOut[13] ; 14.117 ; 14.555 ; 14.555 ; 14.117 ;
-; OutMode[0] ; SignalOut[14] ; 14.021 ; 13.553 ; 13.553 ; 14.021 ;
-; OutMode[0] ; SignalOut[15] ; 13.512 ; 14.264 ; 14.264 ; 13.512 ;
-; OutMode[1] ; SignalOut[0]  ; 14.531 ; 14.531 ; 14.531 ; 14.531 ;
-; OutMode[1] ; SignalOut[1]  ; 14.518 ; 14.518 ; 14.518 ; 14.518 ;
-; OutMode[1] ; SignalOut[2]  ; 14.234 ; 14.234 ; 14.234 ; 14.234 ;
-; OutMode[1] ; SignalOut[3]  ; 13.877 ; 13.877 ; 13.877 ; 13.877 ;
-; OutMode[1] ; SignalOut[4]  ; 13.680 ; 13.680 ; 13.680 ; 13.680 ;
-; OutMode[1] ; SignalOut[5]  ; 13.845 ; 13.845 ; 13.845 ; 13.845 ;
-; OutMode[1] ; SignalOut[6]  ; 13.830 ; 13.830 ; 13.830 ; 13.830 ;
-; OutMode[1] ; SignalOut[7]  ; 13.717 ; 13.717 ; 13.717 ; 13.717 ;
-; OutMode[1] ; SignalOut[8]  ; 14.405 ; 14.405 ; 14.405 ; 14.405 ;
-; OutMode[1] ; SignalOut[9]  ; 14.162 ; 14.162 ; 14.162 ; 14.162 ;
-; OutMode[1] ; SignalOut[10] ; 13.295 ; 13.295 ; 13.295 ; 13.295 ;
-; OutMode[1] ; SignalOut[11] ; 14.230 ; 14.230 ; 14.230 ; 14.230 ;
-; OutMode[1] ; SignalOut[12] ; 14.619 ; 14.619 ; 14.619 ; 14.619 ;
-; OutMode[1] ; SignalOut[13] ; 14.304 ; 14.304 ; 14.304 ; 14.304 ;
-; OutMode[1] ; SignalOut[14] ; 13.819 ; 13.819 ; 13.819 ; 13.819 ;
-; OutMode[1] ; SignalOut[15] ; 13.286 ; 13.286 ; 13.286 ; 13.286 ;
+; OutMode[0] ; SignalOut[0]  ; 14.339 ; 15.533 ; 15.533 ; 14.339 ;
+; OutMode[0] ; SignalOut[1]  ; 13.929 ; 15.903 ; 15.903 ; 13.929 ;
+; OutMode[0] ; SignalOut[2]  ; 14.589 ; 16.278 ; 16.278 ; 14.589 ;
+; OutMode[0] ; SignalOut[3]  ; 14.761 ; 16.331 ; 16.331 ; 14.761 ;
+; OutMode[0] ; SignalOut[4]  ; 14.117 ; 16.218 ; 16.218 ; 14.117 ;
+; OutMode[0] ; SignalOut[5]  ; 13.991 ; 16.088 ; 16.088 ; 13.991 ;
+; OutMode[0] ; SignalOut[6]  ; 14.708 ; 14.289 ; 14.289 ; 14.708 ;
+; OutMode[0] ; SignalOut[7]  ; 14.781 ; 16.288 ; 16.288 ; 14.781 ;
+; OutMode[0] ; SignalOut[8]  ; 15.126 ; 16.329 ; 16.329 ; 15.126 ;
+; OutMode[0] ; SignalOut[9]  ; 13.542 ; 15.640 ; 15.640 ; 13.542 ;
+; OutMode[0] ; SignalOut[10] ; 14.589 ; 16.038 ; 16.038 ; 14.589 ;
+; OutMode[0] ; SignalOut[11] ; 14.098 ; 15.543 ; 15.543 ; 14.098 ;
+; OutMode[0] ; SignalOut[12] ; 13.876 ; 15.869 ; 15.869 ; 13.876 ;
+; OutMode[0] ; SignalOut[13] ; 13.994 ; 15.123 ; 15.123 ; 13.994 ;
+; OutMode[0] ; SignalOut[14] ; 14.331 ; 15.516 ; 15.516 ; 14.331 ;
+; OutMode[0] ; SignalOut[15] ; 14.777 ; 16.284 ; 16.284 ; 14.777 ;
+; OutMode[1] ; SignalOut[0]  ; 14.135 ; 14.135 ; 14.135 ; 14.135 ;
+; OutMode[1] ; SignalOut[1]  ; 14.320 ; 14.320 ; 14.320 ; 14.320 ;
+; OutMode[1] ; SignalOut[2]  ; 14.245 ; 14.245 ; 14.245 ; 14.245 ;
+; OutMode[1] ; SignalOut[3]  ; 15.193 ; 15.193 ; 15.193 ; 15.193 ;
+; OutMode[1] ; SignalOut[4]  ; 13.910 ; 13.910 ; 13.910 ; 13.910 ;
+; OutMode[1] ; SignalOut[5]  ; 13.787 ; 13.787 ; 13.787 ; 13.787 ;
+; OutMode[1] ; SignalOut[6]  ; 14.699 ; 14.699 ; 14.699 ; 14.699 ;
+; OutMode[1] ; SignalOut[7]  ; 15.225 ; 15.225 ; 15.225 ; 15.225 ;
+; OutMode[1] ; SignalOut[8]  ; 14.793 ; 14.793 ; 14.793 ; 14.793 ;
+; OutMode[1] ; SignalOut[9]  ; 13.334 ; 13.334 ; 13.334 ; 13.334 ;
+; OutMode[1] ; SignalOut[10] ; 14.953 ; 14.953 ; 14.953 ; 14.953 ;
+; OutMode[1] ; SignalOut[11] ; 14.497 ; 14.497 ; 14.497 ; 14.497 ;
+; OutMode[1] ; SignalOut[12] ; 14.316 ; 14.316 ; 14.316 ; 14.316 ;
+; OutMode[1] ; SignalOut[13] ; 13.791 ; 13.791 ; 13.791 ; 13.791 ;
+; OutMode[1] ; SignalOut[14] ; 14.123 ; 14.123 ; 14.123 ; 14.123 ;
+; OutMode[1] ; SignalOut[15] ; 15.183 ; 15.183 ; 15.183 ; 15.183 ;
 +------------+---------------+--------+--------+--------+--------+
 
 
@@ -271,38 +271,38 @@ No paths to report.
 +------------+---------------+-------+-------+-------+-------+
 ; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
 +------------+---------------+-------+-------+-------+-------+
-; OutMode[0] ; SignalOut[0]  ; 6.227 ; 6.272 ; 6.272 ; 6.227 ;
-; OutMode[0] ; SignalOut[1]  ; 6.354 ; 6.315 ; 6.315 ; 6.354 ;
-; OutMode[0] ; SignalOut[2]  ; 6.253 ; 6.434 ; 6.434 ; 6.253 ;
-; OutMode[0] ; SignalOut[3]  ; 6.239 ; 6.145 ; 6.145 ; 6.239 ;
-; OutMode[0] ; SignalOut[4]  ; 6.118 ; 6.390 ; 6.390 ; 6.118 ;
-; OutMode[0] ; SignalOut[5]  ; 6.235 ; 6.133 ; 6.133 ; 6.235 ;
-; OutMode[0] ; SignalOut[6]  ; 6.218 ; 6.119 ; 6.119 ; 6.218 ;
-; OutMode[0] ; SignalOut[7]  ; 6.148 ; 6.428 ; 6.428 ; 6.148 ;
-; OutMode[0] ; SignalOut[8]  ; 6.176 ; 6.397 ; 6.397 ; 6.176 ;
-; OutMode[0] ; SignalOut[9]  ; 6.254 ; 6.402 ; 6.402 ; 6.254 ;
-; OutMode[0] ; SignalOut[10] ; 6.011 ; 6.282 ; 6.282 ; 6.011 ;
-; OutMode[0] ; SignalOut[11] ; 6.282 ; 6.373 ; 6.373 ; 6.282 ;
-; OutMode[0] ; SignalOut[12] ; 6.344 ; 6.378 ; 6.378 ; 6.344 ;
-; OutMode[0] ; SignalOut[13] ; 6.178 ; 6.341 ; 6.341 ; 6.178 ;
-; OutMode[0] ; SignalOut[14] ; 6.214 ; 6.109 ; 6.109 ; 6.214 ;
-; OutMode[0] ; SignalOut[15] ; 6.002 ; 6.273 ; 6.273 ; 6.002 ;
-; OutMode[1] ; SignalOut[0]  ; 6.402 ; 6.402 ; 6.402 ; 6.402 ;
-; OutMode[1] ; SignalOut[1]  ; 6.449 ; 6.449 ; 6.449 ; 6.449 ;
-; OutMode[1] ; SignalOut[2]  ; 6.534 ; 6.534 ; 6.534 ; 6.534 ;
-; OutMode[1] ; SignalOut[3]  ; 6.333 ; 6.333 ; 6.333 ; 6.333 ;
-; OutMode[1] ; SignalOut[4]  ; 6.490 ; 6.490 ; 6.490 ; 6.490 ;
-; OutMode[1] ; SignalOut[5]  ; 6.330 ; 6.330 ; 6.330 ; 6.330 ;
-; OutMode[1] ; SignalOut[6]  ; 6.393 ; 6.393 ; 6.393 ; 6.393 ;
-; OutMode[1] ; SignalOut[7]  ; 6.528 ; 6.528 ; 6.528 ; 6.528 ;
-; OutMode[1] ; SignalOut[8]  ; 6.497 ; 6.497 ; 6.497 ; 6.497 ;
-; OutMode[1] ; SignalOut[9]  ; 6.502 ; 6.502 ; 6.502 ; 6.502 ;
-; OutMode[1] ; SignalOut[10] ; 6.382 ; 6.382 ; 6.382 ; 6.382 ;
-; OutMode[1] ; SignalOut[11] ; 6.473 ; 6.473 ; 6.473 ; 6.473 ;
-; OutMode[1] ; SignalOut[12] ; 6.478 ; 6.478 ; 6.478 ; 6.478 ;
-; OutMode[1] ; SignalOut[13] ; 6.441 ; 6.441 ; 6.441 ; 6.441 ;
-; OutMode[1] ; SignalOut[14] ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
-; OutMode[1] ; SignalOut[15] ; 6.373 ; 6.373 ; 6.373 ; 6.373 ;
+; OutMode[0] ; SignalOut[0]  ; 6.252 ; 6.654 ; 6.654 ; 6.252 ;
+; OutMode[0] ; SignalOut[1]  ; 6.149 ; 6.780 ; 6.780 ; 6.149 ;
+; OutMode[0] ; SignalOut[2]  ; 6.314 ; 6.896 ; 6.896 ; 6.314 ;
+; OutMode[0] ; SignalOut[3]  ; 6.405 ; 6.929 ; 6.929 ; 6.405 ;
+; OutMode[0] ; SignalOut[4]  ; 6.295 ; 6.946 ; 6.946 ; 6.295 ;
+; OutMode[0] ; SignalOut[5]  ; 6.198 ; 6.843 ; 6.843 ; 6.198 ;
+; OutMode[0] ; SignalOut[6]  ; 6.448 ; 6.305 ; 6.305 ; 6.448 ;
+; OutMode[0] ; SignalOut[7]  ; 6.388 ; 6.903 ; 6.903 ; 6.388 ;
+; OutMode[0] ; SignalOut[8]  ; 6.474 ; 6.927 ; 6.927 ; 6.474 ;
+; OutMode[0] ; SignalOut[9]  ; 6.022 ; 6.672 ; 6.672 ; 6.022 ;
+; OutMode[0] ; SignalOut[10] ; 6.434 ; 6.897 ; 6.897 ; 6.434 ;
+; OutMode[0] ; SignalOut[11] ; 6.205 ; 6.664 ; 6.664 ; 6.205 ;
+; OutMode[0] ; SignalOut[12] ; 6.117 ; 6.761 ; 6.761 ; 6.117 ;
+; OutMode[0] ; SignalOut[13] ; 6.138 ; 6.522 ; 6.522 ; 6.138 ;
+; OutMode[0] ; SignalOut[14] ; 6.245 ; 6.641 ; 6.641 ; 6.245 ;
+; OutMode[0] ; SignalOut[15] ; 6.389 ; 6.903 ; 6.903 ; 6.389 ;
+; OutMode[1] ; SignalOut[0]  ; 6.819 ; 6.819 ; 6.819 ; 6.819 ;
+; OutMode[1] ; SignalOut[1]  ; 6.945 ; 6.945 ; 6.945 ; 6.945 ;
+; OutMode[1] ; SignalOut[2]  ; 7.061 ; 7.061 ; 7.061 ; 7.061 ;
+; OutMode[1] ; SignalOut[3]  ; 7.094 ; 7.094 ; 7.094 ; 7.094 ;
+; OutMode[1] ; SignalOut[4]  ; 7.111 ; 7.111 ; 7.111 ; 7.111 ;
+; OutMode[1] ; SignalOut[5]  ; 7.008 ; 7.008 ; 7.008 ; 7.008 ;
+; OutMode[1] ; SignalOut[6]  ; 6.584 ; 6.584 ; 6.584 ; 6.584 ;
+; OutMode[1] ; SignalOut[7]  ; 7.068 ; 7.068 ; 7.068 ; 7.068 ;
+; OutMode[1] ; SignalOut[8]  ; 7.092 ; 7.092 ; 7.092 ; 7.092 ;
+; OutMode[1] ; SignalOut[9]  ; 6.837 ; 6.837 ; 6.837 ; 6.837 ;
+; OutMode[1] ; SignalOut[10] ; 7.062 ; 7.062 ; 7.062 ; 7.062 ;
+; OutMode[1] ; SignalOut[11] ; 6.829 ; 6.829 ; 6.829 ; 6.829 ;
+; OutMode[1] ; SignalOut[12] ; 6.926 ; 6.926 ; 6.926 ; 6.926 ;
+; OutMode[1] ; SignalOut[13] ; 6.687 ; 6.687 ; 6.687 ; 6.687 ;
+; OutMode[1] ; SignalOut[14] ; 6.806 ; 6.806 ; 6.806 ; 6.806 ;
+; OutMode[1] ; SignalOut[15] ; 7.068 ; 7.068 ; 7.068 ; 7.068 ;
 +------------+---------------+-------+-------+-------+-------+
 
 
@@ -311,38 +311,38 @@ No paths to report.
 +------------+---------------+-------+-------+-------+-------+
 ; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
 +------------+---------------+-------+-------+-------+-------+
-; OutMode[0] ; SignalOut[0]  ; 6.227 ; 6.272 ; 6.272 ; 6.227 ;
-; OutMode[0] ; SignalOut[1]  ; 6.354 ; 6.315 ; 6.315 ; 6.354 ;
-; OutMode[0] ; SignalOut[2]  ; 6.253 ; 6.434 ; 6.434 ; 6.253 ;
-; OutMode[0] ; SignalOut[3]  ; 6.239 ; 6.145 ; 6.145 ; 6.239 ;
-; OutMode[0] ; SignalOut[4]  ; 6.118 ; 6.390 ; 6.390 ; 6.118 ;
-; OutMode[0] ; SignalOut[5]  ; 6.235 ; 6.133 ; 6.133 ; 6.235 ;
-; OutMode[0] ; SignalOut[6]  ; 6.218 ; 6.119 ; 6.119 ; 6.218 ;
-; OutMode[0] ; SignalOut[7]  ; 6.148 ; 6.428 ; 6.428 ; 6.148 ;
-; OutMode[0] ; SignalOut[8]  ; 6.176 ; 6.397 ; 6.397 ; 6.176 ;
-; OutMode[0] ; SignalOut[9]  ; 6.254 ; 6.402 ; 6.402 ; 6.254 ;
-; OutMode[0] ; SignalOut[10] ; 6.011 ; 6.282 ; 6.282 ; 6.011 ;
-; OutMode[0] ; SignalOut[11] ; 6.282 ; 6.373 ; 6.373 ; 6.282 ;
-; OutMode[0] ; SignalOut[12] ; 6.344 ; 6.378 ; 6.378 ; 6.344 ;
-; OutMode[0] ; SignalOut[13] ; 6.178 ; 6.341 ; 6.341 ; 6.178 ;
-; OutMode[0] ; SignalOut[14] ; 6.214 ; 6.109 ; 6.109 ; 6.214 ;
-; OutMode[0] ; SignalOut[15] ; 6.002 ; 6.273 ; 6.273 ; 6.002 ;
-; OutMode[1] ; SignalOut[0]  ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
-; OutMode[1] ; SignalOut[1]  ; 6.415 ; 6.415 ; 6.415 ; 6.415 ;
-; OutMode[1] ; SignalOut[2]  ; 6.348 ; 6.348 ; 6.348 ; 6.348 ;
-; OutMode[1] ; SignalOut[3]  ; 6.245 ; 6.245 ; 6.245 ; 6.245 ;
-; OutMode[1] ; SignalOut[4]  ; 6.089 ; 6.089 ; 6.089 ; 6.089 ;
-; OutMode[1] ; SignalOut[5]  ; 6.233 ; 6.233 ; 6.233 ; 6.233 ;
-; OutMode[1] ; SignalOut[6]  ; 6.219 ; 6.219 ; 6.219 ; 6.219 ;
-; OutMode[1] ; SignalOut[7]  ; 6.119 ; 6.119 ; 6.119 ; 6.119 ;
-; OutMode[1] ; SignalOut[8]  ; 6.289 ; 6.289 ; 6.289 ; 6.289 ;
-; OutMode[1] ; SignalOut[9]  ; 6.225 ; 6.225 ; 6.225 ; 6.225 ;
-; OutMode[1] ; SignalOut[10] ; 5.981 ; 5.981 ; 5.981 ; 5.981 ;
-; OutMode[1] ; SignalOut[11] ; 6.303 ; 6.303 ; 6.303 ; 6.303 ;
-; OutMode[1] ; SignalOut[12] ; 6.439 ; 6.439 ; 6.439 ; 6.439 ;
-; OutMode[1] ; SignalOut[13] ; 6.273 ; 6.273 ; 6.273 ; 6.273 ;
-; OutMode[1] ; SignalOut[14] ; 6.209 ; 6.209 ; 6.209 ; 6.209 ;
-; OutMode[1] ; SignalOut[15] ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; OutMode[0] ; SignalOut[0]  ; 6.252 ; 6.654 ; 6.654 ; 6.252 ;
+; OutMode[0] ; SignalOut[1]  ; 6.149 ; 6.780 ; 6.780 ; 6.149 ;
+; OutMode[0] ; SignalOut[2]  ; 6.314 ; 6.896 ; 6.896 ; 6.314 ;
+; OutMode[0] ; SignalOut[3]  ; 6.405 ; 6.929 ; 6.929 ; 6.405 ;
+; OutMode[0] ; SignalOut[4]  ; 6.295 ; 6.946 ; 6.946 ; 6.295 ;
+; OutMode[0] ; SignalOut[5]  ; 6.198 ; 6.843 ; 6.843 ; 6.198 ;
+; OutMode[0] ; SignalOut[6]  ; 6.448 ; 6.305 ; 6.305 ; 6.448 ;
+; OutMode[0] ; SignalOut[7]  ; 6.388 ; 6.903 ; 6.903 ; 6.388 ;
+; OutMode[0] ; SignalOut[8]  ; 6.474 ; 6.927 ; 6.927 ; 6.474 ;
+; OutMode[0] ; SignalOut[9]  ; 6.022 ; 6.672 ; 6.672 ; 6.022 ;
+; OutMode[0] ; SignalOut[10] ; 6.434 ; 6.897 ; 6.897 ; 6.434 ;
+; OutMode[0] ; SignalOut[11] ; 6.205 ; 6.664 ; 6.664 ; 6.205 ;
+; OutMode[0] ; SignalOut[12] ; 6.117 ; 6.761 ; 6.761 ; 6.117 ;
+; OutMode[0] ; SignalOut[13] ; 6.138 ; 6.522 ; 6.522 ; 6.138 ;
+; OutMode[0] ; SignalOut[14] ; 6.245 ; 6.641 ; 6.641 ; 6.245 ;
+; OutMode[0] ; SignalOut[15] ; 6.389 ; 6.903 ; 6.903 ; 6.389 ;
+; OutMode[1] ; SignalOut[0]  ; 6.239 ; 6.239 ; 6.239 ; 6.239 ;
+; OutMode[1] ; SignalOut[1]  ; 6.285 ; 6.285 ; 6.285 ; 6.285 ;
+; OutMode[1] ; SignalOut[2]  ; 6.269 ; 6.269 ; 6.269 ; 6.269 ;
+; OutMode[1] ; SignalOut[3]  ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
+; OutMode[1] ; SignalOut[4]  ; 6.282 ; 6.282 ; 6.282 ; 6.282 ;
+; OutMode[1] ; SignalOut[5]  ; 6.184 ; 6.184 ; 6.184 ; 6.184 ;
+; OutMode[1] ; SignalOut[6]  ; 6.470 ; 6.470 ; 6.470 ; 6.470 ;
+; OutMode[1] ; SignalOut[7]  ; 6.544 ; 6.544 ; 6.544 ; 6.544 ;
+; OutMode[1] ; SignalOut[8]  ; 6.443 ; 6.443 ; 6.443 ; 6.443 ;
+; OutMode[1] ; SignalOut[9]  ; 6.008 ; 6.008 ; 6.008 ; 6.008 ;
+; OutMode[1] ; SignalOut[10] ; 6.564 ; 6.564 ; 6.564 ; 6.564 ;
+; OutMode[1] ; SignalOut[11] ; 6.333 ; 6.333 ; 6.333 ; 6.333 ;
+; OutMode[1] ; SignalOut[12] ; 6.268 ; 6.268 ; 6.268 ; 6.268 ;
+; OutMode[1] ; SignalOut[13] ; 6.126 ; 6.126 ; 6.126 ; 6.126 ;
+; OutMode[1] ; SignalOut[14] ; 6.232 ; 6.232 ; 6.232 ; 6.232 ;
+; OutMode[1] ; SignalOut[15] ; 6.542 ; 6.542 ; 6.542 ; 6.542 ;
 +------------+---------------+-------+-------+-------+-------+
 
 
@@ -363,38 +363,38 @@ No paths to report.
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; OutMode[0] ; SignalOut[0]  ; 14.215 ; 14.265 ; 14.265 ; 14.215 ;
-; OutMode[0] ; SignalOut[1]  ; 14.484 ; 14.252 ; 14.252 ; 14.484 ;
-; OutMode[0] ; SignalOut[2]  ; 14.047 ; 14.656 ; 14.656 ; 14.047 ;
-; OutMode[0] ; SignalOut[3]  ; 14.068 ; 13.611 ; 13.611 ; 14.068 ;
-; OutMode[0] ; SignalOut[4]  ; 13.910 ; 14.659 ; 14.659 ; 13.910 ;
-; OutMode[0] ; SignalOut[5]  ; 14.044 ; 13.579 ; 13.579 ; 14.044 ;
-; OutMode[0] ; SignalOut[6]  ; 14.024 ; 13.564 ; 13.564 ; 14.024 ;
-; OutMode[0] ; SignalOut[7]  ; 13.949 ; 14.708 ; 14.708 ; 13.949 ;
-; OutMode[0] ; SignalOut[8]  ; 14.067 ; 14.653 ; 14.653 ; 14.067 ;
-; OutMode[0] ; SignalOut[9]  ; 14.393 ; 14.668 ; 14.668 ; 14.393 ;
-; OutMode[0] ; SignalOut[10] ; 13.525 ; 14.270 ; 14.270 ; 13.525 ;
-; OutMode[0] ; SignalOut[11] ; 14.335 ; 14.383 ; 14.383 ; 14.335 ;
-; OutMode[0] ; SignalOut[12] ; 14.432 ; 14.384 ; 14.384 ; 14.432 ;
-; OutMode[0] ; SignalOut[13] ; 14.117 ; 14.555 ; 14.555 ; 14.117 ;
-; OutMode[0] ; SignalOut[14] ; 14.021 ; 13.553 ; 13.553 ; 14.021 ;
-; OutMode[0] ; SignalOut[15] ; 13.512 ; 14.264 ; 14.264 ; 13.512 ;
-; OutMode[1] ; SignalOut[0]  ; 14.677 ; 14.677 ; 14.677 ; 14.677 ;
-; OutMode[1] ; SignalOut[1]  ; 14.645 ; 14.645 ; 14.645 ; 14.645 ;
-; OutMode[1] ; SignalOut[2]  ; 14.922 ; 14.922 ; 14.922 ; 14.922 ;
-; OutMode[1] ; SignalOut[3]  ; 14.255 ; 14.255 ; 14.255 ; 14.255 ;
-; OutMode[1] ; SignalOut[4]  ; 14.925 ; 14.925 ; 14.925 ; 14.925 ;
-; OutMode[1] ; SignalOut[5]  ; 14.231 ; 14.231 ; 14.231 ; 14.231 ;
-; OutMode[1] ; SignalOut[6]  ; 14.514 ; 14.514 ; 14.514 ; 14.514 ;
-; OutMode[1] ; SignalOut[7]  ; 14.974 ; 14.974 ; 14.974 ; 14.974 ;
-; OutMode[1] ; SignalOut[8]  ; 14.919 ; 14.919 ; 14.919 ; 14.919 ;
-; OutMode[1] ; SignalOut[9]  ; 14.934 ; 14.934 ; 14.934 ; 14.934 ;
-; OutMode[1] ; SignalOut[10] ; 14.536 ; 14.536 ; 14.536 ; 14.536 ;
-; OutMode[1] ; SignalOut[11] ; 14.649 ; 14.649 ; 14.649 ; 14.649 ;
-; OutMode[1] ; SignalOut[12] ; 14.650 ; 14.650 ; 14.650 ; 14.650 ;
-; OutMode[1] ; SignalOut[13] ; 14.821 ; 14.821 ; 14.821 ; 14.821 ;
-; OutMode[1] ; SignalOut[14] ; 14.209 ; 14.209 ; 14.209 ; 14.209 ;
-; OutMode[1] ; SignalOut[15] ; 14.530 ; 14.530 ; 14.530 ; 14.530 ;
+; OutMode[0] ; SignalOut[0]  ; 14.339 ; 15.533 ; 15.533 ; 14.339 ;
+; OutMode[0] ; SignalOut[1]  ; 13.929 ; 15.903 ; 15.903 ; 13.929 ;
+; OutMode[0] ; SignalOut[2]  ; 14.589 ; 16.278 ; 16.278 ; 14.589 ;
+; OutMode[0] ; SignalOut[3]  ; 14.761 ; 16.331 ; 16.331 ; 14.761 ;
+; OutMode[0] ; SignalOut[4]  ; 14.117 ; 16.218 ; 16.218 ; 14.117 ;
+; OutMode[0] ; SignalOut[5]  ; 13.991 ; 16.088 ; 16.088 ; 13.991 ;
+; OutMode[0] ; SignalOut[6]  ; 14.708 ; 14.289 ; 14.289 ; 14.708 ;
+; OutMode[0] ; SignalOut[7]  ; 14.781 ; 16.288 ; 16.288 ; 14.781 ;
+; OutMode[0] ; SignalOut[8]  ; 15.126 ; 16.329 ; 16.329 ; 15.126 ;
+; OutMode[0] ; SignalOut[9]  ; 13.542 ; 15.640 ; 15.640 ; 13.542 ;
+; OutMode[0] ; SignalOut[10] ; 14.589 ; 16.038 ; 16.038 ; 14.589 ;
+; OutMode[0] ; SignalOut[11] ; 14.098 ; 15.543 ; 15.543 ; 14.098 ;
+; OutMode[0] ; SignalOut[12] ; 13.876 ; 15.869 ; 15.869 ; 13.876 ;
+; OutMode[0] ; SignalOut[13] ; 13.994 ; 15.123 ; 15.123 ; 13.994 ;
+; OutMode[0] ; SignalOut[14] ; 14.331 ; 15.516 ; 15.516 ; 14.331 ;
+; OutMode[0] ; SignalOut[15] ; 14.777 ; 16.284 ; 16.284 ; 14.777 ;
+; OutMode[1] ; SignalOut[0]  ; 15.943 ; 15.943 ; 15.943 ; 15.943 ;
+; OutMode[1] ; SignalOut[1]  ; 16.313 ; 16.313 ; 16.313 ; 16.313 ;
+; OutMode[1] ; SignalOut[2]  ; 16.688 ; 16.688 ; 16.688 ; 16.688 ;
+; OutMode[1] ; SignalOut[3]  ; 16.741 ; 16.741 ; 16.741 ; 16.741 ;
+; OutMode[1] ; SignalOut[4]  ; 16.628 ; 16.628 ; 16.628 ; 16.628 ;
+; OutMode[1] ; SignalOut[5]  ; 16.498 ; 16.498 ; 16.498 ; 16.498 ;
+; OutMode[1] ; SignalOut[6]  ; 15.165 ; 15.165 ; 15.165 ; 15.165 ;
+; OutMode[1] ; SignalOut[7]  ; 16.698 ; 16.698 ; 16.698 ; 16.698 ;
+; OutMode[1] ; SignalOut[8]  ; 16.739 ; 16.739 ; 16.739 ; 16.739 ;
+; OutMode[1] ; SignalOut[9]  ; 16.050 ; 16.050 ; 16.050 ; 16.050 ;
+; OutMode[1] ; SignalOut[10] ; 16.448 ; 16.448 ; 16.448 ; 16.448 ;
+; OutMode[1] ; SignalOut[11] ; 15.953 ; 15.953 ; 15.953 ; 15.953 ;
+; OutMode[1] ; SignalOut[12] ; 16.279 ; 16.279 ; 16.279 ; 16.279 ;
+; OutMode[1] ; SignalOut[13] ; 15.533 ; 15.533 ; 15.533 ; 15.533 ;
+; OutMode[1] ; SignalOut[14] ; 15.926 ; 15.926 ; 15.926 ; 15.926 ;
+; OutMode[1] ; SignalOut[15] ; 16.694 ; 16.694 ; 16.694 ; 16.694 ;
 +------------+---------------+--------+--------+--------+--------+
 
 
@@ -403,38 +403,38 @@ No paths to report.
 +------------+---------------+-------+-------+-------+-------+
 ; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
 +------------+---------------+-------+-------+-------+-------+
-; OutMode[0] ; SignalOut[0]  ; 6.227 ; 6.272 ; 6.272 ; 6.227 ;
-; OutMode[0] ; SignalOut[1]  ; 6.354 ; 6.315 ; 6.315 ; 6.354 ;
-; OutMode[0] ; SignalOut[2]  ; 6.253 ; 6.434 ; 6.434 ; 6.253 ;
-; OutMode[0] ; SignalOut[3]  ; 6.239 ; 6.145 ; 6.145 ; 6.239 ;
-; OutMode[0] ; SignalOut[4]  ; 6.118 ; 6.390 ; 6.390 ; 6.118 ;
-; OutMode[0] ; SignalOut[5]  ; 6.235 ; 6.133 ; 6.133 ; 6.235 ;
-; OutMode[0] ; SignalOut[6]  ; 6.218 ; 6.119 ; 6.119 ; 6.218 ;
-; OutMode[0] ; SignalOut[7]  ; 6.148 ; 6.428 ; 6.428 ; 6.148 ;
-; OutMode[0] ; SignalOut[8]  ; 6.176 ; 6.397 ; 6.397 ; 6.176 ;
-; OutMode[0] ; SignalOut[9]  ; 6.254 ; 6.402 ; 6.402 ; 6.254 ;
-; OutMode[0] ; SignalOut[10] ; 6.011 ; 6.282 ; 6.282 ; 6.011 ;
-; OutMode[0] ; SignalOut[11] ; 6.282 ; 6.373 ; 6.373 ; 6.282 ;
-; OutMode[0] ; SignalOut[12] ; 6.344 ; 6.378 ; 6.378 ; 6.344 ;
-; OutMode[0] ; SignalOut[13] ; 6.178 ; 6.341 ; 6.341 ; 6.178 ;
-; OutMode[0] ; SignalOut[14] ; 6.214 ; 6.109 ; 6.109 ; 6.214 ;
-; OutMode[0] ; SignalOut[15] ; 6.002 ; 6.273 ; 6.273 ; 6.002 ;
-; OutMode[1] ; SignalOut[0]  ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
-; OutMode[1] ; SignalOut[1]  ; 6.415 ; 6.415 ; 6.415 ; 6.415 ;
-; OutMode[1] ; SignalOut[2]  ; 6.348 ; 6.348 ; 6.348 ; 6.348 ;
-; OutMode[1] ; SignalOut[3]  ; 6.245 ; 6.245 ; 6.245 ; 6.245 ;
-; OutMode[1] ; SignalOut[4]  ; 6.089 ; 6.089 ; 6.089 ; 6.089 ;
-; OutMode[1] ; SignalOut[5]  ; 6.233 ; 6.233 ; 6.233 ; 6.233 ;
-; OutMode[1] ; SignalOut[6]  ; 6.219 ; 6.219 ; 6.219 ; 6.219 ;
-; OutMode[1] ; SignalOut[7]  ; 6.119 ; 6.119 ; 6.119 ; 6.119 ;
-; OutMode[1] ; SignalOut[8]  ; 6.289 ; 6.289 ; 6.289 ; 6.289 ;
-; OutMode[1] ; SignalOut[9]  ; 6.225 ; 6.225 ; 6.225 ; 6.225 ;
-; OutMode[1] ; SignalOut[10] ; 5.981 ; 5.981 ; 5.981 ; 5.981 ;
-; OutMode[1] ; SignalOut[11] ; 6.303 ; 6.303 ; 6.303 ; 6.303 ;
-; OutMode[1] ; SignalOut[12] ; 6.439 ; 6.439 ; 6.439 ; 6.439 ;
-; OutMode[1] ; SignalOut[13] ; 6.273 ; 6.273 ; 6.273 ; 6.273 ;
-; OutMode[1] ; SignalOut[14] ; 6.209 ; 6.209 ; 6.209 ; 6.209 ;
-; OutMode[1] ; SignalOut[15] ; 5.972 ; 5.972 ; 5.972 ; 5.972 ;
+; OutMode[0] ; SignalOut[0]  ; 6.252 ; 6.654 ; 6.654 ; 6.252 ;
+; OutMode[0] ; SignalOut[1]  ; 6.149 ; 6.780 ; 6.780 ; 6.149 ;
+; OutMode[0] ; SignalOut[2]  ; 6.314 ; 6.896 ; 6.896 ; 6.314 ;
+; OutMode[0] ; SignalOut[3]  ; 6.405 ; 6.929 ; 6.929 ; 6.405 ;
+; OutMode[0] ; SignalOut[4]  ; 6.295 ; 6.946 ; 6.946 ; 6.295 ;
+; OutMode[0] ; SignalOut[5]  ; 6.198 ; 6.843 ; 6.843 ; 6.198 ;
+; OutMode[0] ; SignalOut[6]  ; 6.448 ; 6.305 ; 6.305 ; 6.448 ;
+; OutMode[0] ; SignalOut[7]  ; 6.388 ; 6.903 ; 6.903 ; 6.388 ;
+; OutMode[0] ; SignalOut[8]  ; 6.474 ; 6.927 ; 6.927 ; 6.474 ;
+; OutMode[0] ; SignalOut[9]  ; 6.022 ; 6.672 ; 6.672 ; 6.022 ;
+; OutMode[0] ; SignalOut[10] ; 6.434 ; 6.897 ; 6.897 ; 6.434 ;
+; OutMode[0] ; SignalOut[11] ; 6.205 ; 6.664 ; 6.664 ; 6.205 ;
+; OutMode[0] ; SignalOut[12] ; 6.117 ; 6.761 ; 6.761 ; 6.117 ;
+; OutMode[0] ; SignalOut[13] ; 6.138 ; 6.522 ; 6.522 ; 6.138 ;
+; OutMode[0] ; SignalOut[14] ; 6.245 ; 6.641 ; 6.641 ; 6.245 ;
+; OutMode[0] ; SignalOut[15] ; 6.389 ; 6.903 ; 6.903 ; 6.389 ;
+; OutMode[1] ; SignalOut[0]  ; 6.239 ; 6.239 ; 6.239 ; 6.239 ;
+; OutMode[1] ; SignalOut[1]  ; 6.285 ; 6.285 ; 6.285 ; 6.285 ;
+; OutMode[1] ; SignalOut[2]  ; 6.269 ; 6.269 ; 6.269 ; 6.269 ;
+; OutMode[1] ; SignalOut[3]  ; 6.546 ; 6.546 ; 6.546 ; 6.546 ;
+; OutMode[1] ; SignalOut[4]  ; 6.282 ; 6.282 ; 6.282 ; 6.282 ;
+; OutMode[1] ; SignalOut[5]  ; 6.184 ; 6.184 ; 6.184 ; 6.184 ;
+; OutMode[1] ; SignalOut[6]  ; 6.470 ; 6.470 ; 6.470 ; 6.470 ;
+; OutMode[1] ; SignalOut[7]  ; 6.544 ; 6.544 ; 6.544 ; 6.544 ;
+; OutMode[1] ; SignalOut[8]  ; 6.443 ; 6.443 ; 6.443 ; 6.443 ;
+; OutMode[1] ; SignalOut[9]  ; 6.008 ; 6.008 ; 6.008 ; 6.008 ;
+; OutMode[1] ; SignalOut[10] ; 6.564 ; 6.564 ; 6.564 ; 6.564 ;
+; OutMode[1] ; SignalOut[11] ; 6.333 ; 6.333 ; 6.333 ; 6.333 ;
+; OutMode[1] ; SignalOut[12] ; 6.268 ; 6.268 ; 6.268 ; 6.268 ;
+; OutMode[1] ; SignalOut[13] ; 6.126 ; 6.126 ; 6.126 ; 6.126 ;
+; OutMode[1] ; SignalOut[14] ; 6.232 ; 6.232 ; 6.232 ; 6.232 ;
+; OutMode[1] ; SignalOut[15] ; 6.542 ; 6.542 ; 6.542 ; 6.542 ;
 +------------+---------------+-------+-------+-------+-------+
 
 
@@ -464,9 +464,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 4     ; 4    ;
 ; Unconstrained Input Ports       ; 8     ; 8    ;
-; Unconstrained Input Port Paths  ; 184   ; 184  ;
-; Unconstrained Output Ports      ; 16    ; 16   ;
-; Unconstrained Output Port Paths ; 96    ; 96   ;
+; Unconstrained Input Port Paths  ; 236   ; 236  ;
+; Unconstrained Output Ports      ; 48    ; 48   ;
+; Unconstrained Output Port Paths ; 128   ; 128  ;
 +---------------------------------+-------+------+
 
 
@@ -476,13 +476,13 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 27 21:51:52 2019
+    Info: Processing started: Fri Jun 28 11:26:08 2019
 Info: Command: quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): TimeQuest Timing Analyzer is analyzing 99 combinational loops as latches.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 69 combinational loops as latches.
 Info (332164): Evaluating HDL-embedded SDC commands
     Info (332165): Entity sld_jtag_hub
         Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
@@ -521,9 +521,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4594 megabytes
-    Info: Processing ended: Thu Jun 27 21:51:54 2019
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4600 megabytes
+    Info: Processing ended: Fri Jun 28 11:26:09 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

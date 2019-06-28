@@ -9,7 +9,7 @@ module ClockGenerator(  input Switchadd,
 
 initial
 begin
-    Step=32'd171798; //频率控制字初始化2M
+    Step=32'd171798691; //频率控制字初始化2M
 end
 
 always@(	negedge SwitchMicroadd or negedge SwitchMicrosub or
@@ -18,7 +18,7 @@ always@(	negedge SwitchMicroadd or negedge SwitchMicrosub or
 begin
  if (reset==0) 
         begin
-            Step<=32'd171798;//复位
+            Step<=32'd171798691;//复位
         end   
 
 /**********粗调节************/

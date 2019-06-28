@@ -23,7 +23,11 @@ end
 
 always@(*)
 begin
-
+	
+	if(reset==0)
+	begin
+		PWMDuty=32'd2147483648;//复位50%
+	end
 
     if(FreqPhaseSelect==1)//频率调节
     begin
@@ -61,7 +65,7 @@ begin
         if (UpDownSelect==1) 
         begin
             casez(PushButton)
-                3'b?10:begin PWMDuty=PWMDuty+32'd429496729; end
+                3'b?10:begin PWMDuty=PWMDuty+32'd1073741824; end
                 3'b?01:begin Phaseadd=0; end
                 default:
                 begin
@@ -79,7 +83,7 @@ begin
         else 
         begin
             casez(PushButton)
-                3'b?10:begin PWMDuty=PWMDuty-32'd429496729; end
+                3'b?10:begin PWMDuty=PWMDuty-32'd1073741824; end
                 3'b?01:begin Phasesub=0; end
                 default:
                 begin
