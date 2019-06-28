@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Fri Jun 28 18:54:14 2019
+Sat Jun 29 01:05:02 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -13,22 +13,23 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis IP Cores Summary
   7. Partition Status Summary
-  8. Partition for Top-Level Resource Utilization by Entity
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated
- 13. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_h181:auto_generated
- 14. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
- 15. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
- 16. Partition Dependent Files
- 17. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 18. Port Connectivity Checks: "PWMWave:P2"
- 19. Port Connectivity Checks: "TriangularWave:T1|TriangularROM:ROM1"
- 20. SignalTap II Logic Analyzer Settings
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+  8. Dependent File Changes for Partition Top
+  9. Partition for Top-Level Resource Utilization by Entity
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated
+ 14. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_h181:auto_generated
+ 15. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
+ 17. Partition Dependent Files
+ 18. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 19. Port Connectivity Checks: "PWMWave:P2"
+ 20. Port Connectivity Checks: "TriangularWave:T1|TriangularROM:ROM1"
+ 21. SignalTap II Logic Analyzer Settings
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,7 +55,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 28 18:54:14 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 29 01:05:02 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
@@ -164,12 +165,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.15        ;
+; Average used               ; 1.38        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  15.4%      ;
+;     Processor 2            ;  37.5%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -202,7 +203,7 @@ applicable agreement for further details.
 ; db/altsyncram_th71.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_th71.tdf                                 ;         ;
 ; sinetable.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/sinetable.mif                                          ;         ;
 ; db/altsyncram_h181.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/m1899/Desktop/DDSProject/db/altsyncram_h181.tdf                                 ;         ;
-; TriangularTable.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/TriangularTable.mif                                    ;         ;
+; triangulartable.mif              ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/m1899/Desktop/DDSProject/triangulartable.mif                                    ;         ;
 ; sld_signaltap.vhd                ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_signaltap.vhd            ;         ;
 ; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd       ;         ;
 ; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction                 ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/sld_ela_control.vhd          ;         ;
@@ -266,17 +267,26 @@ applicable agreement for further details.
 +--------------------------------+-------------+-------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------+
+; Dependent File Changes for Partition Top                                                                                   ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+; Hierarchy ; File Name ; Relative Location ; Change   ; Old                              ; New                              ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+; Button:B1 ; Button.v  ; Project Directory ; Checksum ; 151a355a29383da38d5afea83e42cc5a ; d2e6a1b61822aabb5155cd8a2bb50f8d ;
++-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                             ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |top                                         ; 973 (0)           ; 141 (0)      ; 66560       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top                                                                                                     ; work         ;
-;    |Button:B1|                               ; 370 (31)          ; 75 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1                                                                                           ; work         ;
+; |top                                         ; 999 (0)           ; 141 (0)      ; 66560       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top                                                                                                     ; work         ;
+;    |Button:B1|                               ; 377 (38)          ; 75 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1                                                                                           ; work         ;
 ;       |debounce:PushButton0|                 ; 113 (113)         ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1|debounce:PushButton0                                                                      ; work         ;
 ;       |debounce:PushButton1|                 ; 113 (113)         ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1|debounce:PushButton1                                                                      ; work         ;
 ;       |debounce:PushButton2|                 ; 113 (113)         ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1|debounce:PushButton2                                                                      ; work         ;
-;    |ClockGenerator:C1|                       ; 489 (489)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ; work         ;
+;    |ClockGenerator:C1|                       ; 508 (508)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ; work         ;
 ;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ; work         ;
 ;    |PWMWave:P1|                              ; 76 (76)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ; work         ;
 ;    |PWMWave:P2|                              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                          ; work         ;
@@ -330,14 +340,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; ClockGenerator:C1|Step[29]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[30]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
 ; ClockGenerator:C1|Step[31]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; Button:B1|PWMDuty[31]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[30]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|Switchadd                                 ; Button:B1|Switchadd            ; yes                    ;
+; Button:B1|PWMDuty[31]                               ; Button:B1|WideOr9              ; yes                    ;
+; Button:B1|PWMDuty[30]                               ; Button:B1|WideOr9              ; yes                    ;
 ; Button:B1|SwitchMicrosub                            ; Button:B1|SwitchMicrosub       ; yes                    ;
 ; Button:B1|SwitchMicroadd                            ; Button:B1|SwitchMicroadd       ; yes                    ;
 ; Button:B1|Switchsub                                 ; Button:B1|Switchsub            ; yes                    ;
 ; Button:B1|SwitchNanoadd                             ; Button:B1|SwitchNanoadd        ; yes                    ;
 ; Button:B1|SwitchNanosub                             ; Button:B1|SwitchNanosub        ; yes                    ;
+; Button:B1|Switchadd                                 ; Button:B1|Switchadd            ; yes                    ;
 ; phase:phaseControler|phase[30]                      ; phase:phaseControler|phase[31] ; yes                    ;
 ; phase:phaseControler|phase[31]                      ; phase:phaseControler|phase[31] ; yes                    ;
 ; Button:B1|Phasesub                                  ; Button:B1|Phasesub             ; yes                    ;
@@ -509,15 +519,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton0|cnt[22] ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton1|cnt[6]  ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton2|cnt[8]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton0|cnt[2]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton1|cnt[4]  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton2|cnt[2]  ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux15             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|Button:B1|PWMDuty[31]                  ;
-; 13:1               ; 32 bits   ; 256 LEs       ; 224 LEs              ; 32 LEs                 ; No         ; |top|ClockGenerator:C1|Step[28]             ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton2|cnt[12] ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton1|cnt[16] ;
+; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton0|cnt[6]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton2|cnt[4]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton1|cnt[2]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton0|cnt[4]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux1              ;
+; 12:1               ; 32 bits   ; 256 LEs       ; 224 LEs              ; 32 LEs                 ; No         ; |top|ClockGenerator:C1|Step[13]             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
@@ -675,20 +684,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; libraries/megafunctions/lpm_decode.inc        ; Quartus II Install ; work    ; 10da69a8bbd590d66779e7a142f73790 ;
 ; libraries/megafunctions/lpm_mux.inc           ; Quartus II Install ; work    ; dd87bed90959d6126db09970164b7ba6 ;
 ; libraries/megafunctions/stratix_ram_block.inc ; Quartus II Install ; work    ; e3a03868917f0b3dd57b6ed1dd195f22 ;
-; Button.v                                      ; Project Directory  ; work    ; e11fed26278810b6f686efc7ad2feca2 ;
-; ClockGenerator.v                              ; Project Directory  ; work    ; 70f6b2c3f5c8cb5d5217d0dd995d1c24 ;
+; Button.v                                      ; Project Directory  ; work    ; d2e6a1b61822aabb5155cd8a2bb50f8d ;
+; ClockGenerator.v                              ; Project Directory  ; work    ; d5d57e9c9db09770009c92bc5bc1e867 ;
 ; ControlPanel.v                                ; Project Directory  ; work    ; b77715331ddb527c433eb5031bd1bc23 ;
 ; db/altsyncram_h181.tdf                        ; Project Directory  ; work    ; b4ce2a0cafeac6fea79a0073b622e5b8 ;
 ; db/altsyncram_th71.tdf                        ; Project Directory  ; work    ; f439e92a321e26546025b1d590ccaac1 ;
 ; debounce.v                                    ; Project Directory  ; work    ; 0e0e5325ca67e4a66e161c4288bd81ce ;
-; phase.v                                       ; Project Directory  ; work    ; f3c09769a904780dec617aa68f27e105 ;
+; phase.v                                       ; Project Directory  ; work    ; 09a3f299536e751d9cf04d3ce8cd632f ;
 ; PWMWave.v                                     ; Project Directory  ; work    ; b3885989d124e2ad1dce640691bc3d84 ;
 ; sinetable.mif                                 ; Project Directory  ; work    ; 279962eeab1b4aa7ca2f764c4eb16326 ;
 ; SinROM.v                                      ; Project Directory  ; work    ; 3707bf811f83d64491b760e05cdbb71e ;
 ; SinWave.v                                     ; Project Directory  ; work    ; 97c1421936946d5d6072cfe29d0e10aa ;
 ; top.v                                         ; Project Directory  ; work    ; 8116fdefbf27b2351389e9dbffdd4e4a ;
 ; TriangularROM.v                               ; Project Directory  ; work    ; 5a9b1bae245521a1a690d907ebfc70cd ;
-; TriangularTable.mif                           ; Project Directory  ; work    ; 62de3d3ea96820ba11d2a0f14d8bd5d5 ;
+; triangulartable.mif                           ; Project Directory  ; work    ; 62de3d3ea96820ba11d2a0f14d8bd5d5 ;
 ; TriangularWave.v                              ; Project Directory  ; work    ; 4a80595828ce651346450c55f9b7bfe9 ;
 +-----------------------------------------------+--------------------+---------+----------------------------------+
 
@@ -786,8 +795,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------------+--------------+
 ; Partition Name   ; Elapsed Time ;
 +------------------+--------------+
-; Top              ; 00:00:03     ;
-; sld_hub:auto_hub ; 00:00:02     ;
+; Top              ; 00:00:05     ;
+; sld_hub:auto_hub ; 00:00:05     ;
 +------------------+--------------+
 
 
@@ -797,7 +806,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri Jun 28 18:54:00 2019
+    Info: Processing started: Sat Jun 29 01:04:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file debounce.v
@@ -826,54 +835,54 @@ Info (12021): Found 0 design units, including 0 entities, in source file display
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "Button" for hierarchy "Button:B1"
 Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "PWMDuty", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "SwitchNanoadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "SwitchNanosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "Phaseadd", which holds its previous value in one or more paths through the always construct
 Warning (10240): Verilog HDL Always Construct warning at Button.v(34): inferring latch(es) for variable "Phasesub", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Phasesub" at Button.v(72)
-Info (10041): Inferred latch for "Phaseadd" at Button.v(72)
-Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(72)
-Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(72)
-Info (10041): Inferred latch for "SwitchNanosub" at Button.v(72)
-Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(72)
-Info (10041): Inferred latch for "Switchsub" at Button.v(72)
-Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(72)
-Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(72)
-Info (10041): Inferred latch for "Switchadd" at Button.v(72)
-Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(34)
-Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(34)
+Info (10041): Inferred latch for "Phasesub" at Button.v(40)
+Info (10041): Inferred latch for "Phaseadd" at Button.v(40)
+Info (10041): Inferred latch for "Switchsub" at Button.v(40)
+Info (10041): Inferred latch for "Switchadd" at Button.v(40)
+Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(40)
+Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(40)
+Info (10041): Inferred latch for "SwitchNanosub" at Button.v(40)
+Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(40)
+Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(40)
 Info (12128): Elaborating entity "debounce" for hierarchy "Button:B1|debounce:PushButton0"
 Info (12128): Elaborating entity "ClockGenerator" for hierarchy "ClockGenerator:C1"
 Warning (10240): Verilog HDL Always Construct warning at ClockGenerator.v(15): inferring latch(es) for variable "Step", which holds its previous value in one or more paths through the always construct
@@ -985,7 +994,6 @@ Info (12133): Instantiated megafunction "TriangularWave:T1|TriangularROM:ROM1|al
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_h181.tdf
     Info (12023): Found entity 1: altsyncram_h181
 Info (12128): Elaborating entity "altsyncram_h181" for hierarchy "TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_h181:auto_generated"
-Critical Warning (127004): Memory depth (64) in the design file differs from memory depth (2048) in the Memory Initialization File "C:/Users/m1899/Desktop/DDSProject/TriangularTable.mif" -- truncated remaining initial content value to fit RAM
 Info (12128): Elaborating entity "PWMWave" for hierarchy "PWMWave:P1"
 Info (12128): Elaborating entity "ControlPanel" for hierarchy "ControlPanel:Control"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_up14.tdf
@@ -1019,7 +1027,7 @@ Info (281037): Using 4 processors to synthesize 2 partitions in parallel
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri Jun 28 18:54:10 2019
+    Info: Processing started: Sat Jun 29 01:04:56 2019
 Info: Command: quartus_map --parallel=1 --helper=0 --partition=Top DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (281020): Starting Logic Optimization and Technology Mapping for Top Partition
 Warning (13012): Latch ClockGenerator:C1|Step[0] has unsafe behavior
@@ -1088,10 +1096,6 @@ Warning (13012): Latch ClockGenerator:C1|Step[31] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
 Warning (13012): Latch Button:B1|PWMDuty[31] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|PWMDuty[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal reset
-Warning (13012): Latch Button:B1|Switchadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch Button:B1|SwitchMicrosub has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch Button:B1|SwitchMicroadd has unsafe behavior
@@ -1102,50 +1106,52 @@ Warning (13012): Latch Button:B1|SwitchNanoadd has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch Button:B1|SwitchNanosub has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
+Warning (13012): Latch Button:B1|Switchadd has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch phase:phaseControler|phase[31] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|Phasesub
 Warning (13012): Latch Button:B1|Phasesub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal UpDownSelect
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Warning (13012): Latch Button:B1|Phaseadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal UpDownSelect
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Info (21057): Implemented 1062 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1088 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 48 output pins
-    Info (21061): Implemented 973 logic cells
+    Info (21061): Implemented 999 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 86 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 84 warnings
     Info: Peak virtual memory: 4593 megabytes
-    Info: Processing ended: Fri Jun 28 18:54:13 2019
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Sat Jun 29 01:05:01 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:06
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Fri Jun 28 18:54:10 2019
+    Info: Processing started: Sat Jun 29 01:04:56 2019
 Info: Command: quartus_map --parallel=1 --helper=2 --partition=sld_hub:auto_hub DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (281019): Starting Logic Optimization and Technology Mapping for Partition sld_hub:auto_hub
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (21057): Implemented 203 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 200 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 37 output pins
-    Info (21061): Implemented 147 logic cells
+    Info (21061): Implemented 144 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4593 megabytes
-    Info: Processing ended: Fri Jun 28 18:54:12 2019
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Sat Jun 29 01:04:57 2019
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:03
 Info (281038): Finished parallel synthesis of all partitions
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 101 warnings
-    Info: Peak virtual memory: 4687 megabytes
-    Info: Processing ended: Fri Jun 28 18:54:14 2019
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 4669 megabytes
+    Info: Processing ended: Sat Jun 29 01:05:02 2019
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+

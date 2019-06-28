@@ -16,11 +16,12 @@ always@(	negedge SwitchMicroadd or negedge SwitchMicrosub or
 					negedge SwitchNanoadd or negedge SwitchNanosub or
 					negedge Switchadd or negedge Switchsub or negedge reset)
 begin
- if (reset==0) 
-        begin
-            Step<=32'd171798691;//复位
-        end   
-
+if (reset==0) 
+    begin
+        Step<=32'd171798691;//复位
+    end   
+else
+begin
 /**********粗调节************/
     if (Switchadd==0) 
     begin
@@ -73,6 +74,6 @@ begin
         if(Step<=32'd858993) //限制最低频率
             Step<=32'd858993;
     end
-	 
+end	 
 end
 endmodule
