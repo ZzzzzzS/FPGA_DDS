@@ -8,6 +8,7 @@ entity top is
         reset           : in     vl_logic;
         FreqPhaseSelect : in     vl_logic;
         UpDownSelect    : in     vl_logic;
-        PushButton      : in     vl_logic_vector(2 downto 0)
+        PushButton      : in     vl_logic_vector(2 downto 0);
+        Step            : out    vl_logic_vector(31 downto 0)
     );
 end top;

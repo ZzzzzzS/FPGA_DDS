@@ -38,6 +38,7 @@ reg clk;
 reg reset;
 // wires                                               
 wire [15:0]  SignalOut;
+wire [31:0]Step;
 
 // assign statements (if any)                          
 top i1 (
@@ -48,23 +49,25 @@ top i1 (
 	.SignalOut(SignalOut),
 	.UpDownSelect(UpDownSelect),
 	.clk(clk),
-	.reset(reset)
+	.reset(reset),
+	.Step(Step)
 );
 initial                                                
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
 FreqPhaseSelect=0;
-OutMode=2'b10;
+OutMode=2'b01;
 PushButton=3'b111;
-UpDownSelect=1;
+UpDownSelect=0;
 clk=1;
 reset=1; 
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
 
-always #1 begin clk=~clk; PushButton[0]=~PushButton[0];end
-                                                  
+always #1 begin clk=~clk; end
+
+always #1000 begin PushButton[1]=~PushButton[1]; end                                          
 endmodule
 
