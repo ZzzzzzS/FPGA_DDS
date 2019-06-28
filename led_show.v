@@ -1,13 +1,13 @@
-module led_show(clk,rst_n,data,output [7:0] led_numseg);
+module led_show(clk,rst_n,data,led_numseg,led_select);
 
 input clk;			
 input rst_n;
-input [27:0]data;
-
-reg [3:0] value;
+input [27:0]data;//输入数据
+output reg [7:0] led_select;
+output [7:0] led_numseg;
+reg [3:0] value;//位码
   
-reg [23:0] counter;
-reg [7:0] led_select;  
+reg [23:0] counter;//动态扫描计数
 //module led_decoder(clk,rst_n,value,led_numseg);
 
 led_decoder D1(.clk(clk),.rst_n(rst_n),.value(value),.led_numseg(led_numseg));
@@ -22,26 +22,25 @@ always@(posedge clk)
 always@(counter[17:15])
 	case(counter[17:15])
 		3'b000 : 
-			led_select = 8'b00001000;           
+			led_select = 8'b00000001;           
 		3'b001 : 
-			led_select = 8'b00000100;           
+			led_select = 8'b00000010;           
 		3'b010 : 
-			led_select = 8'b00000010;
+			led_select = 8'b00000100;
 		3'b011 : 
-			led_select = 8'b00000001;
+			led_select = 8'b00001000;
 		3'b100 : 
-			led_select = 8'b10000000;
+			led_select = 8'b00010000;
 		3'b101 :
-		    led_select = 8'b01000000;    
+		    led_select = 8'b00100000;    
 		3'b110 : 
-			led_select = 8'b00100000;
+			led_select = 8'b01000000;
 		3'b111 :
-		    led_select = 8'b00010000;                 
+		    led_select = 8'b10000000;                 
 		default:;             
 	endcase
   
-reg [3:0] value;
-always@(counter[17:15] or second)
+always@(counter[17:15])
 	case(counter[17:15])
 		3'b000 : 
 			value = data%10;
@@ -52,7 +51,7 @@ always@(counter[17:15] or second)
 		3'b011 : 
 			value = (data/1000)%10;
 	    3'b100 :
-	        value = (data/10000%10;
+	        value = (data/10000)%10;
 	    3'b101 :
 	        value = (data/100000)%10;
 	    3'b110 :
