@@ -61,5 +61,4 @@ always@(counter[17:15])
 		default:;
 	endcase
 
-
 endmodule
