@@ -1,17 +1,27 @@
 module top(	input clk,
 			output [15:0]SignalOut,
 			input  [1:0]OutMode,
-			input  reset,			
+			input  reset,
 			input  FreqPhaseSelect,
 			input  UpDownSelect,
 			input  [2:0]PushButton,
-			output wire [31:0]Step);
+			output reg [7:0] led_select,
+			output [7:0] led_numseg,
+			output [2:0]LEDGroup);
+ 
 wire [15:0]SinWire,TriangularWire,PWMWire,RectangleWire;
-//wire [31:0]Step; 
+wire [31:0]Step; 
 wire [31:0]PWMDuty;
 wire [31:0]PhaseWire;
 wire SwitchMicroadd,SwitchMicrosub,SwitchNanoadd,SwitchNanosub,Switchadd,Switchsub;
 wire phaseadd,phasesub;
+
+//module led_show(clk,rst_n,data,led_numseg,led_select);
+led_show L1(	.clk(clk),
+				.rst_n(reset),
+				.data(Step[20:0]),
+				.led_numseg(led_numseg),
+				.led_select(led_select));
 /**********閸氬嫪閲滅€靛嫬鐡ㄩ崳銊╂懠閹**********/
 Button B1(	.FreqPhaseSelect(FreqPhaseSelect),  //=1闁瀚ㄦ０鎴犲芳閿闁瀚ㄩ惄闀愮秴
         	.UpDownSelect(UpDownSelect),     //=1娑撳﹤宕岄敍0娑撳妾
@@ -27,7 +37,8 @@ Button B1(	.FreqPhaseSelect(FreqPhaseSelect),  //=1闁瀚ㄦ０鎴犲芳�
         	.SwitchNanosub(SwitchNanosub),
         	.Phaseadd(phaseadd),
         	.Phasesub(phasesub),
-        	.PWMDuty(PWMDuty));
+        	.PWMDuty(PWMDuty),
+			.LEDGroup(LEDGroup));
 
 ClockGenerator C1(	.Switchadd(Switchadd),
 					.Switchsub(Switchsub),

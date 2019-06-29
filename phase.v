@@ -5,20 +5,20 @@ initial
 	phase=32'd0;//相位偏移初始化
 
 always@(negedge add or negedge sub or negedge reset)
-    begin
+begin
 	if (reset==0) 
     begin
         phase<=32'd0;//复位
     end
 	else
 	begin
-		if(add==0)
-			phase<=phase+32'd1073741824;//对应相位偏移程度，应该是1°=2^32/360
-
-		if(sub==0)
-			phase<=phase-32'd1073741824;
+		case({add,sub})
+			2'b01:begin phase<=phase+32'd1073741824; end//对应相位偏移程度，应该是1°=2^32/360
+			2'b10:begin phase<=phase-32'd1073741824; end
+			default: begin phase<=phase; end
+		endcase
 
 	end
-    end
+end
 
 endmodule

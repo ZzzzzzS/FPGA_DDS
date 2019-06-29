@@ -22,58 +22,17 @@ if (reset==0)
     end   
 else
 begin
-/**********粗调节************/
-    if (Switchadd==0) 
-    begin
-        Step<=Step+32'd858993;
-        if(Step>32'd171798691) //限制最高频率
-            Step<=32'd171798691;
-    end
-	 
-		
-    if (Switchsub==0) 
-	begin
-        Step<=Step-32'd858993;
-        if(Step<=32'd858993) //限制最低频率
-            Step<=32'd858993;
-    end
-	 
+    case({SwitchMicroadd,SwitchNanoadd,Switchadd,SwitchMicrosub,SwitchNanosub,Switchsub})
+        6'b011111:begin Step<=Step+32'd85899;  end
+        6'b101111:begin Step<=Step+32'd85;     end
+        6'b110111:begin Step<=Step+32'd858993; end
 
+        6'b111011:begin Step<=Step-32'd85899;  end
+        6'b111101:begin Step<=Step-32'd85;     end
+        6'b111110:begin Step<=Step-32'd858993; end
 
-/**********微调节************/
-    if (SwitchMicroadd==0) 
-    begin
-        Step<=Step+32'd85899;
-        if(Step>32'd171798691) //限制最高频率
-            Step<=32'd171798691;
-    end
-	 
-		
-    if (SwitchMicrosub==0)
-    begin
-        Step<=Step-32'd85899;
-        if(Step<=32'd858993) //限制最低频率
-            Step<=32'd858993;
-    end
-	
-
-
-/**********精调节************/
-    if (SwitchNanoadd==0) 
-    begin
-        Step<=Step+32'd85;
-        if(Step>32'd171798691) //限制最高频率
-            Step<=32'd171798691;
-    end
-	 
-
-
-    if (SwitchNanosub==0)
-	 begin
-        Step<=Step-32'd85;
-        if(Step<=32'd858993) //限制最低频率
-            Step<=32'd858993;
-    end
+        default:begin Step<=Step; end
+    endcase
 end	 
 end
 endmodule

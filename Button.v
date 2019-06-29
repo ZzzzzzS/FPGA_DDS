@@ -13,7 +13,8 @@ module Button(
         output reg SwitchNanosub,
         output reg Phaseadd,
         output reg Phasesub,
-        output reg [31:0]PWMDuty
+        output reg [31:0]PWMDuty,
+        output [2:0]LEDGroup
 );
 
 wire [2:0]PushButton;
@@ -21,11 +22,11 @@ debounce PushButton0(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[0]),.key_ou
 debounce PushButton1(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[1]),.key_out(PushButton[1]));
 debounce PushButton2(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[2]),.key_out(PushButton[2]));
 
-
+assign LEDGroup=PushButton;
 
 initial
 begin
-    PWMDuty=32'd2147483648;//暂定50%
+    PWMDuty=32'd816043786;//暂定19%
 end
 
 always@(*)
@@ -33,7 +34,7 @@ begin
 	
 if(reset==0)
 begin
-	PWMDuty=32'd2147483648;//复位50%
+	PWMDuty=32'd816043786;//复位19%
 end
 else
 begin
@@ -46,8 +47,8 @@ begin
         5'b01101:begin SwitchMicrosub=0; end
         5'b01011:begin Switchsub=0;      end
 
-        5'b10110:begin PWMDuty=PWMDuty+32'd1073741824; end //PWM增减
-        5'b00110:begin PWMDuty=PWMDuty-32'd1073741824; end
+        5'b10110:begin PWMDuty=PWMDuty+32'd816043786; end //PWM增减
+        5'b00110:begin PWMDuty=PWMDuty-32'd816043786; end
 
         5'b10101:begin Phaseadd=0; end //相位增减
         5'b00101:begin Phasesub=0; end
