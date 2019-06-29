@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for DirectDigitalSynthesizer
-Sat Jun 29 11:00:03 2019
+Sat Jun 29 15:45:27 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -144,44 +144,51 @@ No paths to report.
 +--------+--------------+----------------+-----------+---------------------+------------+---------------------+
 
 
-+----------------------------------------------------------------+
-; Propagation Delay                                              ;
-+------------+---------------+--------+--------+--------+--------+
-; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
-+------------+---------------+--------+--------+--------+--------+
-; OutMode[0] ; SignalOut[0]  ; 14.596 ; 14.424 ; 14.424 ; 14.596 ;
-; OutMode[0] ; SignalOut[1]  ; 14.314 ; 16.346 ; 16.346 ; 14.314 ;
-; OutMode[0] ; SignalOut[2]  ; 14.246 ; 16.285 ; 16.285 ; 14.246 ;
-; OutMode[0] ; SignalOut[3]  ; 14.235 ; 15.779 ; 15.779 ; 14.235 ;
-; OutMode[0] ; SignalOut[4]  ; 14.528 ; 15.741 ; 15.741 ; 14.528 ;
-; OutMode[0] ; SignalOut[5]  ; 14.262 ; 15.812 ; 15.812 ; 14.262 ;
-; OutMode[0] ; SignalOut[6]  ; 14.569 ; 16.173 ; 16.173 ; 14.569 ;
-; OutMode[0] ; SignalOut[7]  ; 14.358 ; 16.388 ; 16.388 ; 14.358 ;
-; OutMode[0] ; SignalOut[8]  ; 14.141 ; 14.397 ; 14.397 ; 14.141 ;
-; OutMode[0] ; SignalOut[9]  ; 14.925 ; 16.091 ; 16.091 ; 14.925 ;
-; OutMode[0] ; SignalOut[10] ; 14.566 ; 16.390 ; 16.390 ; 14.566 ;
-; OutMode[0] ; SignalOut[11] ; 14.776 ; 16.323 ; 16.323 ; 14.776 ;
-; OutMode[0] ; SignalOut[12] ; 14.605 ; 16.215 ; 16.215 ; 14.605 ;
-; OutMode[0] ; SignalOut[13] ; 14.578 ; 14.058 ; 14.058 ; 14.578 ;
-; OutMode[0] ; SignalOut[14] ; 15.219 ; 15.058 ; 15.058 ; 15.219 ;
-; OutMode[0] ; SignalOut[15] ; 14.318 ; 16.608 ; 16.608 ; 14.318 ;
-; OutMode[1] ; SignalOut[0]  ; 13.476 ; 13.476 ; 13.476 ; 13.476 ;
-; OutMode[1] ; SignalOut[1]  ; 15.310 ; 15.310 ; 15.310 ; 15.310 ;
-; OutMode[1] ; SignalOut[2]  ; 15.249 ; 15.249 ; 15.249 ; 15.249 ;
-; OutMode[1] ; SignalOut[3]  ; 14.743 ; 14.743 ; 14.743 ; 14.743 ;
-; OutMode[1] ; SignalOut[4]  ; 14.705 ; 14.705 ; 14.705 ; 14.705 ;
-; OutMode[1] ; SignalOut[5]  ; 14.776 ; 14.776 ; 14.776 ; 14.776 ;
-; OutMode[1] ; SignalOut[6]  ; 15.137 ; 15.137 ; 15.137 ; 15.137 ;
-; OutMode[1] ; SignalOut[7]  ; 15.352 ; 15.352 ; 15.352 ; 15.352 ;
-; OutMode[1] ; SignalOut[8]  ; 13.666 ; 13.666 ; 13.666 ; 13.666 ;
-; OutMode[1] ; SignalOut[9]  ; 15.055 ; 15.055 ; 15.055 ; 15.055 ;
-; OutMode[1] ; SignalOut[10] ; 15.354 ; 15.354 ; 15.354 ; 15.354 ;
-; OutMode[1] ; SignalOut[11] ; 15.287 ; 15.287 ; 15.287 ; 15.287 ;
-; OutMode[1] ; SignalOut[12] ; 15.179 ; 15.179 ; 15.179 ; 15.179 ;
-; OutMode[1] ; SignalOut[13] ; 13.464 ; 13.464 ; 13.464 ; 13.464 ;
-; OutMode[1] ; SignalOut[14] ; 14.118 ; 14.118 ; 14.118 ; 14.118 ;
-; OutMode[1] ; SignalOut[15] ; 15.572 ; 15.572 ; 15.572 ; 15.572 ;
-+------------+---------------+--------+--------+--------+--------+
++--------------------------------------------------------------------+
+; Propagation Delay                                                  ;
++------------+---------------+---------+---------+---------+---------+
+; Input Port ; Output Port   ; RR      ; RF      ; FR      ; FF      ;
++------------+---------------+---------+---------+---------+---------+
+; OutMode[0] ; SignalOut[0]  ; 13.840  ; 15.190  ; 15.190  ; 13.840  ;
+; OutMode[0] ; SignalOut[1]  ; 13.469  ; 15.566  ; 15.566  ; 13.469  ;
+; OutMode[0] ; SignalOut[2]  ; 13.644  ; 14.911  ; 14.911  ; 13.644  ;
+; OutMode[0] ; SignalOut[3]  ; 15.209  ; 17.298  ; 17.298  ; 15.209  ;
+; OutMode[0] ; SignalOut[4]  ; 14.790  ; 14.132  ; 14.132  ; 14.790  ;
+; OutMode[0] ; SignalOut[5]  ; 13.840  ; 15.116  ; 15.116  ; 13.840  ;
+; OutMode[0] ; SignalOut[6]  ; 13.916  ; 15.187  ; 15.187  ; 13.916  ;
+; OutMode[0] ; SignalOut[7]  ; 14.024  ; 13.960  ; 13.960  ; 14.024  ;
+; OutMode[0] ; SignalOut[8]  ; 13.883  ; 13.433  ; 13.433  ; 13.883  ;
+; OutMode[0] ; SignalOut[9]  ; 14.768  ; 14.695  ; 14.695  ; 14.768  ;
+; OutMode[0] ; SignalOut[10] ; 13.748  ; 14.910  ; 14.910  ; 13.748  ;
+; OutMode[0] ; SignalOut[11] ; 13.748  ; 15.235  ; 15.235  ; 13.748  ;
+; OutMode[0] ; SignalOut[12] ; 14.257  ; 15.536  ; 15.536  ; 14.257  ;
+; OutMode[0] ; SignalOut[13] ; 14.033  ; 13.971  ; 13.971  ; 14.033  ;
+; OutMode[0] ; SignalOut[14] ; 14.175  ; 14.114  ; 14.114  ; 14.175  ;
+; OutMode[0] ; SignalOut[15] ; 14.853  ; 14.787  ; 14.787  ; 14.853  ;
+; OutMode[1] ; SignalOut[0]  ; 15.125  ; 15.125  ; 15.125  ; 15.125  ;
+; OutMode[1] ; SignalOut[1]  ; 15.501  ; 15.501  ; 15.501  ; 15.501  ;
+; OutMode[1] ; SignalOut[2]  ; 14.846  ; 14.846  ; 14.846  ; 14.846  ;
+; OutMode[1] ; SignalOut[3]  ; 17.233  ; 17.233  ; 17.233  ; 17.233  ;
+; OutMode[1] ; SignalOut[4]  ; 14.067  ; 14.067  ; 14.067  ; 14.067  ;
+; OutMode[1] ; SignalOut[5]  ; 15.051  ; 15.051  ; 15.051  ; 15.051  ;
+; OutMode[1] ; SignalOut[6]  ; 15.122  ; 15.122  ; 15.122  ; 15.122  ;
+; OutMode[1] ; SignalOut[7]  ; 13.999  ; 13.999  ; 13.999  ; 13.999  ;
+; OutMode[1] ; SignalOut[8]  ; 13.863  ; 13.863  ; 13.863  ; 13.863  ;
+; OutMode[1] ; SignalOut[9]  ; 14.757  ; 14.757  ; 14.757  ; 14.757  ;
+; OutMode[1] ; SignalOut[10] ; 14.845  ; 14.845  ; 14.845  ; 14.845  ;
+; OutMode[1] ; SignalOut[11] ; 15.170  ; 15.170  ; 15.170  ; 15.170  ;
+; OutMode[1] ; SignalOut[12] ; 15.471  ; 15.471  ; 15.471  ; 15.471  ;
+; OutMode[1] ; SignalOut[13] ; 14.021  ; 14.021  ; 14.021  ; 14.021  ;
+; OutMode[1] ; SignalOut[14] ; 14.163  ; 14.163  ; 14.163  ; 14.163  ;
+; OutMode[1] ; SignalOut[15] ; 14.790  ; 14.790  ; 14.790  ; 14.790  ;
+; reset      ; led_numseg[1] ; 148.736 ; 148.736 ; 148.736 ; 148.736 ;
+; reset      ; led_numseg[2] ; 149.071 ; 149.071 ; 149.071 ; 149.071 ;
+; reset      ; led_numseg[3] ; 149.171 ; 149.171 ; 149.171 ; 149.171 ;
+; reset      ; led_numseg[4] ; 149.152 ; 149.152 ; 149.152 ; 149.152 ;
+; reset      ; led_numseg[5] ; 148.732 ; 148.732 ; 148.732 ; 148.732 ;
+; reset      ; led_numseg[6] ; 149.075 ; 149.075 ; 149.075 ; 149.075 ;
+; reset      ; led_numseg[7] ; 149.270 ; 149.270 ; 149.270 ; 149.270 ;
++------------+---------------+---------+---------+---------+---------+
 
 
 +----------------------------------------------------------------+
@@ -189,38 +196,45 @@ No paths to report.
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; OutMode[0] ; SignalOut[0]  ; 14.596 ; 14.424 ; 14.424 ; 14.596 ;
-; OutMode[0] ; SignalOut[1]  ; 14.314 ; 16.346 ; 16.346 ; 14.314 ;
-; OutMode[0] ; SignalOut[2]  ; 14.246 ; 16.285 ; 16.285 ; 14.246 ;
-; OutMode[0] ; SignalOut[3]  ; 14.235 ; 15.779 ; 15.779 ; 14.235 ;
-; OutMode[0] ; SignalOut[4]  ; 14.528 ; 15.741 ; 15.741 ; 14.528 ;
-; OutMode[0] ; SignalOut[5]  ; 14.262 ; 15.812 ; 15.812 ; 14.262 ;
-; OutMode[0] ; SignalOut[6]  ; 14.569 ; 16.173 ; 16.173 ; 14.569 ;
-; OutMode[0] ; SignalOut[7]  ; 14.358 ; 16.388 ; 16.388 ; 14.358 ;
-; OutMode[0] ; SignalOut[8]  ; 14.141 ; 14.397 ; 14.397 ; 14.141 ;
-; OutMode[0] ; SignalOut[9]  ; 14.925 ; 16.091 ; 16.091 ; 14.925 ;
-; OutMode[0] ; SignalOut[10] ; 14.566 ; 16.390 ; 16.390 ; 14.566 ;
-; OutMode[0] ; SignalOut[11] ; 14.776 ; 16.323 ; 16.323 ; 14.776 ;
-; OutMode[0] ; SignalOut[12] ; 14.605 ; 16.215 ; 16.215 ; 14.605 ;
-; OutMode[0] ; SignalOut[13] ; 14.578 ; 14.058 ; 14.058 ; 14.578 ;
-; OutMode[0] ; SignalOut[14] ; 15.219 ; 15.058 ; 15.058 ; 15.219 ;
-; OutMode[0] ; SignalOut[15] ; 14.318 ; 16.608 ; 16.608 ; 14.318 ;
-; OutMode[1] ; SignalOut[0]  ; 13.388 ; 13.388 ; 13.388 ; 13.388 ;
-; OutMode[1] ; SignalOut[1]  ; 14.119 ; 14.119 ; 14.119 ; 14.119 ;
-; OutMode[1] ; SignalOut[2]  ; 14.055 ; 14.055 ; 14.055 ; 14.055 ;
-; OutMode[1] ; SignalOut[3]  ; 14.043 ; 14.043 ; 14.043 ; 14.043 ;
-; OutMode[1] ; SignalOut[4]  ; 13.934 ; 13.934 ; 13.934 ; 13.934 ;
-; OutMode[1] ; SignalOut[5]  ; 14.069 ; 14.069 ; 14.069 ; 14.069 ;
-; OutMode[1] ; SignalOut[6]  ; 14.623 ; 14.623 ; 14.623 ; 14.623 ;
-; OutMode[1] ; SignalOut[7]  ; 14.166 ; 14.166 ; 14.166 ; 14.166 ;
-; OutMode[1] ; SignalOut[8]  ; 13.361 ; 13.361 ; 13.361 ; 13.361 ;
-; OutMode[1] ; SignalOut[9]  ; 14.334 ; 14.334 ; 14.334 ; 14.334 ;
-; OutMode[1] ; SignalOut[10] ; 13.979 ; 13.979 ; 13.979 ; 13.979 ;
-; OutMode[1] ; SignalOut[11] ; 14.582 ; 14.582 ; 14.582 ; 14.582 ;
-; OutMode[1] ; SignalOut[12] ; 14.410 ; 14.410 ; 14.410 ; 14.410 ;
-; OutMode[1] ; SignalOut[13] ; 13.022 ; 13.022 ; 13.022 ; 13.022 ;
-; OutMode[1] ; SignalOut[14] ; 14.022 ; 14.022 ; 14.022 ; 14.022 ;
-; OutMode[1] ; SignalOut[15] ; 14.074 ; 14.074 ; 14.074 ; 14.074 ;
+; OutMode[0] ; SignalOut[0]  ; 13.840 ; 15.190 ; 15.190 ; 13.840 ;
+; OutMode[0] ; SignalOut[1]  ; 13.469 ; 15.566 ; 15.566 ; 13.469 ;
+; OutMode[0] ; SignalOut[2]  ; 13.644 ; 14.911 ; 14.911 ; 13.644 ;
+; OutMode[0] ; SignalOut[3]  ; 15.209 ; 17.298 ; 17.298 ; 15.209 ;
+; OutMode[0] ; SignalOut[4]  ; 14.790 ; 14.132 ; 14.132 ; 14.790 ;
+; OutMode[0] ; SignalOut[5]  ; 13.840 ; 15.116 ; 15.116 ; 13.840 ;
+; OutMode[0] ; SignalOut[6]  ; 13.916 ; 15.187 ; 15.187 ; 13.916 ;
+; OutMode[0] ; SignalOut[7]  ; 14.024 ; 13.960 ; 13.960 ; 14.024 ;
+; OutMode[0] ; SignalOut[8]  ; 13.883 ; 13.433 ; 13.433 ; 13.883 ;
+; OutMode[0] ; SignalOut[9]  ; 14.768 ; 14.695 ; 14.695 ; 14.768 ;
+; OutMode[0] ; SignalOut[10] ; 13.748 ; 14.910 ; 14.910 ; 13.748 ;
+; OutMode[0] ; SignalOut[11] ; 13.748 ; 15.235 ; 15.235 ; 13.748 ;
+; OutMode[0] ; SignalOut[12] ; 14.257 ; 15.536 ; 15.536 ; 14.257 ;
+; OutMode[0] ; SignalOut[13] ; 14.033 ; 13.971 ; 13.971 ; 14.033 ;
+; OutMode[0] ; SignalOut[14] ; 14.175 ; 14.114 ; 14.114 ; 14.175 ;
+; OutMode[0] ; SignalOut[15] ; 14.853 ; 14.787 ; 14.787 ; 14.853 ;
+; OutMode[1] ; SignalOut[0]  ; 13.887 ; 13.887 ; 13.887 ; 13.887 ;
+; OutMode[1] ; SignalOut[1]  ; 13.283 ; 13.283 ; 13.283 ; 13.283 ;
+; OutMode[1] ; SignalOut[2]  ; 13.048 ; 13.048 ; 13.048 ; 13.048 ;
+; OutMode[1] ; SignalOut[3]  ; 15.020 ; 15.020 ; 15.020 ; 15.020 ;
+; OutMode[1] ; SignalOut[4]  ; 13.995 ; 13.995 ; 13.995 ; 13.995 ;
+; OutMode[1] ; SignalOut[5]  ; 13.237 ; 13.237 ; 13.237 ; 13.237 ;
+; OutMode[1] ; SignalOut[6]  ; 13.311 ; 13.311 ; 13.311 ; 13.311 ;
+; OutMode[1] ; SignalOut[7]  ; 13.895 ; 13.895 ; 13.895 ; 13.895 ;
+; OutMode[1] ; SignalOut[8]  ; 13.368 ; 13.368 ; 13.368 ; 13.368 ;
+; OutMode[1] ; SignalOut[9]  ; 14.630 ; 14.630 ; 14.630 ; 14.630 ;
+; OutMode[1] ; SignalOut[10] ; 13.150 ; 13.150 ; 13.150 ; 13.150 ;
+; OutMode[1] ; SignalOut[11] ; 13.858 ; 13.858 ; 13.858 ; 13.858 ;
+; OutMode[1] ; SignalOut[12] ; 13.658 ; 13.658 ; 13.658 ; 13.658 ;
+; OutMode[1] ; SignalOut[13] ; 13.906 ; 13.906 ; 13.906 ; 13.906 ;
+; OutMode[1] ; SignalOut[14] ; 14.049 ; 14.049 ; 14.049 ; 14.049 ;
+; OutMode[1] ; SignalOut[15] ; 14.722 ; 14.722 ; 14.722 ; 14.722 ;
+; reset      ; led_numseg[1] ; 26.662 ; 26.662 ; 26.662 ; 26.662 ;
+; reset      ; led_numseg[2] ; 26.984 ; 26.984 ; 26.984 ; 26.984 ;
+; reset      ; led_numseg[3] ; 27.096 ; 27.096 ; 27.096 ; 27.096 ;
+; reset      ; led_numseg[4] ; 27.082 ; 27.082 ; 27.082 ; 27.082 ;
+; reset      ; led_numseg[5] ; 26.652 ; 26.652 ; 26.652 ; 26.652 ;
+; reset      ; led_numseg[6] ; 27.006 ; 27.006 ; 27.006 ; 27.006 ;
+; reset      ; led_numseg[7] ; 27.185 ; 27.185 ; 27.185 ; 27.185 ;
 +------------+---------------+--------+--------+--------+--------+
 
 
@@ -266,84 +280,98 @@ No paths to report.
 +--------+--------------+----------------+-----------+---------------------+------------+---------------------+
 
 
-+------------------------------------------------------------+
-; Propagation Delay                                          ;
-+------------+---------------+-------+-------+-------+-------+
-; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
-+------------+---------------+-------+-------+-------+-------+
-; OutMode[0] ; SignalOut[0]  ; 6.455 ; 6.415 ; 6.415 ; 6.455 ;
-; OutMode[0] ; SignalOut[1]  ; 6.290 ; 6.976 ; 6.976 ; 6.290 ;
-; OutMode[0] ; SignalOut[2]  ; 6.250 ; 6.941 ; 6.941 ; 6.250 ;
-; OutMode[0] ; SignalOut[3]  ; 6.343 ; 6.894 ; 6.894 ; 6.343 ;
-; OutMode[0] ; SignalOut[4]  ; 6.415 ; 6.877 ; 6.877 ; 6.415 ;
-; OutMode[0] ; SignalOut[5]  ; 6.351 ; 6.903 ; 6.903 ; 6.351 ;
-; OutMode[0] ; SignalOut[6]  ; 6.449 ; 7.015 ; 7.015 ; 6.449 ;
-; OutMode[0] ; SignalOut[7]  ; 6.306 ; 6.990 ; 6.990 ; 6.306 ;
-; OutMode[0] ; SignalOut[8]  ; 6.312 ; 6.397 ; 6.397 ; 6.312 ;
-; OutMode[0] ; SignalOut[9]  ; 6.524 ; 6.977 ; 6.977 ; 6.524 ;
-; OutMode[0] ; SignalOut[10] ; 6.439 ; 7.049 ; 7.049 ; 6.439 ;
-; OutMode[0] ; SignalOut[11] ; 6.413 ; 6.969 ; 6.969 ; 6.413 ;
-; OutMode[0] ; SignalOut[12] ; 6.474 ; 7.039 ; 7.039 ; 6.474 ;
-; OutMode[0] ; SignalOut[13] ; 6.416 ; 6.302 ; 6.302 ; 6.416 ;
-; OutMode[0] ; SignalOut[14] ; 6.567 ; 6.538 ; 6.538 ; 6.567 ;
-; OutMode[0] ; SignalOut[15] ; 6.248 ; 6.993 ; 6.993 ; 6.248 ;
-; OutMode[1] ; SignalOut[0]  ; 6.095 ; 6.095 ; 6.095 ; 6.095 ;
-; OutMode[1] ; SignalOut[1]  ; 6.620 ; 6.620 ; 6.620 ; 6.620 ;
-; OutMode[1] ; SignalOut[2]  ; 6.585 ; 6.585 ; 6.585 ; 6.585 ;
-; OutMode[1] ; SignalOut[3]  ; 6.538 ; 6.538 ; 6.538 ; 6.538 ;
-; OutMode[1] ; SignalOut[4]  ; 6.521 ; 6.521 ; 6.521 ; 6.521 ;
-; OutMode[1] ; SignalOut[5]  ; 6.547 ; 6.547 ; 6.547 ; 6.547 ;
-; OutMode[1] ; SignalOut[6]  ; 6.659 ; 6.659 ; 6.659 ; 6.659 ;
-; OutMode[1] ; SignalOut[7]  ; 6.634 ; 6.634 ; 6.634 ; 6.634 ;
-; OutMode[1] ; SignalOut[8]  ; 6.145 ; 6.145 ; 6.145 ; 6.145 ;
-; OutMode[1] ; SignalOut[9]  ; 6.621 ; 6.621 ; 6.621 ; 6.621 ;
-; OutMode[1] ; SignalOut[10] ; 6.693 ; 6.693 ; 6.693 ; 6.693 ;
-; OutMode[1] ; SignalOut[11] ; 6.613 ; 6.613 ; 6.613 ; 6.613 ;
-; OutMode[1] ; SignalOut[12] ; 6.683 ; 6.683 ; 6.683 ; 6.683 ;
-; OutMode[1] ; SignalOut[13] ; 6.058 ; 6.058 ; 6.058 ; 6.058 ;
-; OutMode[1] ; SignalOut[14] ; 6.221 ; 6.221 ; 6.221 ; 6.221 ;
-; OutMode[1] ; SignalOut[15] ; 6.637 ; 6.637 ; 6.637 ; 6.637 ;
-+------------+---------------+-------+-------+-------+-------+
++----------------------------------------------------------------+
+; Propagation Delay                                              ;
++------------+---------------+--------+--------+--------+--------+
+; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
++------------+---------------+--------+--------+--------+--------+
+; OutMode[0] ; SignalOut[0]  ; 6.154  ; 6.536  ; 6.536  ; 6.154  ;
+; OutMode[0] ; SignalOut[1]  ; 5.997  ; 6.617  ; 6.617  ; 5.997  ;
+; OutMode[0] ; SignalOut[2]  ; 6.115  ; 6.478  ; 6.478  ; 6.115  ;
+; OutMode[0] ; SignalOut[3]  ; 6.651  ; 7.265  ; 7.265  ; 6.651  ;
+; OutMode[0] ; SignalOut[4]  ; 6.435  ; 6.264  ; 6.264  ; 6.435  ;
+; OutMode[0] ; SignalOut[5]  ; 6.098  ; 6.464  ; 6.464  ; 6.098  ;
+; OutMode[0] ; SignalOut[6]  ; 6.145  ; 6.506  ; 6.506  ; 6.145  ;
+; OutMode[0] ; SignalOut[7]  ; 6.316  ; 6.269  ; 6.269  ; 6.316  ;
+; OutMode[0] ; SignalOut[8]  ; 6.208  ; 6.066  ; 6.066  ; 6.208  ;
+; OutMode[0] ; SignalOut[9]  ; 6.554  ; 6.501  ; 6.501  ; 6.554  ;
+; OutMode[0] ; SignalOut[10] ; 6.165  ; 6.483  ; 6.483  ; 6.165  ;
+; OutMode[0] ; SignalOut[11] ; 6.178  ; 6.611  ; 6.611  ; 6.178  ;
+; OutMode[0] ; SignalOut[12] ; 6.252  ; 6.618  ; 6.618  ; 6.252  ;
+; OutMode[0] ; SignalOut[13] ; 6.252  ; 6.210  ; 6.210  ; 6.252  ;
+; OutMode[0] ; SignalOut[14] ; 6.298  ; 6.255  ; 6.255  ; 6.298  ;
+; OutMode[0] ; SignalOut[15] ; 6.460  ; 6.411  ; 6.411  ; 6.460  ;
+; OutMode[1] ; SignalOut[0]  ; 6.540  ; 6.540  ; 6.540  ; 6.540  ;
+; OutMode[1] ; SignalOut[1]  ; 6.621  ; 6.621  ; 6.621  ; 6.621  ;
+; OutMode[1] ; SignalOut[2]  ; 6.482  ; 6.482  ; 6.482  ; 6.482  ;
+; OutMode[1] ; SignalOut[3]  ; 7.269  ; 7.269  ; 7.269  ; 7.269  ;
+; OutMode[1] ; SignalOut[4]  ; 6.268  ; 6.268  ; 6.268  ; 6.268  ;
+; OutMode[1] ; SignalOut[5]  ; 6.468  ; 6.468  ; 6.468  ; 6.468  ;
+; OutMode[1] ; SignalOut[6]  ; 6.510  ; 6.510  ; 6.510  ; 6.510  ;
+; OutMode[1] ; SignalOut[7]  ; 6.292  ; 6.292  ; 6.292  ; 6.292  ;
+; OutMode[1] ; SignalOut[8]  ; 6.187  ; 6.187  ; 6.187  ; 6.187  ;
+; OutMode[1] ; SignalOut[9]  ; 6.542  ; 6.542  ; 6.542  ; 6.542  ;
+; OutMode[1] ; SignalOut[10] ; 6.487  ; 6.487  ; 6.487  ; 6.487  ;
+; OutMode[1] ; SignalOut[11] ; 6.615  ; 6.615  ; 6.615  ; 6.615  ;
+; OutMode[1] ; SignalOut[12] ; 6.622  ; 6.622  ; 6.622  ; 6.622  ;
+; OutMode[1] ; SignalOut[13] ; 6.240  ; 6.240  ; 6.240  ; 6.240  ;
+; OutMode[1] ; SignalOut[14] ; 6.284  ; 6.284  ; 6.284  ; 6.284  ;
+; OutMode[1] ; SignalOut[15] ; 6.434  ; 6.434  ; 6.434  ; 6.434  ;
+; reset      ; led_numseg[1] ; 48.539 ; 48.539 ; 48.539 ; 48.539 ;
+; reset      ; led_numseg[2] ; 48.634 ; 48.634 ; 48.634 ; 48.634 ;
+; reset      ; led_numseg[3] ; 48.740 ; 48.740 ; 48.740 ; 48.740 ;
+; reset      ; led_numseg[4] ; 48.716 ; 48.716 ; 48.716 ; 48.716 ;
+; reset      ; led_numseg[5] ; 48.540 ; 48.540 ; 48.540 ; 48.540 ;
+; reset      ; led_numseg[6] ; 48.626 ; 48.626 ; 48.626 ; 48.626 ;
+; reset      ; led_numseg[7] ; 48.761 ; 48.761 ; 48.761 ; 48.761 ;
++------------+---------------+--------+--------+--------+--------+
 
 
-+------------------------------------------------------------+
-; Minimum Propagation Delay                                  ;
-+------------+---------------+-------+-------+-------+-------+
-; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
-+------------+---------------+-------+-------+-------+-------+
-; OutMode[0] ; SignalOut[0]  ; 6.455 ; 6.415 ; 6.415 ; 6.455 ;
-; OutMode[0] ; SignalOut[1]  ; 6.290 ; 6.976 ; 6.976 ; 6.290 ;
-; OutMode[0] ; SignalOut[2]  ; 6.250 ; 6.941 ; 6.941 ; 6.250 ;
-; OutMode[0] ; SignalOut[3]  ; 6.343 ; 6.894 ; 6.894 ; 6.343 ;
-; OutMode[0] ; SignalOut[4]  ; 6.415 ; 6.877 ; 6.877 ; 6.415 ;
-; OutMode[0] ; SignalOut[5]  ; 6.351 ; 6.903 ; 6.903 ; 6.351 ;
-; OutMode[0] ; SignalOut[6]  ; 6.449 ; 7.015 ; 7.015 ; 6.449 ;
-; OutMode[0] ; SignalOut[7]  ; 6.306 ; 6.990 ; 6.990 ; 6.306 ;
-; OutMode[0] ; SignalOut[8]  ; 6.312 ; 6.397 ; 6.397 ; 6.312 ;
-; OutMode[0] ; SignalOut[9]  ; 6.524 ; 6.977 ; 6.977 ; 6.524 ;
-; OutMode[0] ; SignalOut[10] ; 6.439 ; 7.049 ; 7.049 ; 6.439 ;
-; OutMode[0] ; SignalOut[11] ; 6.413 ; 6.969 ; 6.969 ; 6.413 ;
-; OutMode[0] ; SignalOut[12] ; 6.474 ; 7.039 ; 7.039 ; 6.474 ;
-; OutMode[0] ; SignalOut[13] ; 6.416 ; 6.302 ; 6.302 ; 6.416 ;
-; OutMode[0] ; SignalOut[14] ; 6.567 ; 6.538 ; 6.538 ; 6.567 ;
-; OutMode[0] ; SignalOut[15] ; 6.248 ; 6.993 ; 6.993 ; 6.248 ;
-; OutMode[1] ; SignalOut[0]  ; 6.059 ; 6.059 ; 6.059 ; 6.059 ;
-; OutMode[1] ; SignalOut[1]  ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
-; OutMode[1] ; SignalOut[2]  ; 6.216 ; 6.216 ; 6.216 ; 6.216 ;
-; OutMode[1] ; SignalOut[3]  ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
-; OutMode[1] ; SignalOut[4]  ; 6.263 ; 6.263 ; 6.263 ; 6.263 ;
-; OutMode[1] ; SignalOut[5]  ; 6.316 ; 6.316 ; 6.316 ; 6.316 ;
-; OutMode[1] ; SignalOut[6]  ; 6.483 ; 6.483 ; 6.483 ; 6.483 ;
-; OutMode[1] ; SignalOut[7]  ; 6.271 ; 6.271 ; 6.271 ; 6.271 ;
-; OutMode[1] ; SignalOut[8]  ; 6.041 ; 6.041 ; 6.041 ; 6.041 ;
-; OutMode[1] ; SignalOut[9]  ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
-; OutMode[1] ; SignalOut[10] ; 6.294 ; 6.294 ; 6.294 ; 6.294 ;
-; OutMode[1] ; SignalOut[11] ; 6.379 ; 6.379 ; 6.379 ; 6.379 ;
-; OutMode[1] ; SignalOut[12] ; 6.436 ; 6.436 ; 6.436 ; 6.436 ;
-; OutMode[1] ; SignalOut[13] ; 5.946 ; 5.946 ; 5.946 ; 5.946 ;
-; OutMode[1] ; SignalOut[14] ; 6.182 ; 6.182 ; 6.182 ; 6.182 ;
-; OutMode[1] ; SignalOut[15] ; 6.212 ; 6.212 ; 6.212 ; 6.212 ;
-+------------+---------------+-------+-------+-------+-------+
++----------------------------------------------------------------+
+; Minimum Propagation Delay                                      ;
++------------+---------------+--------+--------+--------+--------+
+; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
++------------+---------------+--------+--------+--------+--------+
+; OutMode[0] ; SignalOut[0]  ; 6.154  ; 6.536  ; 6.536  ; 6.154  ;
+; OutMode[0] ; SignalOut[1]  ; 5.997  ; 6.617  ; 6.617  ; 5.997  ;
+; OutMode[0] ; SignalOut[2]  ; 6.115  ; 6.478  ; 6.478  ; 6.115  ;
+; OutMode[0] ; SignalOut[3]  ; 6.651  ; 7.265  ; 7.265  ; 6.651  ;
+; OutMode[0] ; SignalOut[4]  ; 6.435  ; 6.264  ; 6.264  ; 6.435  ;
+; OutMode[0] ; SignalOut[5]  ; 6.098  ; 6.464  ; 6.464  ; 6.098  ;
+; OutMode[0] ; SignalOut[6]  ; 6.145  ; 6.506  ; 6.506  ; 6.145  ;
+; OutMode[0] ; SignalOut[7]  ; 6.316  ; 6.269  ; 6.269  ; 6.316  ;
+; OutMode[0] ; SignalOut[8]  ; 6.208  ; 6.066  ; 6.066  ; 6.208  ;
+; OutMode[0] ; SignalOut[9]  ; 6.554  ; 6.501  ; 6.501  ; 6.554  ;
+; OutMode[0] ; SignalOut[10] ; 6.165  ; 6.483  ; 6.483  ; 6.165  ;
+; OutMode[0] ; SignalOut[11] ; 6.178  ; 6.611  ; 6.611  ; 6.178  ;
+; OutMode[0] ; SignalOut[12] ; 6.252  ; 6.618  ; 6.618  ; 6.252  ;
+; OutMode[0] ; SignalOut[13] ; 6.252  ; 6.210  ; 6.210  ; 6.252  ;
+; OutMode[0] ; SignalOut[14] ; 6.298  ; 6.255  ; 6.255  ; 6.298  ;
+; OutMode[0] ; SignalOut[15] ; 6.460  ; 6.411  ; 6.411  ; 6.460  ;
+; OutMode[1] ; SignalOut[0]  ; 6.198  ; 6.198  ; 6.198  ; 6.198  ;
+; OutMode[1] ; SignalOut[1]  ; 5.973  ; 5.973  ; 5.973  ; 5.973  ;
+; OutMode[1] ; SignalOut[2]  ; 5.968  ; 5.968  ; 5.968  ; 5.968  ;
+; OutMode[1] ; SignalOut[3]  ; 6.623  ; 6.623  ; 6.623  ; 6.623  ;
+; OutMode[1] ; SignalOut[4]  ; 6.230  ; 6.230  ; 6.230  ; 6.230  ;
+; OutMode[1] ; SignalOut[5]  ; 5.939  ; 5.939  ; 5.939  ; 5.939  ;
+; OutMode[1] ; SignalOut[6]  ; 5.984  ; 5.984  ; 5.984  ; 5.984  ;
+; OutMode[1] ; SignalOut[7]  ; 6.273  ; 6.273  ; 6.273  ; 6.273  ;
+; OutMode[1] ; SignalOut[8]  ; 6.070  ; 6.070  ; 6.070  ; 6.070  ;
+; OutMode[1] ; SignalOut[9]  ; 6.505  ; 6.505  ; 6.505  ; 6.505  ;
+; OutMode[1] ; SignalOut[10] ; 6.009  ; 6.009  ; 6.009  ; 6.009  ;
+; OutMode[1] ; SignalOut[11] ; 6.227  ; 6.227  ; 6.227  ; 6.227  ;
+; OutMode[1] ; SignalOut[12] ; 6.096  ; 6.096  ; 6.096  ; 6.096  ;
+; OutMode[1] ; SignalOut[13] ; 6.214  ; 6.214  ; 6.214  ; 6.214  ;
+; OutMode[1] ; SignalOut[14] ; 6.259  ; 6.259  ; 6.259  ; 6.259  ;
+; OutMode[1] ; SignalOut[15] ; 6.415  ; 6.415  ; 6.415  ; 6.415  ;
+; reset      ; led_numseg[1] ; 10.221 ; 10.221 ; 10.221 ; 10.221 ;
+; reset      ; led_numseg[2] ; 10.317 ; 10.317 ; 10.317 ; 10.317 ;
+; reset      ; led_numseg[3] ; 10.423 ; 10.423 ; 10.423 ; 10.423 ;
+; reset      ; led_numseg[4] ; 10.398 ; 10.398 ; 10.398 ; 10.398 ;
+; reset      ; led_numseg[5] ; 10.223 ; 10.223 ; 10.223 ; 10.223 ;
+; reset      ; led_numseg[6] ; 10.306 ; 10.306 ; 10.306 ; 10.306 ;
+; reset      ; led_numseg[7] ; 10.441 ; 10.441 ; 10.441 ; 10.441 ;
++------------+---------------+--------+--------+--------+--------+
 
 
 +--------------------------------------------------------------------------------+
@@ -358,84 +386,98 @@ No paths to report.
 +----------------------+-------+------+----------+---------+---------------------+
 
 
++--------------------------------------------------------------------+
+; Progagation Delay                                                  ;
++------------+---------------+---------+---------+---------+---------+
+; Input Port ; Output Port   ; RR      ; RF      ; FR      ; FF      ;
++------------+---------------+---------+---------+---------+---------+
+; OutMode[0] ; SignalOut[0]  ; 13.840  ; 15.190  ; 15.190  ; 13.840  ;
+; OutMode[0] ; SignalOut[1]  ; 13.469  ; 15.566  ; 15.566  ; 13.469  ;
+; OutMode[0] ; SignalOut[2]  ; 13.644  ; 14.911  ; 14.911  ; 13.644  ;
+; OutMode[0] ; SignalOut[3]  ; 15.209  ; 17.298  ; 17.298  ; 15.209  ;
+; OutMode[0] ; SignalOut[4]  ; 14.790  ; 14.132  ; 14.132  ; 14.790  ;
+; OutMode[0] ; SignalOut[5]  ; 13.840  ; 15.116  ; 15.116  ; 13.840  ;
+; OutMode[0] ; SignalOut[6]  ; 13.916  ; 15.187  ; 15.187  ; 13.916  ;
+; OutMode[0] ; SignalOut[7]  ; 14.024  ; 13.960  ; 13.960  ; 14.024  ;
+; OutMode[0] ; SignalOut[8]  ; 13.883  ; 13.433  ; 13.433  ; 13.883  ;
+; OutMode[0] ; SignalOut[9]  ; 14.768  ; 14.695  ; 14.695  ; 14.768  ;
+; OutMode[0] ; SignalOut[10] ; 13.748  ; 14.910  ; 14.910  ; 13.748  ;
+; OutMode[0] ; SignalOut[11] ; 13.748  ; 15.235  ; 15.235  ; 13.748  ;
+; OutMode[0] ; SignalOut[12] ; 14.257  ; 15.536  ; 15.536  ; 14.257  ;
+; OutMode[0] ; SignalOut[13] ; 14.033  ; 13.971  ; 13.971  ; 14.033  ;
+; OutMode[0] ; SignalOut[14] ; 14.175  ; 14.114  ; 14.114  ; 14.175  ;
+; OutMode[0] ; SignalOut[15] ; 14.853  ; 14.787  ; 14.787  ; 14.853  ;
+; OutMode[1] ; SignalOut[0]  ; 15.125  ; 15.125  ; 15.125  ; 15.125  ;
+; OutMode[1] ; SignalOut[1]  ; 15.501  ; 15.501  ; 15.501  ; 15.501  ;
+; OutMode[1] ; SignalOut[2]  ; 14.846  ; 14.846  ; 14.846  ; 14.846  ;
+; OutMode[1] ; SignalOut[3]  ; 17.233  ; 17.233  ; 17.233  ; 17.233  ;
+; OutMode[1] ; SignalOut[4]  ; 14.067  ; 14.067  ; 14.067  ; 14.067  ;
+; OutMode[1] ; SignalOut[5]  ; 15.051  ; 15.051  ; 15.051  ; 15.051  ;
+; OutMode[1] ; SignalOut[6]  ; 15.122  ; 15.122  ; 15.122  ; 15.122  ;
+; OutMode[1] ; SignalOut[7]  ; 13.999  ; 13.999  ; 13.999  ; 13.999  ;
+; OutMode[1] ; SignalOut[8]  ; 13.863  ; 13.863  ; 13.863  ; 13.863  ;
+; OutMode[1] ; SignalOut[9]  ; 14.757  ; 14.757  ; 14.757  ; 14.757  ;
+; OutMode[1] ; SignalOut[10] ; 14.845  ; 14.845  ; 14.845  ; 14.845  ;
+; OutMode[1] ; SignalOut[11] ; 15.170  ; 15.170  ; 15.170  ; 15.170  ;
+; OutMode[1] ; SignalOut[12] ; 15.471  ; 15.471  ; 15.471  ; 15.471  ;
+; OutMode[1] ; SignalOut[13] ; 14.021  ; 14.021  ; 14.021  ; 14.021  ;
+; OutMode[1] ; SignalOut[14] ; 14.163  ; 14.163  ; 14.163  ; 14.163  ;
+; OutMode[1] ; SignalOut[15] ; 14.790  ; 14.790  ; 14.790  ; 14.790  ;
+; reset      ; led_numseg[1] ; 148.736 ; 148.736 ; 148.736 ; 148.736 ;
+; reset      ; led_numseg[2] ; 149.071 ; 149.071 ; 149.071 ; 149.071 ;
+; reset      ; led_numseg[3] ; 149.171 ; 149.171 ; 149.171 ; 149.171 ;
+; reset      ; led_numseg[4] ; 149.152 ; 149.152 ; 149.152 ; 149.152 ;
+; reset      ; led_numseg[5] ; 148.732 ; 148.732 ; 148.732 ; 148.732 ;
+; reset      ; led_numseg[6] ; 149.075 ; 149.075 ; 149.075 ; 149.075 ;
+; reset      ; led_numseg[7] ; 149.270 ; 149.270 ; 149.270 ; 149.270 ;
++------------+---------------+---------+---------+---------+---------+
+
+
 +----------------------------------------------------------------+
-; Progagation Delay                                              ;
+; Minimum Progagation Delay                                      ;
 +------------+---------------+--------+--------+--------+--------+
 ; Input Port ; Output Port   ; RR     ; RF     ; FR     ; FF     ;
 +------------+---------------+--------+--------+--------+--------+
-; OutMode[0] ; SignalOut[0]  ; 14.596 ; 14.424 ; 14.424 ; 14.596 ;
-; OutMode[0] ; SignalOut[1]  ; 14.314 ; 16.346 ; 16.346 ; 14.314 ;
-; OutMode[0] ; SignalOut[2]  ; 14.246 ; 16.285 ; 16.285 ; 14.246 ;
-; OutMode[0] ; SignalOut[3]  ; 14.235 ; 15.779 ; 15.779 ; 14.235 ;
-; OutMode[0] ; SignalOut[4]  ; 14.528 ; 15.741 ; 15.741 ; 14.528 ;
-; OutMode[0] ; SignalOut[5]  ; 14.262 ; 15.812 ; 15.812 ; 14.262 ;
-; OutMode[0] ; SignalOut[6]  ; 14.569 ; 16.173 ; 16.173 ; 14.569 ;
-; OutMode[0] ; SignalOut[7]  ; 14.358 ; 16.388 ; 16.388 ; 14.358 ;
-; OutMode[0] ; SignalOut[8]  ; 14.141 ; 14.397 ; 14.397 ; 14.141 ;
-; OutMode[0] ; SignalOut[9]  ; 14.925 ; 16.091 ; 16.091 ; 14.925 ;
-; OutMode[0] ; SignalOut[10] ; 14.566 ; 16.390 ; 16.390 ; 14.566 ;
-; OutMode[0] ; SignalOut[11] ; 14.776 ; 16.323 ; 16.323 ; 14.776 ;
-; OutMode[0] ; SignalOut[12] ; 14.605 ; 16.215 ; 16.215 ; 14.605 ;
-; OutMode[0] ; SignalOut[13] ; 14.578 ; 14.058 ; 14.058 ; 14.578 ;
-; OutMode[0] ; SignalOut[14] ; 15.219 ; 15.058 ; 15.058 ; 15.219 ;
-; OutMode[0] ; SignalOut[15] ; 14.318 ; 16.608 ; 16.608 ; 14.318 ;
-; OutMode[1] ; SignalOut[0]  ; 13.476 ; 13.476 ; 13.476 ; 13.476 ;
-; OutMode[1] ; SignalOut[1]  ; 15.310 ; 15.310 ; 15.310 ; 15.310 ;
-; OutMode[1] ; SignalOut[2]  ; 15.249 ; 15.249 ; 15.249 ; 15.249 ;
-; OutMode[1] ; SignalOut[3]  ; 14.743 ; 14.743 ; 14.743 ; 14.743 ;
-; OutMode[1] ; SignalOut[4]  ; 14.705 ; 14.705 ; 14.705 ; 14.705 ;
-; OutMode[1] ; SignalOut[5]  ; 14.776 ; 14.776 ; 14.776 ; 14.776 ;
-; OutMode[1] ; SignalOut[6]  ; 15.137 ; 15.137 ; 15.137 ; 15.137 ;
-; OutMode[1] ; SignalOut[7]  ; 15.352 ; 15.352 ; 15.352 ; 15.352 ;
-; OutMode[1] ; SignalOut[8]  ; 13.666 ; 13.666 ; 13.666 ; 13.666 ;
-; OutMode[1] ; SignalOut[9]  ; 15.055 ; 15.055 ; 15.055 ; 15.055 ;
-; OutMode[1] ; SignalOut[10] ; 15.354 ; 15.354 ; 15.354 ; 15.354 ;
-; OutMode[1] ; SignalOut[11] ; 15.287 ; 15.287 ; 15.287 ; 15.287 ;
-; OutMode[1] ; SignalOut[12] ; 15.179 ; 15.179 ; 15.179 ; 15.179 ;
-; OutMode[1] ; SignalOut[13] ; 13.464 ; 13.464 ; 13.464 ; 13.464 ;
-; OutMode[1] ; SignalOut[14] ; 14.118 ; 14.118 ; 14.118 ; 14.118 ;
-; OutMode[1] ; SignalOut[15] ; 15.572 ; 15.572 ; 15.572 ; 15.572 ;
+; OutMode[0] ; SignalOut[0]  ; 6.154  ; 6.536  ; 6.536  ; 6.154  ;
+; OutMode[0] ; SignalOut[1]  ; 5.997  ; 6.617  ; 6.617  ; 5.997  ;
+; OutMode[0] ; SignalOut[2]  ; 6.115  ; 6.478  ; 6.478  ; 6.115  ;
+; OutMode[0] ; SignalOut[3]  ; 6.651  ; 7.265  ; 7.265  ; 6.651  ;
+; OutMode[0] ; SignalOut[4]  ; 6.435  ; 6.264  ; 6.264  ; 6.435  ;
+; OutMode[0] ; SignalOut[5]  ; 6.098  ; 6.464  ; 6.464  ; 6.098  ;
+; OutMode[0] ; SignalOut[6]  ; 6.145  ; 6.506  ; 6.506  ; 6.145  ;
+; OutMode[0] ; SignalOut[7]  ; 6.316  ; 6.269  ; 6.269  ; 6.316  ;
+; OutMode[0] ; SignalOut[8]  ; 6.208  ; 6.066  ; 6.066  ; 6.208  ;
+; OutMode[0] ; SignalOut[9]  ; 6.554  ; 6.501  ; 6.501  ; 6.554  ;
+; OutMode[0] ; SignalOut[10] ; 6.165  ; 6.483  ; 6.483  ; 6.165  ;
+; OutMode[0] ; SignalOut[11] ; 6.178  ; 6.611  ; 6.611  ; 6.178  ;
+; OutMode[0] ; SignalOut[12] ; 6.252  ; 6.618  ; 6.618  ; 6.252  ;
+; OutMode[0] ; SignalOut[13] ; 6.252  ; 6.210  ; 6.210  ; 6.252  ;
+; OutMode[0] ; SignalOut[14] ; 6.298  ; 6.255  ; 6.255  ; 6.298  ;
+; OutMode[0] ; SignalOut[15] ; 6.460  ; 6.411  ; 6.411  ; 6.460  ;
+; OutMode[1] ; SignalOut[0]  ; 6.198  ; 6.198  ; 6.198  ; 6.198  ;
+; OutMode[1] ; SignalOut[1]  ; 5.973  ; 5.973  ; 5.973  ; 5.973  ;
+; OutMode[1] ; SignalOut[2]  ; 5.968  ; 5.968  ; 5.968  ; 5.968  ;
+; OutMode[1] ; SignalOut[3]  ; 6.623  ; 6.623  ; 6.623  ; 6.623  ;
+; OutMode[1] ; SignalOut[4]  ; 6.230  ; 6.230  ; 6.230  ; 6.230  ;
+; OutMode[1] ; SignalOut[5]  ; 5.939  ; 5.939  ; 5.939  ; 5.939  ;
+; OutMode[1] ; SignalOut[6]  ; 5.984  ; 5.984  ; 5.984  ; 5.984  ;
+; OutMode[1] ; SignalOut[7]  ; 6.273  ; 6.273  ; 6.273  ; 6.273  ;
+; OutMode[1] ; SignalOut[8]  ; 6.070  ; 6.070  ; 6.070  ; 6.070  ;
+; OutMode[1] ; SignalOut[9]  ; 6.505  ; 6.505  ; 6.505  ; 6.505  ;
+; OutMode[1] ; SignalOut[10] ; 6.009  ; 6.009  ; 6.009  ; 6.009  ;
+; OutMode[1] ; SignalOut[11] ; 6.227  ; 6.227  ; 6.227  ; 6.227  ;
+; OutMode[1] ; SignalOut[12] ; 6.096  ; 6.096  ; 6.096  ; 6.096  ;
+; OutMode[1] ; SignalOut[13] ; 6.214  ; 6.214  ; 6.214  ; 6.214  ;
+; OutMode[1] ; SignalOut[14] ; 6.259  ; 6.259  ; 6.259  ; 6.259  ;
+; OutMode[1] ; SignalOut[15] ; 6.415  ; 6.415  ; 6.415  ; 6.415  ;
+; reset      ; led_numseg[1] ; 10.221 ; 10.221 ; 10.221 ; 10.221 ;
+; reset      ; led_numseg[2] ; 10.317 ; 10.317 ; 10.317 ; 10.317 ;
+; reset      ; led_numseg[3] ; 10.423 ; 10.423 ; 10.423 ; 10.423 ;
+; reset      ; led_numseg[4] ; 10.398 ; 10.398 ; 10.398 ; 10.398 ;
+; reset      ; led_numseg[5] ; 10.223 ; 10.223 ; 10.223 ; 10.223 ;
+; reset      ; led_numseg[6] ; 10.306 ; 10.306 ; 10.306 ; 10.306 ;
+; reset      ; led_numseg[7] ; 10.441 ; 10.441 ; 10.441 ; 10.441 ;
 +------------+---------------+--------+--------+--------+--------+
-
-
-+------------------------------------------------------------+
-; Minimum Progagation Delay                                  ;
-+------------+---------------+-------+-------+-------+-------+
-; Input Port ; Output Port   ; RR    ; RF    ; FR    ; FF    ;
-+------------+---------------+-------+-------+-------+-------+
-; OutMode[0] ; SignalOut[0]  ; 6.455 ; 6.415 ; 6.415 ; 6.455 ;
-; OutMode[0] ; SignalOut[1]  ; 6.290 ; 6.976 ; 6.976 ; 6.290 ;
-; OutMode[0] ; SignalOut[2]  ; 6.250 ; 6.941 ; 6.941 ; 6.250 ;
-; OutMode[0] ; SignalOut[3]  ; 6.343 ; 6.894 ; 6.894 ; 6.343 ;
-; OutMode[0] ; SignalOut[4]  ; 6.415 ; 6.877 ; 6.877 ; 6.415 ;
-; OutMode[0] ; SignalOut[5]  ; 6.351 ; 6.903 ; 6.903 ; 6.351 ;
-; OutMode[0] ; SignalOut[6]  ; 6.449 ; 7.015 ; 7.015 ; 6.449 ;
-; OutMode[0] ; SignalOut[7]  ; 6.306 ; 6.990 ; 6.990 ; 6.306 ;
-; OutMode[0] ; SignalOut[8]  ; 6.312 ; 6.397 ; 6.397 ; 6.312 ;
-; OutMode[0] ; SignalOut[9]  ; 6.524 ; 6.977 ; 6.977 ; 6.524 ;
-; OutMode[0] ; SignalOut[10] ; 6.439 ; 7.049 ; 7.049 ; 6.439 ;
-; OutMode[0] ; SignalOut[11] ; 6.413 ; 6.969 ; 6.969 ; 6.413 ;
-; OutMode[0] ; SignalOut[12] ; 6.474 ; 7.039 ; 7.039 ; 6.474 ;
-; OutMode[0] ; SignalOut[13] ; 6.416 ; 6.302 ; 6.302 ; 6.416 ;
-; OutMode[0] ; SignalOut[14] ; 6.567 ; 6.538 ; 6.538 ; 6.567 ;
-; OutMode[0] ; SignalOut[15] ; 6.248 ; 6.993 ; 6.993 ; 6.248 ;
-; OutMode[1] ; SignalOut[0]  ; 6.059 ; 6.059 ; 6.059 ; 6.059 ;
-; OutMode[1] ; SignalOut[1]  ; 6.251 ; 6.251 ; 6.251 ; 6.251 ;
-; OutMode[1] ; SignalOut[2]  ; 6.216 ; 6.216 ; 6.216 ; 6.216 ;
-; OutMode[1] ; SignalOut[3]  ; 6.309 ; 6.309 ; 6.309 ; 6.309 ;
-; OutMode[1] ; SignalOut[4]  ; 6.263 ; 6.263 ; 6.263 ; 6.263 ;
-; OutMode[1] ; SignalOut[5]  ; 6.316 ; 6.316 ; 6.316 ; 6.316 ;
-; OutMode[1] ; SignalOut[6]  ; 6.483 ; 6.483 ; 6.483 ; 6.483 ;
-; OutMode[1] ; SignalOut[7]  ; 6.271 ; 6.271 ; 6.271 ; 6.271 ;
-; OutMode[1] ; SignalOut[8]  ; 6.041 ; 6.041 ; 6.041 ; 6.041 ;
-; OutMode[1] ; SignalOut[9]  ; 6.372 ; 6.372 ; 6.372 ; 6.372 ;
-; OutMode[1] ; SignalOut[10] ; 6.294 ; 6.294 ; 6.294 ; 6.294 ;
-; OutMode[1] ; SignalOut[11] ; 6.379 ; 6.379 ; 6.379 ; 6.379 ;
-; OutMode[1] ; SignalOut[12] ; 6.436 ; 6.436 ; 6.436 ; 6.436 ;
-; OutMode[1] ; SignalOut[13] ; 5.946 ; 5.946 ; 5.946 ; 5.946 ;
-; OutMode[1] ; SignalOut[14] ; 6.182 ; 6.182 ; 6.182 ; 6.182 ;
-; OutMode[1] ; SignalOut[15] ; 6.212 ; 6.212 ; 6.212 ; 6.212 ;
-+------------+---------------+-------+-------+-------+-------+
 
 
 -------------------
@@ -464,9 +506,9 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 4     ; 4    ;
 ; Unconstrained Input Ports       ; 8     ; 8    ;
-; Unconstrained Input Port Paths  ; 526   ; 526  ;
+; Unconstrained Input Port Paths  ; 509   ; 509  ;
 ; Unconstrained Output Ports      ; 34    ; 34   ;
-; Unconstrained Output Port Paths ; 291   ; 291  ;
+; Unconstrained Output Port Paths ; 319   ; 319  ;
 +---------------------------------+-------+------+
 
 
@@ -476,21 +518,822 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sat Jun 29 11:00:01 2019
+    Info: Processing started: Sat Jun 29 15:45:25 2019
 Info: Command: quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Warning (335093): TimeQuest Timing Analyzer is analyzing 72 combinational loops as latches.
+Warning (335093): TimeQuest Timing Analyzer is analyzing 58 combinational loops as latches.
 Info (332164): Evaluating HDL-embedded SDC commands
     Info (332165): Entity sld_jtag_hub
         Info (332166): create_clock -name altera_reserved_tck [get_ports {altera_reserved_tck}] -period 10MHz   
         Info (332166): set_clock_groups -asynchronous -group {altera_reserved_tck}
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'DirectDigitalSynthesizer.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Warning (332125): Found combinational loop of 799 nodes
+    Warning (332126): Node "C1|comb~1|combout"
+    Warning (332126): Node "C1|Step[3]|datab"
+    Warning (332126): Node "C1|Step[3]|combout"
+    Warning (332126): Node "C1|LessThan0~1|datac"
+    Warning (332126): Node "C1|LessThan0~1|combout"
+    Warning (332126): Node "C1|LessThan0~2|datab"
+    Warning (332126): Node "C1|LessThan0~2|combout"
+    Warning (332126): Node "C1|LessThan0~3|datad"
+    Warning (332126): Node "C1|LessThan0~3|combout"
+    Warning (332126): Node "C1|LessThan0~4|datad"
+    Warning (332126): Node "C1|LessThan0~4|combout"
+    Warning (332126): Node "C1|LessThan0~6|dataa"
+    Warning (332126): Node "C1|LessThan0~6|combout"
+    Warning (332126): Node "C1|comb~1|datad"
+    Warning (332126): Node "C1|LessThan1~6|datac"
+    Warning (332126): Node "C1|LessThan1~6|combout"
+    Warning (332126): Node "C1|LessThan1~8|datad"
+    Warning (332126): Node "C1|LessThan1~8|combout"
+    Warning (332126): Node "C1|LessThan1~9|datad"
+    Warning (332126): Node "C1|LessThan1~9|combout"
+    Warning (332126): Node "C1|LessThan1~10|datac"
+    Warning (332126): Node "C1|LessThan1~10|combout"
+    Warning (332126): Node "C1|Step[11]|datac"
+    Warning (332126): Node "C1|Step[11]|combout"
+    Warning (332126): Node "C1|LessThan0~0|dataa"
+    Warning (332126): Node "C1|LessThan0~0|combout"
+    Warning (332126): Node "C1|LessThan0~2|datad"
+    Warning (332126): Node "C1|LessThan1~8|datac"
+    Warning (332126): Node "C1|Add5~22|dataa"
+    Warning (332126): Node "C1|Add5~22|cout"
+    Warning (332126): Node "C1|Add5~24|cin"
+    Warning (332126): Node "C1|Add5~24|cout"
+    Warning (332126): Node "C1|Add5~26|cin"
+    Warning (332126): Node "C1|Add5~26|cout"
+    Warning (332126): Node "C1|Add5~28|cin"
+    Warning (332126): Node "C1|Add5~28|cout"
+    Warning (332126): Node "C1|Add5~30|cin"
+    Warning (332126): Node "C1|Add5~30|cout"
+    Warning (332126): Node "C1|Add5~32|cin"
+    Warning (332126): Node "C1|Add5~32|cout"
+    Warning (332126): Node "C1|Add5~34|cin"
+    Warning (332126): Node "C1|Add5~34|cout"
+    Warning (332126): Node "C1|Add5~36|cin"
+    Warning (332126): Node "C1|Add5~36|cout"
+    Warning (332126): Node "C1|Add5~38|cin"
+    Warning (332126): Node "C1|Add5~38|cout"
+    Warning (332126): Node "C1|Add5~40|cin"
+    Warning (332126): Node "C1|Add5~40|cout"
+    Warning (332126): Node "C1|Add5~42|cin"
+    Warning (332126): Node "C1|Add5~42|cout"
+    Warning (332126): Node "C1|Add5~44|cin"
+    Warning (332126): Node "C1|Add5~44|cout"
+    Warning (332126): Node "C1|Add5~46|cin"
+    Warning (332126): Node "C1|Add5~46|cout"
+    Warning (332126): Node "C1|Add5~48|cin"
+    Warning (332126): Node "C1|Add5~48|cout"
+    Warning (332126): Node "C1|Add5~50|cin"
+    Warning (332126): Node "C1|Add5~50|cout"
+    Warning (332126): Node "C1|Add5~52|cin"
+    Warning (332126): Node "C1|Add5~52|cout"
+    Warning (332126): Node "C1|Add5~54|cin"
+    Warning (332126): Node "C1|Add5~54|combout"
+    Warning (332126): Node "C1|Selector4~1|dataa"
+    Warning (332126): Node "C1|Selector4~1|combout"
+    Warning (332126): Node "C1|Add0~72|dataa"
+    Warning (332126): Node "C1|Add0~72|combout"
+    Warning (332126): Node "C1|Add0~73|datad"
+    Warning (332126): Node "C1|Add0~73|combout"
+    Warning (332126): Node "C1|Step[27]~1|datab"
+    Warning (332126): Node "C1|Step[27]~1|combout"
+    Warning (332126): Node "C1|Step[27]|datad"
+    Warning (332126): Node "C1|Step[27]|combout"
+    Warning (332126): Node "C1|comb~1|datac"
+    Warning (332126): Node "C1|LessThan1~4|datac"
+    Warning (332126): Node "C1|LessThan1~4|combout"
+    Warning (332126): Node "C1|LessThan1~10|datab"
+    Warning (332126): Node "C1|Add5~54|dataa"
+    Warning (332126): Node "C1|Add3~54|datab"
+    Warning (332126): Node "C1|Add3~54|combout"
+    Warning (332126): Node "C1|Selector4~1|datab"
+    Warning (332126): Node "C1|Add4~54|datab"
+    Warning (332126): Node "C1|Add4~54|combout"
+    Warning (332126): Node "C1|Selector4~0|datac"
+    Warning (332126): Node "C1|Selector4~0|combout"
+    Warning (332126): Node "C1|Selector4~1|datad"
+    Warning (332126): Node "C1|Add2~54|dataa"
+    Warning (332126): Node "C1|Add2~54|combout"
+    Warning (332126): Node "C1|Selector4~0|datad"
+    Warning (332126): Node "C1|Add1~54|dataa"
+    Warning (332126): Node "C1|Add1~54|combout"
+    Warning (332126): Node "C1|Add0~72|datad"
+    Warning (332126): Node "C1|Step[27]~1|datad"
+    Warning (332126): Node "C1|Add0~55|dataa"
+    Warning (332126): Node "C1|Add0~55|combout"
+    Warning (332126): Node "C1|Add0~73|datac"
+    Warning (332126): Node "C1|Add5~50|combout"
+    Warning (332126): Node "C1|Selector6~1|datad"
+    Warning (332126): Node "C1|Selector6~1|combout"
+    Warning (332126): Node "C1|Add0~76|datad"
+    Warning (332126): Node "C1|Add0~76|combout"
+    Warning (332126): Node "C1|Add0~77|datac"
+    Warning (332126): Node "C1|Add0~77|combout"
+    Warning (332126): Node "C1|Step[25]~2|datab"
+    Warning (332126): Node "C1|Step[25]~2|combout"
+    Warning (332126): Node "C1|Step[25]|datac"
+    Warning (332126): Node "C1|Step[25]|combout"
+    Warning (332126): Node "C1|LessThan0~6|datac"
+    Warning (332126): Node "C1|LessThan1~3|datab"
+    Warning (332126): Node "C1|LessThan1~3|combout"
+    Warning (332126): Node "C1|LessThan1~4|dataa"
+    Warning (332126): Node "C1|Add1~50|dataa"
+    Warning (332126): Node "C1|Add1~50|cout"
+    Warning (332126): Node "C1|Add1~52|cin"
+    Warning (332126): Node "C1|Add1~52|cout"
+    Warning (332126): Node "C1|Add1~54|cin"
+    Warning (332126): Node "C1|Add1~50|combout"
+    Warning (332126): Node "C1|Add0~76|datac"
+    Warning (332126): Node "C1|Add4~50|datab"
+    Warning (332126): Node "C1|Add4~50|cout"
+    Warning (332126): Node "C1|Add4~52|cin"
+    Warning (332126): Node "C1|Add4~52|cout"
+    Warning (332126): Node "C1|Add4~54|cin"
+    Warning (332126): Node "C1|Add4~50|combout"
+    Warning (332126): Node "C1|Selector6~0|dataa"
+    Warning (332126): Node "C1|Selector6~0|combout"
+    Warning (332126): Node "C1|Selector6~1|dataa"
+    Warning (332126): Node "C1|Add2~50|dataa"
+    Warning (332126): Node "C1|Add2~50|cout"
+    Warning (332126): Node "C1|Add2~52|cin"
+    Warning (332126): Node "C1|Add2~52|cout"
+    Warning (332126): Node "C1|Add2~54|cin"
+    Warning (332126): Node "C1|Add2~50|combout"
+    Warning (332126): Node "C1|Selector6~0|datab"
+    Warning (332126): Node "C1|Add3~50|dataa"
+    Warning (332126): Node "C1|Add3~50|cout"
+    Warning (332126): Node "C1|Add3~52|cin"
+    Warning (332126): Node "C1|Add3~52|cout"
+    Warning (332126): Node "C1|Add3~54|cin"
+    Warning (332126): Node "C1|Add3~50|combout"
+    Warning (332126): Node "C1|Selector6~1|datab"
+    Warning (332126): Node "C1|Add5~50|datab"
+    Warning (332126): Node "C1|Step[25]~2|datad"
+    Warning (332126): Node "C1|Add0~51|datab"
+    Warning (332126): Node "C1|Add0~51|combout"
+    Warning (332126): Node "C1|Add0~77|datad"
+    Warning (332126): Node "C1|Add0~51|cout"
+    Warning (332126): Node "C1|Add0~53|cin"
+    Warning (332126): Node "C1|Add0~53|cout"
+    Warning (332126): Node "C1|Add0~55|cin"
+    Warning (332126): Node "C1|Add5~42|combout"
+    Warning (332126): Node "C1|Selector10~1|dataa"
+    Warning (332126): Node "C1|Selector10~1|combout"
+    Warning (332126): Node "C1|Add0~84|dataa"
+    Warning (332126): Node "C1|Add0~84|combout"
+    Warning (332126): Node "C1|Add0~85|dataa"
+    Warning (332126): Node "C1|Add0~85|combout"
+    Warning (332126): Node "C1|Step[21]~3|dataa"
+    Warning (332126): Node "C1|Step[21]~3|combout"
+    Warning (332126): Node "C1|Step[21]|datac"
+    Warning (332126): Node "C1|Step[21]|combout"
+    Warning (332126): Node "C1|LessThan0~5|datab"
+    Warning (332126): Node "C1|LessThan0~5|combout"
+    Warning (332126): Node "C1|LessThan0~6|datab"
+    Warning (332126): Node "C1|LessThan1~3|datac"
+    Warning (332126): Node "C1|Add5~42|dataa"
+    Warning (332126): Node "C1|Add3~42|dataa"
+    Warning (332126): Node "C1|Add3~42|cout"
+    Warning (332126): Node "C1|Add3~44|cin"
+    Warning (332126): Node "C1|Add3~44|cout"
+    Warning (332126): Node "C1|Add3~46|cin"
+    Warning (332126): Node "C1|Add3~46|cout"
+    Warning (332126): Node "C1|Add3~48|cin"
+    Warning (332126): Node "C1|Add3~48|cout"
+    Warning (332126): Node "C1|Add3~50|cin"
+    Warning (332126): Node "C1|Add3~42|combout"
+    Warning (332126): Node "C1|Selector10~1|datab"
+    Warning (332126): Node "C1|Add2~42|dataa"
+    Warning (332126): Node "C1|Add2~42|cout"
+    Warning (332126): Node "C1|Add2~44|cin"
+    Warning (332126): Node "C1|Add2~44|cout"
+    Warning (332126): Node "C1|Add2~46|cin"
+    Warning (332126): Node "C1|Add2~46|cout"
+    Warning (332126): Node "C1|Add2~48|cin"
+    Warning (332126): Node "C1|Add2~48|cout"
+    Warning (332126): Node "C1|Add2~50|cin"
+    Warning (332126): Node "C1|Add2~42|combout"
+    Warning (332126): Node "C1|Selector10~0|dataa"
+    Warning (332126): Node "C1|Selector10~0|combout"
+    Warning (332126): Node "C1|Selector10~1|datad"
+    Warning (332126): Node "C1|Add4~42|datab"
+    Warning (332126): Node "C1|Add4~42|cout"
+    Warning (332126): Node "C1|Add4~44|cin"
+    Warning (332126): Node "C1|Add4~44|cout"
+    Warning (332126): Node "C1|Add4~46|cin"
+    Warning (332126): Node "C1|Add4~46|cout"
+    Warning (332126): Node "C1|Add4~48|cin"
+    Warning (332126): Node "C1|Add4~48|cout"
+    Warning (332126): Node "C1|Add4~50|cin"
+    Warning (332126): Node "C1|Add4~42|combout"
+    Warning (332126): Node "C1|Selector10~0|datad"
+    Warning (332126): Node "C1|Add0~43|dataa"
+    Warning (332126): Node "C1|Add0~43|cout"
+    Warning (332126): Node "C1|Add0~45|cin"
+    Warning (332126): Node "C1|Add0~45|cout"
+    Warning (332126): Node "C1|Add0~47|cin"
+    Warning (332126): Node "C1|Add0~47|cout"
+    Warning (332126): Node "C1|Add0~49|cin"
+    Warning (332126): Node "C1|Add0~49|cout"
+    Warning (332126): Node "C1|Add0~51|cin"
+    Warning (332126): Node "C1|Add0~43|combout"
+    Warning (332126): Node "C1|Add0~85|datad"
+    Warning (332126): Node "C1|Step[21]~3|datad"
+    Warning (332126): Node "C1|Add1~42|datab"
+    Warning (332126): Node "C1|Add1~42|combout"
+    Warning (332126): Node "C1|Add0~84|datac"
+    Warning (332126): Node "C1|Add1~42|cout"
+    Warning (332126): Node "C1|Add1~44|cin"
+    Warning (332126): Node "C1|Add1~44|cout"
+    Warning (332126): Node "C1|Add1~46|cin"
+    Warning (332126): Node "C1|Add1~46|cout"
+    Warning (332126): Node "C1|Add1~48|cin"
+    Warning (332126): Node "C1|Add1~48|cout"
+    Warning (332126): Node "C1|Add1~50|cin"
+    Warning (332126): Node "C1|Add5~40|combout"
+    Warning (332126): Node "C1|Selector11~1|datad"
+    Warning (332126): Node "C1|Selector11~1|combout"
+    Warning (332126): Node "C1|Add0~86|datad"
+    Warning (332126): Node "C1|Add0~86|combout"
+    Warning (332126): Node "C1|Add0~87|datad"
+    Warning (332126): Node "C1|Add0~87|combout"
+    Warning (332126): Node "C1|Step[20]~4|datab"
+    Warning (332126): Node "C1|Step[20]~4|combout"
+    Warning (332126): Node "C1|Step[20]|datac"
+    Warning (332126): Node "C1|Step[20]|combout"
+    Warning (332126): Node "C1|LessThan0~5|datad"
+    Warning (332126): Node "C1|LessThan1~3|datad"
+    Warning (332126): Node "C1|Add0~41|dataa"
+    Warning (332126): Node "C1|Add0~41|cout"
+    Warning (332126): Node "C1|Add0~43|cin"
+    Warning (332126): Node "C1|Add0~41|combout"
+    Warning (332126): Node "C1|Add0~87|datab"
+    Warning (332126): Node "C1|Add4~40|datab"
+    Warning (332126): Node "C1|Add4~40|cout"
+    Warning (332126): Node "C1|Add4~42|cin"
+    Warning (332126): Node "C1|Add4~40|combout"
+    Warning (332126): Node "C1|Selector11~1|dataa"
+    Warning (332126): Node "C1|Add3~40|dataa"
+    Warning (332126): Node "C1|Add3~40|cout"
+    Warning (332126): Node "C1|Add3~42|cin"
+    Warning (332126): Node "C1|Add3~40|combout"
+    Warning (332126): Node "C1|Selector11~0|dataa"
+    Warning (332126): Node "C1|Selector11~0|combout"
+    Warning (332126): Node "C1|Selector11~1|datac"
+    Warning (332126): Node "C1|Add2~40|dataa"
+    Warning (332126): Node "C1|Add2~40|cout"
+    Warning (332126): Node "C1|Add2~42|cin"
+    Warning (332126): Node "C1|Add2~40|combout"
+    Warning (332126): Node "C1|Selector11~0|datac"
+    Warning (332126): Node "C1|Add5~40|datab"
+    Warning (332126): Node "C1|Step[20]~4|datad"
+    Warning (332126): Node "C1|Add1~40|dataa"
+    Warning (332126): Node "C1|Add1~40|combout"
+    Warning (332126): Node "C1|Add0~86|datac"
+    Warning (332126): Node "C1|Add1~40|cout"
+    Warning (332126): Node "C1|Add1~42|cin"
+    Warning (332126): Node "C1|Add5~38|combout"
+    Warning (332126): Node "C1|Selector12~1|dataa"
+    Warning (332126): Node "C1|Selector12~1|combout"
+    Warning (332126): Node "C1|Add0~88|datac"
+    Warning (332126): Node "C1|Add0~88|combout"
+    Warning (332126): Node "C1|Add0~89|datad"
+    Warning (332126): Node "C1|Add0~89|combout"
+    Warning (332126): Node "C1|Step[19]~5|dataa"
+    Warning (332126): Node "C1|Step[19]~5|combout"
+    Warning (332126): Node "C1|Step[19]|datac"
+    Warning (332126): Node "C1|Step[19]|combout"
+    Warning (332126): Node "C1|LessThan0~5|dataa"
+    Warning (332126): Node "C1|LessThan1~3|dataa"
+    Warning (332126): Node "C1|Add0~39|datab"
+    Warning (332126): Node "C1|Add0~39|cout"
+    Warning (332126): Node "C1|Add0~41|cin"
+    Warning (332126): Node "C1|Add0~39|combout"
+    Warning (332126): Node "C1|Add0~89|datac"
+    Warning (332126): Node "C1|Add5~38|dataa"
+    Warning (332126): Node "C1|Add3~38|dataa"
+    Warning (332126): Node "C1|Add3~38|cout"
+    Warning (332126): Node "C1|Add3~40|cin"
+    Warning (332126): Node "C1|Add3~38|combout"
+    Warning (332126): Node "C1|Selector12~1|datac"
+    Warning (332126): Node "C1|Add2~38|datab"
+    Warning (332126): Node "C1|Add2~38|cout"
+    Warning (332126): Node "C1|Add2~40|cin"
+    Warning (332126): Node "C1|Add2~38|combout"
+    Warning (332126): Node "C1|Selector12~0|datac"
+    Warning (332126): Node "C1|Selector12~0|combout"
+    Warning (332126): Node "C1|Selector12~1|datad"
+    Warning (332126): Node "C1|Add4~38|dataa"
+    Warning (332126): Node "C1|Add4~38|cout"
+    Warning (332126): Node "C1|Add4~40|cin"
+    Warning (332126): Node "C1|Add4~38|combout"
+    Warning (332126): Node "C1|Selector12~0|datad"
+    Warning (332126): Node "C1|Step[19]~5|datad"
+    Warning (332126): Node "C1|Add1~38|datab"
+    Warning (332126): Node "C1|Add1~38|combout"
+    Warning (332126): Node "C1|Add0~88|datad"
+    Warning (332126): Node "C1|Add1~38|cout"
+    Warning (332126): Node "C1|Add1~40|cin"
+    Warning (332126): Node "C1|Add5~36|combout"
+    Warning (332126): Node "C1|Selector13~1|datad"
+    Warning (332126): Node "C1|Selector13~1|combout"
+    Warning (332126): Node "C1|Add0~90|datab"
+    Warning (332126): Node "C1|Add0~90|combout"
+    Warning (332126): Node "C1|Add0~91|datac"
+    Warning (332126): Node "C1|Add0~91|combout"
+    Warning (332126): Node "C1|Step[18]~6|datab"
+    Warning (332126): Node "C1|Step[18]~6|combout"
+    Warning (332126): Node "C1|Step[18]|datad"
+    Warning (332126): Node "C1|Step[18]|combout"
+    Warning (332126): Node "C1|LessThan0~5|datac"
+    Warning (332126): Node "C1|LessThan1~2|dataa"
+    Warning (332126): Node "C1|LessThan1~2|combout"
+    Warning (332126): Node "C1|LessThan1~4|datad"
+    Warning (332126): Node "C1|Add0~37|datab"
+    Warning (332126): Node "C1|Add0~37|cout"
+    Warning (332126): Node "C1|Add0~39|cin"
+    Warning (332126): Node "C1|Add0~37|combout"
+    Warning (332126): Node "C1|Add0~91|dataa"
+    Warning (332126): Node "C1|Add4~36|datab"
+    Warning (332126): Node "C1|Add4~36|cout"
+    Warning (332126): Node "C1|Add4~38|cin"
+    Warning (332126): Node "C1|Add4~36|combout"
+    Warning (332126): Node "C1|Selector13~1|dataa"
+    Warning (332126): Node "C1|Add3~36|datab"
+    Warning (332126): Node "C1|Add3~36|cout"
+    Warning (332126): Node "C1|Add3~38|cin"
+    Warning (332126): Node "C1|Add3~36|combout"
+    Warning (332126): Node "C1|Selector13~0|dataa"
+    Warning (332126): Node "C1|Selector13~0|combout"
+    Warning (332126): Node "C1|Selector13~1|datab"
+    Warning (332126): Node "C1|Add2~36|datab"
+    Warning (332126): Node "C1|Add2~36|cout"
+    Warning (332126): Node "C1|Add2~38|cin"
+    Warning (332126): Node "C1|Add2~36|combout"
+    Warning (332126): Node "C1|Selector13~0|datab"
+    Warning (332126): Node "C1|Add5~36|dataa"
+    Warning (332126): Node "C1|Step[18]~6|datac"
+    Warning (332126): Node "C1|Add1~36|dataa"
+    Warning (332126): Node "C1|Add1~36|combout"
+    Warning (332126): Node "C1|Add0~90|dataa"
+    Warning (332126): Node "C1|Add1~36|cout"
+    Warning (332126): Node "C1|Add1~38|cin"
+    Warning (332126): Node "C1|Add5~26|combout"
+    Warning (332126): Node "C1|Selector18~1|datad"
+    Warning (332126): Node "C1|Selector18~1|combout"
+    Warning (332126): Node "C1|Add0~100|datab"
+    Warning (332126): Node "C1|Add0~100|combout"
+    Warning (332126): Node "C1|Add0~101|datad"
+    Warning (332126): Node "C1|Add0~101|combout"
+    Warning (332126): Node "C1|Step[13]~7|datab"
+    Warning (332126): Node "C1|Step[13]~7|combout"
+    Warning (332126): Node "C1|Step[13]|datac"
+    Warning (332126): Node "C1|Step[13]|combout"
+    Warning (332126): Node "C1|LessThan0~3|datab"
+    Warning (332126): Node "C1|LessThan1~9|datab"
+    Warning (332126): Node "C1|Add0~27|datab"
+    Warning (332126): Node "C1|Add0~27|cout"
+    Warning (332126): Node "C1|Add0~29|cin"
+    Warning (332126): Node "C1|Add0~29|cout"
+    Warning (332126): Node "C1|Add0~31|cin"
+    Warning (332126): Node "C1|Add0~31|cout"
+    Warning (332126): Node "C1|Add0~33|cin"
+    Warning (332126): Node "C1|Add0~33|cout"
+    Warning (332126): Node "C1|Add0~35|cin"
+    Warning (332126): Node "C1|Add0~35|cout"
+    Warning (332126): Node "C1|Add0~37|cin"
+    Warning (332126): Node "C1|Add0~27|combout"
+    Warning (332126): Node "C1|Add0~101|datac"
+    Warning (332126): Node "C1|Add3~26|datab"
+    Warning (332126): Node "C1|Add3~26|cout"
+    Warning (332126): Node "C1|Add3~28|cin"
+    Warning (332126): Node "C1|Add3~28|cout"
+    Warning (332126): Node "C1|Add3~30|cin"
+    Warning (332126): Node "C1|Add3~30|cout"
+    Warning (332126): Node "C1|Add3~32|cin"
+    Warning (332126): Node "C1|Add3~32|cout"
+    Warning (332126): Node "C1|Add3~34|cin"
+    Warning (332126): Node "C1|Add3~34|cout"
+    Warning (332126): Node "C1|Add3~36|cin"
+    Warning (332126): Node "C1|Add3~26|combout"
+    Warning (332126): Node "C1|Selector18~1|dataa"
+    Warning (332126): Node "C1|Add2~26|dataa"
+    Warning (332126): Node "C1|Add2~26|cout"
+    Warning (332126): Node "C1|Add2~28|cin"
+    Warning (332126): Node "C1|Add2~28|cout"
+    Warning (332126): Node "C1|Add2~30|cin"
+    Warning (332126): Node "C1|Add2~30|cout"
+    Warning (332126): Node "C1|Add2~32|cin"
+    Warning (332126): Node "C1|Add2~32|cout"
+    Warning (332126): Node "C1|Add2~34|cin"
+    Warning (332126): Node "C1|Add2~34|cout"
+    Warning (332126): Node "C1|Add2~36|cin"
+    Warning (332126): Node "C1|Add2~26|combout"
+    Warning (332126): Node "C1|Selector18~0|datac"
+    Warning (332126): Node "C1|Selector18~0|combout"
+    Warning (332126): Node "C1|Selector18~1|datab"
+    Warning (332126): Node "C1|Add4~26|datab"
+    Warning (332126): Node "C1|Add4~26|cout"
+    Warning (332126): Node "C1|Add4~28|cin"
+    Warning (332126): Node "C1|Add4~28|cout"
+    Warning (332126): Node "C1|Add4~30|cin"
+    Warning (332126): Node "C1|Add4~30|cout"
+    Warning (332126): Node "C1|Add4~32|cin"
+    Warning (332126): Node "C1|Add4~32|cout"
+    Warning (332126): Node "C1|Add4~34|cin"
+    Warning (332126): Node "C1|Add4~34|cout"
+    Warning (332126): Node "C1|Add4~36|cin"
+    Warning (332126): Node "C1|Add4~26|combout"
+    Warning (332126): Node "C1|Selector18~0|datad"
+    Warning (332126): Node "C1|Add5~26|datab"
+    Warning (332126): Node "C1|Step[13]~7|datac"
+    Warning (332126): Node "C1|Add1~26|datab"
+    Warning (332126): Node "C1|Add1~26|combout"
+    Warning (332126): Node "C1|Add0~100|dataa"
+    Warning (332126): Node "C1|Add1~26|cout"
+    Warning (332126): Node "C1|Add1~28|cin"
+    Warning (332126): Node "C1|Add1~28|cout"
+    Warning (332126): Node "C1|Add1~30|cin"
+    Warning (332126): Node "C1|Add1~30|cout"
+    Warning (332126): Node "C1|Add1~32|cin"
+    Warning (332126): Node "C1|Add1~32|cout"
+    Warning (332126): Node "C1|Add1~34|cin"
+    Warning (332126): Node "C1|Add1~34|cout"
+    Warning (332126): Node "C1|Add1~36|cin"
+    Warning (332126): Node "C1|Add5~24|combout"
+    Warning (332126): Node "C1|Selector19~1|dataa"
+    Warning (332126): Node "C1|Selector19~1|combout"
+    Warning (332126): Node "C1|Add0~102|datac"
+    Warning (332126): Node "C1|Add0~102|combout"
+    Warning (332126): Node "C1|Add0~103|datab"
+    Warning (332126): Node "C1|Add0~103|combout"
+    Warning (332126): Node "C1|Step[12]~8|datab"
+    Warning (332126): Node "C1|Step[12]~8|combout"
+    Warning (332126): Node "C1|Step[12]|datad"
+    Warning (332126): Node "C1|Step[12]|combout"
+    Warning (332126): Node "C1|LessThan0~3|dataa"
+    Warning (332126): Node "C1|LessThan1~9|dataa"
+    Warning (332126): Node "C1|Add5~24|datab"
+    Warning (332126): Node "C1|Add3~24|datab"
+    Warning (332126): Node "C1|Add3~24|cout"
+    Warning (332126): Node "C1|Add3~26|cin"
+    Warning (332126): Node "C1|Add3~24|combout"
+    Warning (332126): Node "C1|Selector19~0|dataa"
+    Warning (332126): Node "C1|Selector19~0|combout"
+    Warning (332126): Node "C1|Selector19~1|datab"
+    Warning (332126): Node "C1|Add2~24|datab"
+    Warning (332126): Node "C1|Add2~24|cout"
+    Warning (332126): Node "C1|Add2~26|cin"
+    Warning (332126): Node "C1|Add2~24|combout"
+    Warning (332126): Node "C1|Selector19~0|datad"
+    Warning (332126): Node "C1|Add4~24|datab"
+    Warning (332126): Node "C1|Add4~24|cout"
+    Warning (332126): Node "C1|Add4~26|cin"
+    Warning (332126): Node "C1|Add4~24|combout"
+    Warning (332126): Node "C1|Selector19~1|datad"
+    Warning (332126): Node "C1|Add0~25|dataa"
+    Warning (332126): Node "C1|Add0~25|cout"
+    Warning (332126): Node "C1|Add0~27|cin"
+    Warning (332126): Node "C1|Add0~25|combout"
+    Warning (332126): Node "C1|Add0~103|datad"
+    Warning (332126): Node "C1|Step[12]~8|datac"
+    Warning (332126): Node "C1|Add1~24|dataa"
+    Warning (332126): Node "C1|Add1~24|combout"
+    Warning (332126): Node "C1|Add0~102|dataa"
+    Warning (332126): Node "C1|Add1~24|cout"
+    Warning (332126): Node "C1|Add1~26|cin"
+    Warning (332126): Node "C1|Add5~22|combout"
+    Warning (332126): Node "C1|Selector20~1|dataa"
+    Warning (332126): Node "C1|Selector20~1|combout"
+    Warning (332126): Node "C1|Add0~104|dataa"
+    Warning (332126): Node "C1|Add0~104|combout"
+    Warning (332126): Node "C1|Add0~105|datac"
+    Warning (332126): Node "C1|Add0~105|combout"
+    Warning (332126): Node "C1|Step[11]~9|datab"
+    Warning (332126): Node "C1|Step[11]~9|combout"
+    Warning (332126): Node "C1|Step[11]|datad"
+    Warning (332126): Node "C1|Add2~22|datab"
+    Warning (332126): Node "C1|Add2~22|cout"
+    Warning (332126): Node "C1|Add2~24|cin"
+    Warning (332126): Node "C1|Add2~22|combout"
+    Warning (332126): Node "C1|Selector20~0|datac"
+    Warning (332126): Node "C1|Selector20~0|combout"
+    Warning (332126): Node "C1|Selector20~1|datab"
+    Warning (332126): Node "C1|Add4~22|dataa"
+    Warning (332126): Node "C1|Add4~22|cout"
+    Warning (332126): Node "C1|Add4~24|cin"
+    Warning (332126): Node "C1|Add4~22|combout"
+    Warning (332126): Node "C1|Selector20~0|datad"
+    Warning (332126): Node "C1|Add3~22|dataa"
+    Warning (332126): Node "C1|Add3~22|cout"
+    Warning (332126): Node "C1|Add3~24|cin"
+    Warning (332126): Node "C1|Add3~22|combout"
+    Warning (332126): Node "C1|Selector20~1|datac"
+    Warning (332126): Node "C1|Add0~23|dataa"
+    Warning (332126): Node "C1|Add0~23|cout"
+    Warning (332126): Node "C1|Add0~25|cin"
+    Warning (332126): Node "C1|Add0~23|combout"
+    Warning (332126): Node "C1|Add0~105|datad"
+    Warning (332126): Node "C1|Step[11]~9|datac"
+    Warning (332126): Node "C1|Add1~22|dataa"
+    Warning (332126): Node "C1|Add1~22|combout"
+    Warning (332126): Node "C1|Add0~104|datad"
+    Warning (332126): Node "C1|Add1~22|cout"
+    Warning (332126): Node "C1|Add1~24|cin"
+    Warning (332126): Node "C1|Step[10]|datac"
+    Warning (332126): Node "C1|Step[10]|combout"
+    Warning (332126): Node "C1|LessThan0~0|datab"
+    Warning (332126): Node "C1|LessThan1~5|datab"
+    Warning (332126): Node "C1|LessThan1~5|combout"
+    Warning (332126): Node "C1|LessThan1~8|dataa"
+    Warning (332126): Node "C1|Add0~21|datab"
+    Warning (332126): Node "C1|Add0~21|cout"
+    Warning (332126): Node "C1|Add0~23|cin"
+    Warning (332126): Node "C1|Add0~21|combout"
+    Warning (332126): Node "C1|Add0~107|datac"
+    Warning (332126): Node "C1|Add0~107|combout"
+    Warning (332126): Node "C1|Step[10]~10|datab"
+    Warning (332126): Node "C1|Step[10]~10|combout"
+    Warning (332126): Node "C1|Step[10]|datad"
+    Warning (332126): Node "C1|Add2~20|dataa"
+    Warning (332126): Node "C1|Add2~20|cout"
+    Warning (332126): Node "C1|Add2~22|cin"
+    Warning (332126): Node "C1|Add2~20|combout"
+    Warning (332126): Node "C1|Selector21~2|datab"
+    Warning (332126): Node "C1|Selector21~2|combout"
+    Warning (332126): Node "C1|Selector21~3|dataa"
+    Warning (332126): Node "C1|Selector21~3|combout"
+    Warning (332126): Node "C1|Add0~106|dataa"
+    Warning (332126): Node "C1|Add0~106|combout"
+    Warning (332126): Node "C1|Add0~107|datad"
+    Warning (332126): Node "C1|Add3~20|dataa"
+    Warning (332126): Node "C1|Add3~20|cout"
+    Warning (332126): Node "C1|Add3~22|cin"
+    Warning (332126): Node "C1|Add3~20|combout"
+    Warning (332126): Node "C1|Selector21~2|datad"
+    Warning (332126): Node "C1|Add4~20|dataa"
+    Warning (332126): Node "C1|Add4~20|cout"
+    Warning (332126): Node "C1|Add4~22|cin"
+    Warning (332126): Node "C1|Add4~20|combout"
+    Warning (332126): Node "C1|Selector21~3|datab"
+    Warning (332126): Node "C1|Add5~20|dataa"
+    Warning (332126): Node "C1|Add5~20|cout"
+    Warning (332126): Node "C1|Add5~22|cin"
+    Warning (332126): Node "C1|Add5~20|combout"
+    Warning (332126): Node "C1|Selector21~3|datad"
+    Warning (332126): Node "C1|Step[10]~10|datac"
+    Warning (332126): Node "C1|Add1~20|dataa"
+    Warning (332126): Node "C1|Add1~20|combout"
+    Warning (332126): Node "C1|Add0~106|datad"
+    Warning (332126): Node "C1|Add1~20|cout"
+    Warning (332126): Node "C1|Add1~22|cin"
+    Warning (332126): Node "C1|Step[9]|dataa"
+    Warning (332126): Node "C1|Step[9]|combout"
+    Warning (332126): Node "C1|LessThan0~0|datad"
+    Warning (332126): Node "C1|LessThan1~5|datad"
+    Warning (332126): Node "C1|Add0~19|dataa"
+    Warning (332126): Node "C1|Add0~19|cout"
+    Warning (332126): Node "C1|Add0~21|cin"
+    Warning (332126): Node "C1|Add0~19|combout"
+    Warning (332126): Node "C1|Add0~109|datac"
+    Warning (332126): Node "C1|Add0~109|combout"
+    Warning (332126): Node "C1|Step[9]~11|datab"
+    Warning (332126): Node "C1|Step[9]~11|combout"
+    Warning (332126): Node "C1|Step[9]|datac"
+    Warning (332126): Node "C1|Add4~18|dataa"
+    Warning (332126): Node "C1|Add4~18|cout"
+    Warning (332126): Node "C1|Add4~20|cin"
+    Warning (332126): Node "C1|Add4~18|combout"
+    Warning (332126): Node "C1|Selector22~0|datab"
+    Warning (332126): Node "C1|Selector22~0|combout"
+    Warning (332126): Node "C1|Selector22~1|dataa"
+    Warning (332126): Node "C1|Selector22~1|combout"
+    Warning (332126): Node "C1|Add0~108|datab"
+    Warning (332126): Node "C1|Add0~108|combout"
+    Warning (332126): Node "C1|Add0~109|datad"
+    Warning (332126): Node "C1|Add2~18|datab"
+    Warning (332126): Node "C1|Add2~18|cout"
+    Warning (332126): Node "C1|Add2~20|cin"
+    Warning (332126): Node "C1|Add2~18|combout"
+    Warning (332126): Node "C1|Selector22~0|datad"
+    Warning (332126): Node "C1|Add5~18|datab"
+    Warning (332126): Node "C1|Add5~18|cout"
+    Warning (332126): Node "C1|Add5~20|cin"
+    Warning (332126): Node "C1|Add5~18|combout"
+    Warning (332126): Node "C1|Selector22~1|datab"
+    Warning (332126): Node "C1|Add3~18|datab"
+    Warning (332126): Node "C1|Add3~18|cout"
+    Warning (332126): Node "C1|Add3~20|cin"
+    Warning (332126): Node "C1|Add3~18|combout"
+    Warning (332126): Node "C1|Selector22~1|datad"
+    Warning (332126): Node "C1|Step[9]~11|datac"
+    Warning (332126): Node "C1|Add1~18|datab"
+    Warning (332126): Node "C1|Add1~18|combout"
+    Warning (332126): Node "C1|Add0~108|datad"
+    Warning (332126): Node "C1|Add1~18|cout"
+    Warning (332126): Node "C1|Add1~20|cin"
+    Warning (332126): Node "C1|Step[8]|datac"
+    Warning (332126): Node "C1|Step[8]|combout"
+    Warning (332126): Node "C1|LessThan0~0|datac"
+    Warning (332126): Node "C1|LessThan1~5|dataa"
+    Warning (332126): Node "C1|Add0~17|datab"
+    Warning (332126): Node "C1|Add0~17|cout"
+    Warning (332126): Node "C1|Add0~19|cin"
+    Warning (332126): Node "C1|Add0~17|combout"
+    Warning (332126): Node "C1|Add0~111|dataa"
+    Warning (332126): Node "C1|Add0~111|combout"
+    Warning (332126): Node "C1|Step[8]~12|datab"
+    Warning (332126): Node "C1|Step[8]~12|combout"
+    Warning (332126): Node "C1|Step[8]|datad"
+    Warning (332126): Node "C1|Add5~16|datab"
+    Warning (332126): Node "C1|Add5~16|cout"
+    Warning (332126): Node "C1|Add5~18|cin"
+    Warning (332126): Node "C1|Add5~16|combout"
+    Warning (332126): Node "C1|Selector23~1|dataa"
+    Warning (332126): Node "C1|Selector23~1|combout"
+    Warning (332126): Node "C1|Add0~110|dataa"
+    Warning (332126): Node "C1|Add0~110|combout"
+    Warning (332126): Node "C1|Add0~111|datad"
+    Warning (332126): Node "C1|Add2~16|datab"
+    Warning (332126): Node "C1|Add2~16|cout"
+    Warning (332126): Node "C1|Add2~18|cin"
+    Warning (332126): Node "C1|Add2~16|combout"
+    Warning (332126): Node "C1|Selector23~0|datab"
+    Warning (332126): Node "C1|Selector23~0|combout"
+    Warning (332126): Node "C1|Selector23~1|datab"
+    Warning (332126): Node "C1|Add3~16|dataa"
+    Warning (332126): Node "C1|Add3~16|cout"
+    Warning (332126): Node "C1|Add3~18|cin"
+    Warning (332126): Node "C1|Add3~16|combout"
+    Warning (332126): Node "C1|Selector23~0|datad"
+    Warning (332126): Node "C1|Add4~16|datab"
+    Warning (332126): Node "C1|Add4~16|cout"
+    Warning (332126): Node "C1|Add4~18|cin"
+    Warning (332126): Node "C1|Add4~16|combout"
+    Warning (332126): Node "C1|Selector23~1|datad"
+    Warning (332126): Node "C1|Step[8]~12|datac"
+    Warning (332126): Node "C1|Add1~16|dataa"
+    Warning (332126): Node "C1|Add1~16|combout"
+    Warning (332126): Node "C1|Add0~110|datad"
+    Warning (332126): Node "C1|Add1~16|cout"
+    Warning (332126): Node "C1|Add1~18|cin"
+    Warning (332126): Node "C1|comb~2|datac"
+    Warning (332126): Node "C1|comb~2|combout"
+    Warning (332126): Node "C1|Step[27]|dataa"
+    Warning (332126): Node "C1|Step[25]|datad"
+    Warning (332126): Node "C1|Step[21]|datad"
+    Warning (332126): Node "C1|Step[20]|datad"
+    Warning (332126): Node "C1|Step[19]|datad"
+    Warning (332126): Node "C1|Step[18]|dataa"
+    Warning (332126): Node "C1|Step[13]|datad"
+    Warning (332126): Node "C1|Step[12]|dataa"
+    Warning (332126): Node "C1|Step[5]|datad"
+    Warning (332126): Node "C1|Step[5]|combout"
+    Warning (332126): Node "C1|LessThan0~1|datad"
+    Warning (332126): Node "C1|LessThan1~7|datac"
+    Warning (332126): Node "C1|LessThan1~7|combout"
+    Warning (332126): Node "C1|LessThan1~8|datab"
+    Warning (332126): Node "C1|Add3~10|datab"
+    Warning (332126): Node "C1|Add3~10|cout"
+    Warning (332126): Node "C1|Add3~12|cin"
+    Warning (332126): Node "C1|Add3~12|cout"
+    Warning (332126): Node "C1|Add3~14|cin"
+    Warning (332126): Node "C1|Add3~14|cout"
+    Warning (332126): Node "C1|Add3~16|cin"
+    Warning (332126): Node "C1|Add3~10|combout"
+    Warning (332126): Node "C1|Selector26~1|dataa"
+    Warning (332126): Node "C1|Selector26~1|combout"
+    Warning (332126): Node "C1|Add0~116|dataa"
+    Warning (332126): Node "C1|Add0~116|combout"
+    Warning (332126): Node "C1|Add0~117|dataa"
+    Warning (332126): Node "C1|Add0~117|combout"
+    Warning (332126): Node "C1|Step[5]~13|datab"
+    Warning (332126): Node "C1|Step[5]~13|combout"
+    Warning (332126): Node "C1|Step[5]|datab"
+    Warning (332126): Node "C1|Add5~10|datab"
+    Warning (332126): Node "C1|Add5~10|cout"
+    Warning (332126): Node "C1|Add5~12|cin"
+    Warning (332126): Node "C1|Add5~12|cout"
+    Warning (332126): Node "C1|Add5~14|cin"
+    Warning (332126): Node "C1|Add5~14|cout"
+    Warning (332126): Node "C1|Add5~16|cin"
+    Warning (332126): Node "C1|Add5~10|combout"
+    Warning (332126): Node "C1|Selector26~1|datab"
+    Warning (332126): Node "C1|Add2~10|dataa"
+    Warning (332126): Node "C1|Add2~10|cout"
+    Warning (332126): Node "C1|Add2~12|cin"
+    Warning (332126): Node "C1|Add2~12|cout"
+    Warning (332126): Node "C1|Add2~14|cin"
+    Warning (332126): Node "C1|Add2~14|cout"
+    Warning (332126): Node "C1|Add2~16|cin"
+    Warning (332126): Node "C1|Add2~10|combout"
+    Warning (332126): Node "C1|Selector26~0|datac"
+    Warning (332126): Node "C1|Selector26~0|combout"
+    Warning (332126): Node "C1|Selector26~1|datac"
+    Warning (332126): Node "C1|Add4~10|dataa"
+    Warning (332126): Node "C1|Add4~10|cout"
+    Warning (332126): Node "C1|Add4~12|cin"
+    Warning (332126): Node "C1|Add4~12|cout"
+    Warning (332126): Node "C1|Add4~14|cin"
+    Warning (332126): Node "C1|Add4~14|cout"
+    Warning (332126): Node "C1|Add4~16|cin"
+    Warning (332126): Node "C1|Add4~10|combout"
+    Warning (332126): Node "C1|Selector26~0|datad"
+    Warning (332126): Node "C1|Add0~11|datab"
+    Warning (332126): Node "C1|Add0~11|cout"
+    Warning (332126): Node "C1|Add0~13|cin"
+    Warning (332126): Node "C1|Add0~13|cout"
+    Warning (332126): Node "C1|Add0~15|cin"
+    Warning (332126): Node "C1|Add0~15|cout"
+    Warning (332126): Node "C1|Add0~17|cin"
+    Warning (332126): Node "C1|Add0~11|combout"
+    Warning (332126): Node "C1|Add0~117|datac"
+    Warning (332126): Node "C1|Step[5]~13|datad"
+    Warning (332126): Node "C1|Add1~10|dataa"
+    Warning (332126): Node "C1|Add1~10|combout"
+    Warning (332126): Node "C1|Add0~116|datab"
+    Warning (332126): Node "C1|Add1~10|cout"
+    Warning (332126): Node "C1|Add1~12|cin"
+    Warning (332126): Node "C1|Add1~12|cout"
+    Warning (332126): Node "C1|Add1~14|cin"
+    Warning (332126): Node "C1|Add1~14|cout"
+    Warning (332126): Node "C1|Add1~16|cin"
+    Warning (332126): Node "C1|Step[3]|datac"
+    Warning (332126): Node "C1|Add2~6|datab"
+    Warning (332126): Node "C1|Add2~6|cout"
+    Warning (332126): Node "C1|Add2~8|cin"
+    Warning (332126): Node "C1|Add2~8|cout"
+    Warning (332126): Node "C1|Add2~10|cin"
+    Warning (332126): Node "C1|Add2~6|combout"
+    Warning (332126): Node "C1|Selector28~0|dataa"
+    Warning (332126): Node "C1|Selector28~0|combout"
+    Warning (332126): Node "C1|Selector28~1|dataa"
+    Warning (332126): Node "C1|Selector28~1|combout"
+    Warning (332126): Node "C1|Add0~120|dataa"
+    Warning (332126): Node "C1|Add0~120|combout"
+    Warning (332126): Node "C1|Add0~121|datac"
+    Warning (332126): Node "C1|Add0~121|combout"
+    Warning (332126): Node "C1|Step[3]~14|datab"
+    Warning (332126): Node "C1|Step[3]~14|combout"
+    Warning (332126): Node "C1|Step[3]|datad"
+    Warning (332126): Node "C1|Add4~6|dataa"
+    Warning (332126): Node "C1|Add4~6|cout"
+    Warning (332126): Node "C1|Add4~8|cin"
+    Warning (332126): Node "C1|Add4~8|cout"
+    Warning (332126): Node "C1|Add4~10|cin"
+    Warning (332126): Node "C1|Add4~6|combout"
+    Warning (332126): Node "C1|Selector28~0|datad"
+    Warning (332126): Node "C1|Add5~6|datab"
+    Warning (332126): Node "C1|Add5~6|cout"
+    Warning (332126): Node "C1|Add5~8|cin"
+    Warning (332126): Node "C1|Add5~8|cout"
+    Warning (332126): Node "C1|Add5~10|cin"
+    Warning (332126): Node "C1|Add5~6|combout"
+    Warning (332126): Node "C1|Selector28~1|datab"
+    Warning (332126): Node "C1|Add3~6|dataa"
+    Warning (332126): Node "C1|Add3~6|cout"
+    Warning (332126): Node "C1|Add3~8|cin"
+    Warning (332126): Node "C1|Add3~8|cout"
+    Warning (332126): Node "C1|Add3~10|cin"
+    Warning (332126): Node "C1|Add3~6|combout"
+    Warning (332126): Node "C1|Selector28~1|datad"
+    Warning (332126): Node "C1|Add1~6|datab"
+    Warning (332126): Node "C1|Add1~6|cout"
+    Warning (332126): Node "C1|Add1~8|cin"
+    Warning (332126): Node "C1|Add1~8|cout"
+    Warning (332126): Node "C1|Add1~10|cin"
+    Warning (332126): Node "C1|Add1~6|combout"
+    Warning (332126): Node "C1|Add0~120|datac"
+    Warning (332126): Node "C1|Step[3]~14|datad"
+    Warning (332126): Node "C1|Add0~7|dataa"
+    Warning (332126): Node "C1|Add0~7|combout"
+    Warning (332126): Node "C1|Add0~121|datad"
+    Warning (332126): Node "C1|Add0~7|cout"
+    Warning (332126): Node "C1|Add0~9|cin"
+    Warning (332126): Node "C1|Add0~9|cout"
+    Warning (332126): Node "C1|Add0~11|cin"
+    Warning (332126): Node "C1|Step[27]|datab"
+    Warning (332126): Node "C1|Step[25]|datab"
+    Warning (332126): Node "C1|Step[21]|datab"
+    Warning (332126): Node "C1|Step[20]|datab"
+    Warning (332126): Node "C1|Step[19]|datab"
+    Warning (332126): Node "C1|Step[18]|datab"
+    Warning (332126): Node "C1|Step[13]|dataa"
+    Warning (332126): Node "C1|Step[12]|datac"
+    Warning (332126): Node "C1|Step[11]|datab"
+    Warning (332126): Node "C1|Step[10]|datab"
+    Warning (332126): Node "C1|Step[9]|datab"
+    Warning (332126): Node "C1|Step[8]|datab"
+    Warning (332126): Node "C1|Step[5]|dataa"
+    Warning (332126): Node "C1|comb~2|datab"
+Critical Warning (332081): Design contains combinational loop of 799 nodes. Estimating the delays through the loop.
 Warning (332125): Found combinational loop of 2 nodes
     Warning (332126): Node "phaseControler|phase[30]~0|combout"
-    Warning (332126): Node "phaseControler|phase[30]~0|datac"
+    Warning (332126): Node "phaseControler|phase[30]~0|datab"
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: FreqPhaseSelect was determined to be a clock but was found without an associated clock assignment.
 Warning (332060): Node: Button:B1|SwitchMicroadd was determined to be a clock but was found without an associated clock assignment.
@@ -523,9 +1366,9 @@ Info (332146): Worst-case minimum pulse width slack is 97.778
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 4618 megabytes
-    Info: Processing ended: Sat Jun 29 11:00:03 2019
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 814 warnings
+    Info: Peak virtual memory: 4619 megabytes
+    Info: Processing ended: Sat Jun 29 15:45:27 2019
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -2,7 +2,7 @@ module led_show(clk,rst_n,data,led_numseg,led_select);
 
 input clk;			
 input rst_n;
-input [27:0]data;//输入数据
+input [20:0]data;//输入数据
 output reg [7:0] led_select;
 output [7:0] led_numseg;
 reg [3:0] value;//位码
@@ -45,11 +45,11 @@ always@(counter[17:15])
 		3'b000 : 
 			value = data%10;
 		3'b001 : 
-			value = (data/10)%10;          
+			value = 0;//(data/10)%10;          
 		3'b010 : 
-			value = (data/100)%10;         
+			value = 0;//(data/100)%10;         
 		3'b011 : 
-			value = (data/1000)%10;
+			value = 0;//(data/1000)%10;
 	    3'b100 :
 	        value = (data/10000)%10;
 	    3'b101 :
@@ -57,7 +57,7 @@ always@(counter[17:15])
 	    3'b110 :
 	        value = (data/1000000)%10;
 	    3'b111 :
-	        value = (data/10000000)%10;
+	        value = 0;
 		default:;
 	endcase
 

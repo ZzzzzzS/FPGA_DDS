@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sat Jun 29 10:59:57 2019
+Fitter Status : Successful - Sat Jun 29 15:45:21 2019
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : DirectDigitalSynthesizer
 Top-level Entity Name : top
 Family : Cyclone II
 Device : EP2C5Q208C8
 Timing Models : Final
-Total logic elements : 3,997 / 4,608 ( 87 % )
-    Total combinational functions : 3,708 / 4,608 ( 80 % )
-    Dedicated logic registers : 732 / 4,608 ( 16 % )
-Total registers : 732
+Total logic elements : 3,212 / 4,608 ( 70 % )
+    Total combinational functions : 2,971 / 4,608 ( 64 % )
+    Dedicated logic registers : 671 / 4,608 ( 15 % )
+Total registers : 671
 Total pins : 44 / 142 ( 31 % )
 Total virtual pins : 0
-Total memory bits : 100,992 / 119,808 ( 84 % )
+Total memory bits : 100,352 / 119,808 ( 84 % )
 Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
 Total PLLs : 0 / 2 ( 0 % )

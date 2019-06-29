@@ -16,10 +16,14 @@ wire [31:0]PhaseWire;
 wire SwitchMicroadd,SwitchMicrosub,SwitchNanoadd,SwitchNanosub,Switchadd,Switchsub;
 wire phaseadd,phasesub;
 
+wire [20:0]DisplayFreq;
+
+assign DisplayFreq=Step/85;
+
 //module led_show(clk,rst_n,data,led_numseg,led_select);
 led_show L1(	.clk(clk),
 				.rst_n(reset),
-				.data(Step[20:0]),
+				.data(DisplayFreq),
 				.led_numseg(led_numseg),
 				.led_select(led_select));
 /**********閸氬嫪閲滅€靛嫬鐡ㄩ崳銊╂懠閹**********/

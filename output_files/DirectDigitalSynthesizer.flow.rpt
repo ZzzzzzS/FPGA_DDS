@@ -1,5 +1,5 @@
 Flow report for DirectDigitalSynthesizer
-Sat Jun 29 11:03:42 2019
+Sat Jun 29 15:45:31 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sat Jun 29 11:03:42 2019       ;
+; Flow Status                        ; Successful - Sat Jun 29 15:45:31 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone II                                  ;
 ; Device                             ; EP2C5Q208C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 3,212 / 4,608 ( 70 % )                      ;
+;     Total combinational functions  ; 2,971 / 4,608 ( 64 % )                      ;
+;     Dedicated logic registers      ; 671 / 4,608 ( 15 % )                        ;
+; Total registers                    ; 671                                         ;
+; Total pins                         ; 44 / 142 ( 31 % )                           ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 100,352 / 119,808 ( 84 % )                  ;
+; Embedded Multiplier 9-bit elements ; 0 / 26 ( 0 % )                              ;
+; Total PLLs                         ; 0 / 2 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -489,7 +489,51 @@ applicable agreement for further details.
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4618 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
 ; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4686 MB             ; 00:00:10                           ;
-; Total                     ; 00:29:57     ; --                      ; --                  ; 00:30:36                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4589 MB             ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4573 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:22     ; 1.1                     ; 4685 MB             ; 00:00:22                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 5096 MB             ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:19     ; 1.6                     ; 4681 MB             ; 00:00:20                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4633 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:06     ; 1.0                     ; 5089 MB             ; 00:00:07                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.5                     ; 4676 MB             ; 00:00:19                           ;
+; Analysis & Synthesis      ; 00:00:07     ; 1.0                     ; 4673 MB             ; 00:00:08                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:11     ; 1.6                     ; 5273 MB             ; 00:00:15                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4567 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4618 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:20     ; 2.2                     ; 4678 MB             ; 00:00:22                           ;
+; Partition Merge           ; 00:00:02     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:12     ; 1.8                     ; 5279 MB             ; 00:00:17                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4620 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4569 MB             ; 00:00:03                           ;
+; Analysis & Synthesis      ; 00:00:21     ; 1.6                     ; 4690 MB             ; 00:00:21                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4649 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 5093 MB             ; 00:00:07                           ;
+; Analysis & Synthesis      ; 00:00:20     ; 1.6                     ; 4676 MB             ; 00:00:19                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 5093 MB             ; 00:00:07                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.6                     ; 4680 MB             ; 00:00:19                           ;
+; Partition Merge           ; 00:00:02     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:07     ; 1.0                     ; 5085 MB             ; 00:00:07                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.5                     ; 4680 MB             ; 00:00:16                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:09     ; 1.4                     ; 5272 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4577 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4558 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4594 MB             ; 00:00:06                           ;
+; Analysis & Synthesis      ; 00:00:16     ; 1.5                     ; 4674 MB             ; 00:00:16                           ;
+; Analysis & Synthesis      ; 00:00:09     ; 1.0                     ; 4674 MB             ; 00:00:08                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:09     ; 1.4                     ; 5273 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4575 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4619 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
+; Total                     ; 00:35:07     ; --                      ; --                  ; 00:35:59                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -879,6 +923,50 @@ applicable agreement for further details.
 ; TimeQuest Timing Analyzer ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
 ; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -1266,6 +1354,50 @@ quartus_asm --read_settings_files=off --write_settings_files=off DirectDigitalSy
 quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 quartus_eda --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_asm --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_eda --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_asm --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_eda --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_asm --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_eda --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_asm --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_eda --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 
 
 
