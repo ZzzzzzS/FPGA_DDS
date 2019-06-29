@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="ab8f4ba34b166e9570f1"/>
+    <hash md5_digest_80b="1ede3fb522fd680544e1"/>
   </project>
   <file_info>
     <file device="EP2C5Q208C8" path="DirectDigitalSynthesizer.sof" usercode="0xFFFFFFFF"/>
@@ -17,8 +17,8 @@
         <parameter name="sld_data_bits" type="unknown" value="16"/>
         <parameter name="sld_trigger_bits" type="unknown" value="16"/>
         <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
-        <parameter name="sld_node_crc_hiword" type="unknown" value="60419"/>
-        <parameter name="sld_node_crc_loword" type="unknown" value="52744"/>
+        <parameter name="sld_node_crc_hiword" type="unknown" value="52991"/>
+        <parameter name="sld_node_crc_loword" type="unknown" value="10215"/>
         <parameter name="SLD_INCREMENTAL_ROUTING" type="dec" value="0"/>
         <parameter name="sld_sample_depth" type="unknown" value="128"/>
         <parameter name="sld_segment_size" type="unknown" value="128"/>

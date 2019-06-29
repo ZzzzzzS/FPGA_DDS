@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Thu Jun 27 23:43:54 2019
+Sat Jun 29 15:45:09 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -13,22 +13,28 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis IP Cores Summary
   7. Partition Status Summary
-  8. Dependent File Changes for Partition Top
-  9. Partition for Top-Level Resource Utilization by Entity
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated
- 14. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated
- 15. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
- 16. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
- 17. Partition Dependent Files
- 18. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 19. Port Connectivity Checks: "PWMWave:P2"
- 20. SignalTap II Logic Analyzer Settings
- 21. Elapsed Time Per Partition
- 22. Analysis & Synthesis Messages
- 23. Analysis & Synthesis Suppressed Messages
+  8. Partition for Top-Level Resource Utilization by Entity
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated
+ 13. Source assignments for TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated
+ 14. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 15. Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Div1
+ 16. Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod2
+ 17. Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Div0
+ 18. Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod1
+ 19. Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Div2
+ 20. Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod3
+ 21. Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod0
+ 22. Parameter Settings for User Entity Instance: SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component
+ 24. Partition Dependent Files
+ 25. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 26. Port Connectivity Checks: "PWMWave:P2"
+ 27. SignalTap II Logic Analyzer Settings
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -54,7 +60,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 27 23:43:54 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 29 15:45:09 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
@@ -164,13 +170,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.33        ;
-; Maximum used               ; 2           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  33.3%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -179,6 +184,7 @@ applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                             ; Library ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
+; debounce.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/debounce.v                                             ;         ;
 ; Button.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/Button.v                                               ;         ;
 ; phase.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/phase.v                                                ;         ;
 ; TriangularWave.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/TriangularWave.v                                       ;         ;
@@ -189,6 +195,8 @@ applicable agreement for further details.
 ; ClockGenerator.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v                                       ;         ;
 ; SinROM.v                         ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/SinROM.v                                               ;         ;
 ; TriangularROM.v                  ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/TriangularROM.v                                        ;         ;
+; led_show.v                       ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/m1899/Desktop/DDSProject/led_show.v                                             ;         ;
+; led_decoder.v                    ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/m1899/Desktop/DDSProject/led_decoder.v                                          ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
@@ -253,156 +261,154 @@ applicable agreement for further details.
 +--------+--------------+---------+--------------+--------------+-------------------------------------------+---------------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Partition Status Summary                                               ;
-+--------------------------------+-------------+-------------------------+
-; Partition Name                 ; Synthesized ; Reason                  ;
-+--------------------------------+-------------+-------------------------+
-; Top                            ; yes         ; Dependent files changed ;
-; sld_hub:auto_hub               ; yes         ; Parameters changed      ;
-; sld_signaltap:auto_signaltap_0 ; no          ; No relevant changes     ;
-+--------------------------------+-------------+-------------------------+
++--------------------------------------------------------------------+
+; Partition Status Summary                                           ;
++--------------------------------+-------------+---------------------+
+; Partition Name                 ; Synthesized ; Reason              ;
++--------------------------------+-------------+---------------------+
+; Top                            ; no          ; No relevant changes ;
+; sld_hub:auto_hub               ; no          ; No relevant changes ;
+; sld_signaltap:auto_signaltap_0 ; no          ; No relevant changes ;
++--------------------------------+-------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Dependent File Changes for Partition Top                                                                                   ;
-+-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
-; Hierarchy ; File Name ; Relative Location ; Change   ; Old                              ; New                              ;
-+-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
-; Button:B1 ; Button.v  ; Project Directory ; Checksum ; 2c251ff450d370b6b647ee343b67e6d9 ; 23590c41d5bb9fce9bfca20cf577c830 ;
-+-----------+-----------+-------------------+----------+----------------------------------+----------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                             ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |top                                         ; 390 (0)           ; 66 (0)       ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top                                                                                                     ; work         ;
-;    |Button:B1|                               ; 89 (89)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1                                                                                           ; work         ;
-;    |ClockGenerator:C1|                       ; 105 (105)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                   ; work         ;
-;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                ; work         ;
-;    |PWMWave:P1|                              ; 97 (97)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                          ; work         ;
-;    |PWMWave:P2|                              ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                          ; work         ;
-;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                          ; work         ;
-;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                              ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component                                              ; work         ;
-;             |altsyncram_th71:auto_generated| ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated               ; work         ;
-;    |TriangularWave:T1|                       ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1                                                                                   ; work         ;
-;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                ; work         ;
-;             |altsyncram_1681:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated ; work         ;
-;    |phase:phaseControler|                    ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|phase:phaseControler                                                                                ; work         ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                                     ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
+; |top                                         ; 2603 (1)          ; 183 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top                                                                                                             ; work         ;
+;    |Button:B1|                               ; 540 (96)          ; 99 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1                                                                                                   ; work         ;
+;       |debounce:PushButton0|                 ; 148 (148)         ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1|debounce:PushButton0                                                                              ; work         ;
+;       |debounce:PushButton1|                 ; 148 (148)         ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1|debounce:PushButton1                                                                              ; work         ;
+;       |debounce:PushButton2|                 ; 148 (148)         ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|Button:B1|debounce:PushButton2                                                                              ; work         ;
+;    |ClockGenerator:C1|                       ; 394 (394)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ClockGenerator:C1                                                                                           ; work         ;
+;    |ControlPanel:Control|                    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ControlPanel:Control                                                                                        ; work         ;
+;    |PWMWave:P1|                              ; 97 (97)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P1                                                                                                  ; work         ;
+;    |PWMWave:P2|                              ; 11 (11)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|PWMWave:P2                                                                                                  ; work         ;
+;    |SinWave:S1|                              ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1                                                                                                  ; work         ;
+;       |SinROM:ROM1|                          ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1                                                                                      ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component                                                      ; work         ;
+;             |altsyncram_th71:auto_generated| ; 0 (0)             ; 0 (0)        ; 65536       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated                       ; work         ;
+;    |TriangularWave:T1|                       ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1                                                                                           ; work         ;
+;       |TriangularROM:ROM1|                   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1                                                                        ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component                                        ; work         ;
+;             |altsyncram_1681:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|TriangularWave:T1|TriangularROM:ROM1|altsyncram:altsyncram_component|altsyncram_1681:auto_generated         ; work         ;
+;    |led_show:L1|                             ; 940 (40)          ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1                                                                                                 ; work         ;
+;       |led_decoder:D1|                       ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|led_decoder:D1                                                                                  ; work         ;
+;       |lpm_divide:Div0|                      ; 301 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_tfm:auto_generated|     ; 301 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div0|lpm_divide_tfm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_7nh:divider|    ; 301 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div0|lpm_divide_tfm:auto_generated|sign_div_unsign_7nh:divider                       ; work         ;
+;                |alt_u_div_g5f:divider|       ; 301 (301)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div0|lpm_divide_tfm:auto_generated|sign_div_unsign_7nh:divider|alt_u_div_g5f:divider ; work         ;
+;       |lpm_divide:Div1|                      ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_2gm:auto_generated|     ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div1|lpm_divide_2gm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_cnh:divider|    ; 195 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div1|lpm_divide_2gm:auto_generated|sign_div_unsign_cnh:divider                       ; work         ;
+;                |alt_u_div_n5f:divider|       ; 195 (195)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div1|lpm_divide_2gm:auto_generated|sign_div_unsign_cnh:divider|alt_u_div_n5f:divider ; work         ;
+;       |lpm_divide:Div2|                      ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div2                                                                                 ; work         ;
+;          |lpm_divide_qfm:auto_generated|     ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div2|lpm_divide_qfm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_4nh:divider|    ; 62 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div2|lpm_divide_qfm:auto_generated|sign_div_unsign_4nh:divider                       ; work         ;
+;                |alt_u_div_a5f:divider|       ; 62 (62)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Div2|lpm_divide_qfm:auto_generated|sign_div_unsign_4nh:divider|alt_u_div_a5f:divider ; work         ;
+;       |lpm_divide:Mod0|                      ; 244 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_f6m:auto_generated|     ; 244 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod0|lpm_divide_f6m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_mlh:divider|    ; 244 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod0|lpm_divide_f6m:auto_generated|sign_div_unsign_mlh:divider                       ; work         ;
+;                |alt_u_div_e2f:divider|       ; 244 (244)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod0|lpm_divide_f6m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ; work         ;
+;       |lpm_divide:Mod1|                      ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_f6m:auto_generated|     ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod1|lpm_divide_f6m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_mlh:divider|    ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod1|lpm_divide_f6m:auto_generated|sign_div_unsign_mlh:divider                       ; work         ;
+;                |alt_u_div_e2f:divider|       ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod1|lpm_divide_f6m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ; work         ;
+;       |lpm_divide:Mod2|                      ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod2                                                                                 ; work         ;
+;          |lpm_divide_f6m:auto_generated|     ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod2|lpm_divide_f6m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_mlh:divider|    ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod2|lpm_divide_f6m:auto_generated|sign_div_unsign_mlh:divider                       ; work         ;
+;                |alt_u_div_e2f:divider|       ; 24 (24)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|led_show:L1|lpm_divide:Mod2|lpm_divide_f6m:auto_generated|sign_div_unsign_mlh:divider|alt_u_div_e2f:divider ; work         ;
+;    |lpm_divide:Div0|                         ; 583 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0                                                                                             ; work         ;
+;       |lpm_divide_hem:auto_generated|        ; 583 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hem:auto_generated                                                               ; work         ;
+;          |sign_div_unsign_rlh:divider|       ; 583 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hem:auto_generated|sign_div_unsign_rlh:divider                                   ; work         ;
+;             |alt_u_div_o2f:divider|          ; 583 (583)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|lpm_divide:Div0|lpm_divide_hem:auto_generated|sign_div_unsign_rlh:divider|alt_u_div_o2f:divider             ; work         ;
+;    |phase:phaseControler|                    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|phase:phaseControler                                                                                        ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                           ;
-+-----------------------------------------------------+--------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
-+-----------------------------------------------------+--------------------------------+------------------------+
-; Button:B1|PWMDuty[31]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[30]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[29]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[28]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[27]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[26]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[25]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[24]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[23]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[22]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[21]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[20]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[19]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[18]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[17]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[16]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[15]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[14]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[13]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[12]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[11]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[10]                               ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[9]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[8]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[7]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[6]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[5]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[4]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[3]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[2]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[1]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; Button:B1|PWMDuty[0]                                ; Button:B1|PWMDuty[31]          ; yes                    ;
-; phase:phaseControler|phase[5]                       ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[6]                       ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[7]                       ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[8]                       ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[9]                       ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[10]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[11]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[12]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[13]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[14]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[15]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[16]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[17]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[18]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[19]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[20]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[21]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[22]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[23]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[24]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[25]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[26]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[27]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[28]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[29]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[30]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; phase:phaseControler|phase[31]                      ; phase:phaseControler|phase[31] ; yes                    ;
-; ClockGenerator:C1|Step[0]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[1]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[2]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[3]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[4]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[5]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; Button:B1|Phaseadd                                  ; Button:B1|Phaseadd             ; yes                    ;
-; Button:B1|Phasesub                                  ; Button:B1|Phasesub             ; yes                    ;
-; ClockGenerator:C1|Step[6]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[7]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[8]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[9]                           ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[10]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[11]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[12]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[13]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[14]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[15]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[16]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[17]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[18]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[19]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[20]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[21]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[22]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[23]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[24]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[25]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[26]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[27]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[28]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[29]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[30]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; ClockGenerator:C1|Step[31]                          ; ClockGenerator:C1|Step[31]     ; yes                    ;
-; Button:B1|SwitchNanosub                             ; Button:B1|SwitchNanosub        ; yes                    ;
-; Button:B1|SwitchMicrosub                            ; Button:B1|SwitchMicrosub       ; yes                    ;
-; Button:B1|Switchsub                                 ; Button:B1|Switchsub            ; yes                    ;
-; Button:B1|SwitchNanoadd                             ; Button:B1|SwitchNanoadd        ; yes                    ;
-; Button:B1|SwitchMicroadd                            ; Button:B1|SwitchMicroadd       ; yes                    ;
-; Button:B1|Switchadd                                 ; Button:B1|Switchadd            ; yes                    ;
-; Number of user-specified and inferred latches = 99  ;                                ;                        ;
-+-----------------------------------------------------+--------------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------------+------------------------+
+; Button:B1|PWMDuty[31]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[30]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[29]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[28]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[27]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[26]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[25]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[24]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[23]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[22]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[21]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[20]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[19]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[18]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[17]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[16]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[15]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[14]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[13]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[12]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[11]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[10]                               ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[9]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[8]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[7]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[6]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[5]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[4]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[3]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[2]                                ; Button:B1|WideOr9             ; yes                    ;
+; Button:B1|PWMDuty[1]                                ; Button:B1|WideOr9             ; yes                    ;
+; phase:phaseControler|phase[30]                      ; phase:phaseControler|WideNor0 ; yes                    ;
+; phase:phaseControler|phase[31]                      ; phase:phaseControler|WideNor0 ; yes                    ;
+; ClockGenerator:C1|Step[7]                           ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[8]                           ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[9]                           ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[10]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[0]                           ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[1]                           ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[2]                           ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[3]                           ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[4]                           ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[5]                           ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[6]                           ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[11]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[12]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[13]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[14]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[15]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[16]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[17]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[18]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[19]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[20]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[21]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[22]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[23]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[24]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[25]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[26]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[27]                          ; ClockGenerator:C1|WideOr0     ; no                     ;
+; ClockGenerator:C1|Step[28]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[29]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; ClockGenerator:C1|Step[30]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; Button:B1|Phasesub                                  ; Button:B1|Phasesub            ; yes                    ;
+; Button:B1|Phaseadd                                  ; Button:B1|Phaseadd            ; yes                    ;
+; ClockGenerator:C1|Step[31]                          ; ClockGenerator:C1|WideOr0     ; yes                    ;
+; Button:B1|Switchadd                                 ; Button:B1|Switchadd           ; yes                    ;
+; Button:B1|SwitchNanosub                             ; Button:B1|SwitchNanosub       ; yes                    ;
+; Button:B1|SwitchMicrosub                            ; Button:B1|SwitchMicrosub      ; yes                    ;
+; Button:B1|SwitchNanoadd                             ; Button:B1|SwitchNanoadd       ; yes                    ;
+; Button:B1|SwitchMicroadd                            ; Button:B1|SwitchMicroadd      ; yes                    ;
+; Button:B1|Switchsub                                 ; Button:B1|Switchsub           ; yes                    ;
+; Number of user-specified and inferred latches = 73  ;                               ;                        ;
++-----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -564,21 +570,26 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; PWMWave:P2|address[31]                  ; Merged with PWMWave:P1|address[31]          ;
 ; SinWave:S1|address[31]                  ; Merged with PWMWave:P1|address[31]          ;
 ; TriangularWave:T1|address[31]           ; Merged with PWMWave:P1|address[31]          ;
-; Total Number of Removed Registers = 181 ;                                             ;
+; led_show:L1|counter[18..23]             ; Lost fanout                                 ;
+; Total Number of Removed Registers = 187 ;                                             ;
 +-----------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux0  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Add0     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Add0     ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Add0     ;
-; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; No         ; |top|ClockGenerator:C1|Step[10] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton0|cnt[30] ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton1|cnt[0]  ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton2|cnt[21] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton0|cnt[2]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton1|cnt[4]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top|Button:B1|debounce:PushButton2|cnt[2]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |top|ControlPanel:Control|Mux15             ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |top|led_show:L1|Mux3                       ;
+; 6:1                ; 32 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |top|ClockGenerator:C1|Selector21           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
@@ -597,6 +608,190 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------------+--------------------+------+--------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                            ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 32             ; Untyped                ;
+; LPM_WIDTHD             ; 7              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_hem ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 21             ; Untyped                            ;
+; LPM_WIDTHD             ; 17             ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_2gm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 21             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_f6m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 21             ; Untyped                            ;
+; LPM_WIDTHD             ; 14             ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_tfm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 21             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_f6m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Div2 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 21             ; Untyped                            ;
+; LPM_WIDTHD             ; 20             ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_qfm ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod3 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 21             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_f6m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: led_show:L1|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------+
+; Parameter Name         ; Value          ; Type                               ;
++------------------------+----------------+------------------------------------+
+; LPM_WIDTHN             ; 21             ; Untyped                            ;
+; LPM_WIDTHD             ; 4              ; Untyped                            ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                            ;
+; LPM_PIPELINE           ; 0              ; Untyped                            ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                            ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                            ;
+; CBXI_PARAMETER         ; lpm_divide_f6m ; Untyped                            ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                            ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                            ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                         ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                       ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                       ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                     ;
++------------------------+----------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -735,20 +930,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; libraries/megafunctions/lpm_decode.inc        ; Quartus II Install ; work    ; 10da69a8bbd590d66779e7a142f73790 ;
 ; libraries/megafunctions/lpm_mux.inc           ; Quartus II Install ; work    ; dd87bed90959d6126db09970164b7ba6 ;
 ; libraries/megafunctions/stratix_ram_block.inc ; Quartus II Install ; work    ; e3a03868917f0b3dd57b6ed1dd195f22 ;
-; Button.v                                      ; Project Directory  ; work    ; 23590c41d5bb9fce9bfca20cf577c830 ;
-; ClockGenerator.v                              ; Project Directory  ; work    ; e9190861a009bed849d81be0ef9fd150 ;
-; ControlPanel.v                                ; Project Directory  ; work    ; 925a4275351b25d21e2c6e3da02c1552 ;
+; Button.v                                      ; Project Directory  ; work    ; 0f3b12e2989b89c6255443dd05e786b2 ;
+; ClockGenerator.v                              ; Project Directory  ; work    ; 76339f0c169ae8bbd1f69588f012364a ;
+; ControlPanel.v                                ; Project Directory  ; work    ; b77715331ddb527c433eb5031bd1bc23 ;
 ; db/altsyncram_1681.tdf                        ; Project Directory  ; work    ; 12caaca11b0f2ac2cb9f1f88b3b20440 ;
 ; db/altsyncram_th71.tdf                        ; Project Directory  ; work    ; f439e92a321e26546025b1d590ccaac1 ;
-; phase.v                                       ; Project Directory  ; work    ; 63c8a38f17e1ceaa4f6fd8c2ed0c43ad ;
-; PWMWave.v                                     ; Project Directory  ; work    ; 42afdf83ae3fabfd83a497523950a8d3 ;
+; debounce.v                                    ; Project Directory  ; work    ; 668a70e199726719adf26cf5916d7d80 ;
+; led_decoder.v                                 ; Project Directory  ; work    ; 3a3e5b96684d02b0c0ba47694dc478cf ;
+; led_show.v                                    ; Project Directory  ; work    ; e35fb98dae04d5ecf15d262f6ce47d6e ;
+; phase.v                                       ; Project Directory  ; work    ; ba70052c02e8054b60e64ac5028d1bab ;
+; PWMWave.v                                     ; Project Directory  ; work    ; b3885989d124e2ad1dce640691bc3d84 ;
 ; sinetable.mif                                 ; Project Directory  ; work    ; 279962eeab1b4aa7ca2f764c4eb16326 ;
 ; SinROM.v                                      ; Project Directory  ; work    ; 3707bf811f83d64491b760e05cdbb71e ;
-; SinWave.v                                     ; Project Directory  ; work    ; 794a587cbd530bc6abc270c0d06ce13b ;
-; top.v                                         ; Project Directory  ; work    ; 49fcc19e62110e882dc49803ba21896b ;
+; SinWave.v                                     ; Project Directory  ; work    ; 97c1421936946d5d6072cfe29d0e10aa ;
+; top.v                                         ; Project Directory  ; work    ; 9899f19fd0e78a54c78ef98c1e18d62e ;
 ; TriangularROM.v                               ; Project Directory  ; work    ; 4ecc1f8b259d8e6176f5c1203fe0a9e6 ;
 ; triangulartable.mif                           ; Project Directory  ; work    ; 62de3d3ea96820ba11d2a0f14d8bd5d5 ;
-; TriangularWave.v                              ; Project Directory  ; work    ; 21a7b3931fa4ec4722d0b5012d083981 ;
+; TriangularWave.v                              ; Project Directory  ; work    ; 4a80595828ce651346450c55f9b7bfe9 ;
 +-----------------------------------------------+--------------------+---------+----------------------------------+
 
 
@@ -765,8 +963,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; sld_data_bits                                   ; 16                                                                    ; Untyped        ;
 ; sld_trigger_bits                                ; 16                                                                    ; Untyped        ;
 ; SLD_NODE_CRC_BITS                               ; 32                                                                    ; Signed Integer ;
-; sld_node_crc_hiword                             ; 60419                                                                 ; Untyped        ;
-; sld_node_crc_loword                             ; 52744                                                                 ; Untyped        ;
+; sld_node_crc_hiword                             ; 52991                                                                 ; Untyped        ;
+; sld_node_crc_loword                             ; 10215                                                                 ; Untyped        ;
 ; SLD_INCREMENTAL_ROUTING                         ; 0                                                                     ; Signed Integer ;
 ; sld_sample_depth                                ; 128                                                                   ; Untyped        ;
 ; sld_segment_size                                ; 128                                                                   ; Untyped        ;
@@ -831,25 +1029,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
 
 
-+---------------------------------+
-; Elapsed Time Per Partition      ;
-+------------------+--------------+
-; Partition Name   ; Elapsed Time ;
-+------------------+--------------+
-; Top              ; 00:00:02     ;
-; sld_hub:auto_hub ; 00:00:02     ;
-+------------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 27 23:43:46 2019
+    Info: Processing started: Sat Jun 29 15:45:00 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file debounce.v
+    Info (12023): Found entity 1: debounce
 Info (12021): Found 1 design units, including 1 entities, in source file button.v
     Info (12023): Found entity 1: Button
 Info (12021): Found 1 design units, including 1 entities, in source file phase.v
@@ -870,92 +1060,110 @@ Info (12021): Found 1 design units, including 1 entities, in source file sinrom.
     Info (12023): Found entity 1: SinROM
 Info (12021): Found 1 design units, including 1 entities, in source file triangularrom.v
     Info (12023): Found entity 1: TriangularROM
+Info (12021): Found 0 design units, including 0 entities, in source file display.v
 Info (12127): Elaborating entity "top" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at top.v(21): truncated value with size 32 to match size of target (21)
+Warning (12125): Using design file led_show.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: led_show
+Info (12128): Elaborating entity "led_show" for hierarchy "led_show:L1"
+Warning (10235): Verilog HDL Always Construct warning at led_show.v(46): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at led_show.v(46): truncated value with size 32 to match size of target (4)
+Warning (10235): Verilog HDL Always Construct warning at led_show.v(54): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at led_show.v(54): truncated value with size 32 to match size of target (4)
+Warning (10235): Verilog HDL Always Construct warning at led_show.v(56): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at led_show.v(56): truncated value with size 32 to match size of target (4)
+Warning (10235): Verilog HDL Always Construct warning at led_show.v(58): variable "data" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10230): Verilog HDL assignment warning at led_show.v(58): truncated value with size 32 to match size of target (4)
+Warning (12125): Using design file led_decoder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: led_decoder
+Info (12128): Elaborating entity "led_decoder" for hierarchy "led_show:L1|led_decoder:D1"
 Info (12128): Elaborating entity "Button" for hierarchy "Button:B1"
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchNanoadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "SwitchNanosub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "PWMDuty", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Phaseadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(28): inferring latch(es) for variable "Phasesub", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Phasesub" at Button.v(61)
-Info (10041): Inferred latch for "Phaseadd" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(61)
-Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(61)
-Info (10041): Inferred latch for "SwitchNanosub" at Button.v(61)
-Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(61)
-Info (10041): Inferred latch for "Switchsub" at Button.v(61)
-Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(61)
-Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(61)
-Info (10041): Inferred latch for "Switchadd" at Button.v(61)
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "PWMDuty", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "SwitchNanoadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "SwitchNanosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "Phaseadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(35): inferring latch(es) for variable "Phasesub", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Phasesub" at Button.v(41)
+Info (10041): Inferred latch for "Phaseadd" at Button.v(41)
+Info (10041): Inferred latch for "Switchsub" at Button.v(41)
+Info (10041): Inferred latch for "Switchadd" at Button.v(41)
+Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(41)
+Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(41)
+Info (10041): Inferred latch for "SwitchNanosub" at Button.v(41)
+Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(41)
+Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(41)
+Info (12128): Elaborating entity "debounce" for hierarchy "Button:B1|debounce:PushButton0"
 Info (12128): Elaborating entity "ClockGenerator" for hierarchy "ClockGenerator:C1"
-Warning (10240): Verilog HDL Always Construct warning at ClockGenerator.v(15): inferring latch(es) for variable "Step", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Step[0]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[1]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[2]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[3]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[4]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[5]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[6]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[7]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[8]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[9]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[10]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[11]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[12]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[13]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[14]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[15]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[16]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[17]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[18]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[19]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[20]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[21]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[22]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[23]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[24]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[25]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[26]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[27]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[28]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[29]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[30]" at ClockGenerator.v(15)
-Info (10041): Inferred latch for "Step[31]" at ClockGenerator.v(15)
+Warning (10240): Verilog HDL Always Construct warning at ClockGenerator.v(20): inferring latch(es) for variable "Step", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Step[0]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[1]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[2]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[3]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[4]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[5]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[6]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[7]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[8]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[9]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[10]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[11]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[12]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[13]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[14]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[15]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[16]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[17]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[18]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[19]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[20]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[21]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[22]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[23]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[24]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[25]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[26]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[27]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[28]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[29]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[30]" at ClockGenerator.v(24)
+Info (10041): Inferred latch for "Step[31]" at ClockGenerator.v(24)
 Info (12128): Elaborating entity "phase" for hierarchy "phase:phaseControler"
+Info (10264): Verilog HDL Case Statement information at phase.v(15): all case item expressions in this case statement are onehot
 Warning (10240): Verilog HDL Always Construct warning at phase.v(7): inferring latch(es) for variable "phase", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "phase[0]" at phase.v(7)
 Info (10041): Inferred latch for "phase[1]" at phase.v(7)
@@ -1052,133 +1260,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cntr
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_5cc.tdf
     Info (12023): Found entity 1: cmpr_5cc
 Info (12033): Analysis and Synthesis generated SignalTap II or debug node instance "auto_signaltap_0"
-Info (12206): 2 design partitions require synthesis
-    Info (12211): Partition "Top" requires synthesis because there were changes to its dependent source files
-    Info (12217): Partition "sld_hub:auto_hub" requires synthesis because there were changes made to the parameters on the partition's root instance
-Info (12207): 1 design partition does not require synthesis
+Info (12206): 0 design partitions require synthesis
+Info (12208): 3 design partitions do not require synthesis
+    Info (12229): Partition "Top" does not require synthesis because there were no relevant design changes
+    Info (12229): Partition "sld_hub:auto_hub" does not require synthesis because there were no relevant design changes
     Info (12229): Partition "sld_signaltap:auto_signaltap_0" does not require synthesis because there were no relevant design changes
-Info (281037): Using 4 processors to synthesize 2 partitions in parallel
-Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 27 23:43:51 2019
-Info: Command: quartus_map --parallel=1 --helper=0 --partition=Top DirectDigitalSynthesizer -c DirectDigitalSynthesizer
-Info (281020): Starting Logic Optimization and Technology Mapping for Top Partition
-Warning (13012): Latch ClockGenerator:C1|Step[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch Button:B1|Phaseadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal UpDownSelect
-Warning (13012): Latch Button:B1|Phasesub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal UpDownSelect
-Warning (13012): Latch ClockGenerator:C1|Step[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[8] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[9] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[10] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[11] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[12] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[13] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[14] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[15] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[16] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[17] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[18] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[19] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[20] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[21] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[22] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[23] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[24] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[25] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[26] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[27] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[28] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[29] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[30] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch ClockGenerator:C1|Step[31] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Button:B1|SwitchNanosub
-Warning (13012): Latch Button:B1|SwitchNanosub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|SwitchMicrosub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|Switchsub has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|SwitchNanoadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|SwitchMicroadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Warning (13012): Latch Button:B1|Switchadd has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FreqPhaseSelect
-Info (21057): Implemented 447 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 390 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 80 warnings
-    Info: Peak virtual memory: 4592 megabytes
-    Info: Processing ended: Thu Jun 27 23:43:53 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
-Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Thu Jun 27 23:43:51 2019
-Info: Command: quartus_map --parallel=1 --helper=2 --partition=sld_hub:auto_hub DirectDigitalSynthesizer -c DirectDigitalSynthesizer
-Info (281019): Starting Logic Optimization and Technology Mapping for Partition sld_hub:auto_hub
-Info (13000): Registers with preset signals will power-up high
-Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
-    Info (21059): Implemented 37 output pins
-    Info (21061): Implemented 145 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4592 megabytes
-    Info: Processing ended: Thu Jun 27 23:43:53 2019
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:03
-Info (281038): Finished parallel synthesis of all partitions
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 93 warnings
-    Info: Peak virtual memory: 4675 megabytes
-    Info: Processing ended: Thu Jun 27 23:43:54 2019
-    Info: Elapsed time: 00:00:08
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 4674 megabytes
+    Info: Processing ended: Sat Jun 29 15:45:09 2019
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:08
 
 

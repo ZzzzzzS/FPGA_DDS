@@ -4,8 +4,9 @@ entity Button is
     port(
         FreqPhaseSelect : in     vl_logic;
         UpDownSelect    : in     vl_logic;
-        PushButton      : in     vl_logic_vector(2 downto 0);
+        PushButtonbefore: in     vl_logic_vector(2 downto 0);
         reset           : in     vl_logic;
+        clk             : in     vl_logic;
         Switchadd       : out    vl_logic;
         Switchsub       : out    vl_logic;
         SwitchMicroadd  : out    vl_logic;

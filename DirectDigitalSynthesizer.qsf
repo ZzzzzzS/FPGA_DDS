@@ -61,6 +61,35 @@ set_global_assignment -name EDA_TEST_BENCH_NAME top_vlg_tst -section_id eda_simu
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id top_vlg_tst
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME top_vlg_tst -section_id top_vlg_tst
 set_global_assignment -name EDA_TEST_BENCH_FILE simulation/modelsim/top.vt -section_id top_vlg_tst
+set_location_assignment PIN_132 -to clk
+set_location_assignment PIN_69 -to OutMode[1]
+set_location_assignment PIN_72 -to OutMode[0]
+set_location_assignment PIN_67 -to FreqPhaseSelect
+set_location_assignment PIN_77 -to PushButton[2]
+set_location_assignment PIN_81 -to PushButton[1]
+set_location_assignment PIN_84 -to PushButton[0]
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
+set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clk -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=128" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_location_assignment PIN_63 -to UpDownSelect
+set_global_assignment -name VERILOG_FILE debounce.v
 set_global_assignment -name VERILOG_FILE Button.v
 set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/top.vt
 set_global_assignment -name VERILOG_FILE phase.v
@@ -72,72 +101,65 @@ set_global_assignment -name VERILOG_FILE ControlPanel.v
 set_global_assignment -name VERILOG_FILE ClockGenerator.v
 set_global_assignment -name QIP_FILE SinROM.qip
 set_global_assignment -name QIP_FILE TriangularROM.qip
-set_location_assignment PIN_132 -to clk
-set_location_assignment PIN_69 -to OutMode[1]
-set_location_assignment PIN_72 -to OutMode[0]
-set_location_assignment PIN_67 -to FreqPhaseSelect
-set_location_assignment PIN_77 -to PushButton[2]
-set_location_assignment PIN_81 -to PushButton[1]
-set_location_assignment PIN_84 -to PushButton[0]
-set_location_assignment PIN_75 -to reset
-set_global_assignment -name ENABLE_SIGNALTAP ON
-set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
-set_global_assignment -name SLD_NODE_CREATOR_ID 110 -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_ENTITY_NAME sld_signaltap -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_clk -to clk -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[0]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[10]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[11]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[12]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[13]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[14]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[15]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[1]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[2]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[3]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[4]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[5]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[6]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[7]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[8]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[9]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[0]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[10]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[11]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[12]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[13]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[14]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[15]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[1]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[2]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[3]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[4]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[5]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[6]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[7]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[8]" -section_id auto_signaltap_0
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "SinWave:S1|SinROM:ROM1|altsyncram:altsyncram_component|altsyncram_th71:auto_generated|q_a[9]" -section_id auto_signaltap_0
+set_global_assignment -name VERILOG_FILE Display.v
+set_location_assignment PIN_152 -to led_numseg[7]
+set_location_assignment PIN_143 -to led_numseg[6]
+set_location_assignment PIN_145 -to led_numseg[5]
+set_location_assignment PIN_160 -to led_numseg[4]
+set_location_assignment PIN_162 -to led_numseg[3]
+set_location_assignment PIN_150 -to led_numseg[2]
+set_location_assignment PIN_147 -to led_numseg[1]
+set_location_assignment PIN_171 -to led_numseg[0]
+set_location_assignment PIN_185 -to led_select[7]
+set_location_assignment PIN_181 -to led_select[6]
+set_location_assignment PIN_173 -to led_select[5]
+set_location_assignment PIN_170 -to led_select[4]
+set_location_assignment PIN_168 -to led_select[3]
+set_location_assignment PIN_179 -to led_select[2]
+set_location_assignment PIN_164 -to led_select[1]
+set_location_assignment PIN_175 -to led_select[0]
+set_location_assignment PIN_187 -to LEDGroup[2]
+set_location_assignment PIN_182 -to LEDGroup[1]
+set_location_assignment PIN_180 -to LEDGroup[0]
+set_location_assignment PIN_75 -to reset
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to SignalOut[0] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[1] -to SignalOut[10] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[2] -to SignalOut[11] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[3] -to SignalOut[12] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[4] -to SignalOut[13] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[5] -to SignalOut[14] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[6] -to SignalOut[15] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[7] -to SignalOut[1] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[8] -to SignalOut[2] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[9] -to SignalOut[3] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[10] -to SignalOut[4] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[11] -to SignalOut[5] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[12] -to SignalOut[6] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[13] -to SignalOut[7] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[14] -to SignalOut[8] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[15] -to SignalOut[9] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[0] -to SignalOut[0] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to SignalOut[10] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to SignalOut[11] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to SignalOut[12] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to SignalOut[13] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to SignalOut[14] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to SignalOut[15] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to SignalOut[1] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to SignalOut[2] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to SignalOut[3] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to SignalOut[4] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to SignalOut[5] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to SignalOut[6] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to SignalOut[7] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to SignalOut[8] -section_id auto_signaltap_0
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to SignalOut[9] -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=16" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_BITS=16" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_INFO=805334528" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_POWER_UP_TRIGGER=0" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=69" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=128" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ATTRIBUTE_MEM_MODE=OFF" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_FLOW_USE_GENERATED=0" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STATE_BITS=11" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=1" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=52744" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=60419" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=128" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=basic,1," -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=10215" -section_id auto_signaltap_0
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=52991" -section_id auto_signaltap_0
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE "C:/Users/m1899/Desktop/DDSProject/output_files/stp1_auto_stripped.stp"
