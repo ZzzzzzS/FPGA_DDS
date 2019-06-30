@@ -45,11 +45,11 @@ always@(counter[17:15])
 		3'b000 : 
 			value = data%10;
 		3'b001 : 
-			value = 0;//(data/10)%10;          
+			value = (data/10)%10;          
 		3'b010 : 
 			value = 0;//(data/100)%10;         
 		3'b011 : 
-			value = 0;//(data/1000)%10;
+			value = (data/1000)%10;
 	    3'b100 :
 	        value = (data/10000)%10;
 	    3'b101 :
