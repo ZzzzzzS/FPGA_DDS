@@ -147,7 +147,6 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=69" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=10215" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=52991" -section_id auto_signaltap_0
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VERILOG_FILE buttonedge.v
 set_global_assignment -name VERILOG_FILE debounce.v
 set_global_assignment -name VERILOG_FILE Button.v
@@ -162,4 +161,5 @@ set_global_assignment -name VERILOG_FILE ClockGenerator.v
 set_global_assignment -name QIP_FILE SinROM.qip
 set_global_assignment -name QIP_FILE TriangularROM.qip
 set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE "C:/Users/m1899/Desktop/DDSProject/output_files/stp1_auto_stripped.stp"

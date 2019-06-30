@@ -15,6 +15,7 @@ entity Button is
         SwitchNanosub   : out    vl_logic;
         Phaseadd        : out    vl_logic;
         Phasesub        : out    vl_logic;
-        PWMDuty         : out    vl_logic_vector(31 downto 0)
+        PWMDuty         : out    vl_logic_vector(31 downto 0);
+        LEDGroup        : out    vl_logic_vector(2 downto 0)
     );
 end Button;

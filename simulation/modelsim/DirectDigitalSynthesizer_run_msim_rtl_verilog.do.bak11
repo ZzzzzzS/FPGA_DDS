@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/buttonedge.v}
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/debounce.v}
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/Button.v}
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/phase.v}
@@ -16,6 +17,8 @@ vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/User
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/ClockGenerator.v}
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/SinROM.v}
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/TriangularROM.v}
+vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/led_show.v}
+vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject {C:/Users/m1899/Desktop/DDSProject/led_decoder.v}
 
 vlog -vlog01compat -work work +incdir+C:/Users/m1899/Desktop/DDSProject/simulation/modelsim {C:/Users/m1899/Desktop/DDSProject/simulation/modelsim/top.vt}
 

@@ -1,10 +1,10 @@
-Partition Merge Status : Successful - Sun Jun 30 14:53:14 2019
+Partition Merge Status : Successful - Sun Jun 30 16:46:05 2019
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Full Version
 Revision Name : DirectDigitalSynthesizer
 Top-level Entity Name : top
 Family : Cyclone II
-Total logic elements : 4,210
-    Total combinational functions : 3,953
+Total logic elements : 4,214
+    Total combinational functions : 3,957
     Dedicated logic registers : 674
 Total registers : 674
 Total pins : 44

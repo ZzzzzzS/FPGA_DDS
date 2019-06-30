@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "06/27/2019 23:14:49"
+// Generated on "06/30/2019 16:50:41"
                                                                                 
 // Verilog Test Bench template for design : top
 // 
@@ -37,36 +37,40 @@ reg UpDownSelect;
 reg clk;
 reg reset;
 // wires                                               
+wire [2:0]  LEDGroup;
 wire [15:0]  SignalOut;
-wire [31:0]Step;
+wire [7:0]  led_numseg;
+wire [7:0]  led_select;
 
 // assign statements (if any)                          
 top i1 (
 // port map - connection between master ports and signals/registers   
 	.FreqPhaseSelect(FreqPhaseSelect),
+	.LEDGroup(LEDGroup),
 	.OutMode(OutMode),
 	.PushButton(PushButton),
 	.SignalOut(SignalOut),
 	.UpDownSelect(UpDownSelect),
 	.clk(clk),
-	.reset(reset),
-	.Step(Step)
+	.led_numseg(led_numseg),
+	.led_select(led_select),
+	.reset(reset)
 );
 initial                                                
 begin                                                  
 // code that executes only once                        
 // insert code here --> begin                          
-FreqPhaseSelect=0;
+FreqPhaseSelect=1;
 OutMode=2'b01;
 PushButton=3'b111;
-UpDownSelect=0;
+UpDownSelect=1;
 clk=1;
-reset=1; 
+reset=1;                                                   
 // --> end                                             
 $display("Running testbench");                       
-end                                                    
+end                                                                                                          
 
-always #1 begin clk=~clk; end
-                                      
+always #1 begin clk=~clk; PushButton[0]=~PushButton[0]; end
+                                                
 endmodule
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DirectDigitalSynthesizer
-Sun Jun 30 14:53:11 2019
+Sun Jun 30 16:46:02 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 30 14:53:11 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 30 16:46:02 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
@@ -191,6 +191,7 @@ applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                             ; Library ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------------------+---------+
+; buttonedge.v                     ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/buttonedge.v                                           ;         ;
 ; debounce.v                       ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/debounce.v                                             ;         ;
 ; Button.v                         ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/Button.v                                               ;         ;
 ; phase.v                          ; yes             ; User Verilog HDL File                  ; C:/Users/m1899/Desktop/DDSProject/phase.v                                                ;         ;
@@ -204,7 +205,6 @@ applicable agreement for further details.
 ; TriangularROM.v                  ; yes             ; User Wizard-Generated File             ; C:/Users/m1899/Desktop/DDSProject/TriangularROM.v                                        ;         ;
 ; led_show.v                       ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/m1899/Desktop/DDSProject/led_show.v                                             ;         ;
 ; led_decoder.v                    ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/m1899/Desktop/DDSProject/led_decoder.v                                          ;         ;
-; buttonedge.v                     ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/m1899/Desktop/DDSProject/buttonedge.v                                           ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/programfiles/altera/13.0/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
@@ -280,13 +280,23 @@ applicable agreement for further details.
 +--------------------------------+-------------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Dependent File Changes for Partition Top                                                                                                  ;
-+-------------------+------------------+-------------------+----------+----------------------------------+----------------------------------+
-; Hierarchy         ; File Name        ; Relative Location ; Change   ; Old                              ; New                              ;
-+-------------------+------------------+-------------------+----------+----------------------------------+----------------------------------+
-; ClockGenerator:C1 ; ClockGenerator.v ; Project Directory ; Checksum ; 5843742672f67895f2e3eb41be0d9ac1 ; 0bf523b6424622ccff8850d8ed5caff1 ;
-+-------------------+------------------+-------------------+----------+----------------------------------+----------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Dependent File Changes for Partition Top                                                                                                                     ;
++--------------------------------------+------------------+-------------------+----------+----------------------------------+----------------------------------+
+; Hierarchy                            ; File Name        ; Relative Location ; Change   ; Old                              ; New                              ;
++--------------------------------------+------------------+-------------------+----------+----------------------------------+----------------------------------+
+; Button:B1                            ; Button.v         ; Project Directory ; Checksum ; eefa8c02c84a96e4acc6f0a2ef98fd03 ; b0b9b0cfca2b3790abe713367fbb0760 ;
+; Button:B1|buttonedge:PushButtonedge0 ; buttonedge.v     ; Project Directory ; Checksum ; cc91971d30b67634381a5a4758ec4a85 ; e0e6bd9661f213d926df699eac84b1f1 ;
+; Button:B1|buttonedge:PushButtonedge1 ; buttonedge.v     ; Project Directory ; Checksum ; cc91971d30b67634381a5a4758ec4a85 ; e0e6bd9661f213d926df699eac84b1f1 ;
+; Button:B1|buttonedge:PushButtonedge2 ; buttonedge.v     ; Project Directory ; Checksum ; cc91971d30b67634381a5a4758ec4a85 ; e0e6bd9661f213d926df699eac84b1f1 ;
+; Button:B1|debounce:PushButton0       ; debounce.v       ; Project Directory ; Checksum ; 668a70e199726719adf26cf5916d7d80 ; 15c27ef3cedca7669e20e494f220b3ad ;
+; Button:B1|debounce:PushButton1       ; debounce.v       ; Project Directory ; Checksum ; 668a70e199726719adf26cf5916d7d80 ; 15c27ef3cedca7669e20e494f220b3ad ;
+; Button:B1|debounce:PushButton2       ; debounce.v       ; Project Directory ; Checksum ; 668a70e199726719adf26cf5916d7d80 ; 15c27ef3cedca7669e20e494f220b3ad ;
+; ClockGenerator:C1                    ; ClockGenerator.v ; Project Directory ; Checksum ; 0bf523b6424622ccff8850d8ed5caff1 ; 4645601b82144b1850df2e138acb4e03 ;
+; led_show:L1                          ; led_show.v       ; Project Directory ; Checksum ; 7963aee4bfe03885ccd6096ec1c502f8 ; d06d67a8b57ffe270bdd0f2d225c51df ;
+; led_show:L1|led_decoder:D1           ; led_decoder.v    ; Project Directory ; Checksum ; 3a3e5b96684d02b0c0ba47694dc478cf ; 03eb5ce749165a3e494bd8c27910154c ;
+; |                                    ; top.v            ; Project Directory ; Checksum ; 9899f19fd0e78a54c78ef98c1e18d62e ; 87dcb4c618585778fcd9ba480745196c ;
++--------------------------------------+------------------+-------------------+----------+----------------------------------+----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1058,21 +1068,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; libraries/megafunctions/lpm_decode.inc        ; Quartus II Install ; work    ; 10da69a8bbd590d66779e7a142f73790 ;
 ; libraries/megafunctions/lpm_mux.inc           ; Quartus II Install ; work    ; dd87bed90959d6126db09970164b7ba6 ;
 ; libraries/megafunctions/stratix_ram_block.inc ; Quartus II Install ; work    ; e3a03868917f0b3dd57b6ed1dd195f22 ;
-; Button.v                                      ; Project Directory  ; work    ; eefa8c02c84a96e4acc6f0a2ef98fd03 ;
-; buttonedge.v                                  ; Project Directory  ; work    ; cc91971d30b67634381a5a4758ec4a85 ;
-; ClockGenerator.v                              ; Project Directory  ; work    ; 0bf523b6424622ccff8850d8ed5caff1 ;
+; Button.v                                      ; Project Directory  ; work    ; b0b9b0cfca2b3790abe713367fbb0760 ;
+; buttonedge.v                                  ; Project Directory  ; work    ; e0e6bd9661f213d926df699eac84b1f1 ;
+; ClockGenerator.v                              ; Project Directory  ; work    ; 4645601b82144b1850df2e138acb4e03 ;
 ; ControlPanel.v                                ; Project Directory  ; work    ; b77715331ddb527c433eb5031bd1bc23 ;
 ; db/altsyncram_1681.tdf                        ; Project Directory  ; work    ; 12caaca11b0f2ac2cb9f1f88b3b20440 ;
 ; db/altsyncram_th71.tdf                        ; Project Directory  ; work    ; f439e92a321e26546025b1d590ccaac1 ;
-; debounce.v                                    ; Project Directory  ; work    ; 668a70e199726719adf26cf5916d7d80 ;
-; led_decoder.v                                 ; Project Directory  ; work    ; 3a3e5b96684d02b0c0ba47694dc478cf ;
-; led_show.v                                    ; Project Directory  ; work    ; 7963aee4bfe03885ccd6096ec1c502f8 ;
+; debounce.v                                    ; Project Directory  ; work    ; 15c27ef3cedca7669e20e494f220b3ad ;
+; led_decoder.v                                 ; Project Directory  ; work    ; 03eb5ce749165a3e494bd8c27910154c ;
+; led_show.v                                    ; Project Directory  ; work    ; d06d67a8b57ffe270bdd0f2d225c51df ;
 ; phase.v                                       ; Project Directory  ; work    ; ba70052c02e8054b60e64ac5028d1bab ;
 ; PWMWave.v                                     ; Project Directory  ; work    ; b3885989d124e2ad1dce640691bc3d84 ;
 ; sinetable.mif                                 ; Project Directory  ; work    ; 279962eeab1b4aa7ca2f764c4eb16326 ;
 ; SinROM.v                                      ; Project Directory  ; work    ; 3707bf811f83d64491b760e05cdbb71e ;
 ; SinWave.v                                     ; Project Directory  ; work    ; 97c1421936946d5d6072cfe29d0e10aa ;
-; top.v                                         ; Project Directory  ; work    ; 9899f19fd0e78a54c78ef98c1e18d62e ;
+; top.v                                         ; Project Directory  ; work    ; 87dcb4c618585778fcd9ba480745196c ;
 ; TriangularROM.v                               ; Project Directory  ; work    ; 4ecc1f8b259d8e6176f5c1203fe0a9e6 ;
 ; triangulartable.mif                           ; Project Directory  ; work    ; 62de3d3ea96820ba11d2a0f14d8bd5d5 ;
 ; TriangularWave.v                              ; Project Directory  ; work    ; 4a80595828ce651346450c55f9b7bfe9 ;
@@ -1174,9 +1184,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sun Jun 30 14:52:53 2019
+    Info: Processing started: Sun Jun 30 16:45:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file buttonedge.v
+    Info (12023): Found entity 1: buttonedge
 Info (12021): Found 1 design units, including 1 entities, in source file debounce.v
     Info (12023): Found entity 1: debounce
 Info (12021): Found 1 design units, including 1 entities, in source file button.v
@@ -1199,7 +1211,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file sinrom.
     Info (12023): Found entity 1: SinROM
 Info (12021): Found 1 design units, including 1 entities, in source file triangularrom.v
     Info (12023): Found entity 1: TriangularROM
-Info (12021): Found 0 design units, including 0 entities, in source file display.v
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10230): Verilog HDL assignment warning at top.v(21): truncated value with size 32 to match size of target (21)
 Warning (12125): Using design file led_show.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
@@ -1221,58 +1232,56 @@ Warning (12125): Using design file led_decoder.v, which is not specified as a de
     Info (12023): Found entity 1: led_decoder
 Info (12128): Elaborating entity "led_decoder" for hierarchy "led_show:L1|led_decoder:D1"
 Info (12128): Elaborating entity "Button" for hierarchy "Button:B1"
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "PWMDuty", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "SwitchNanoadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "SwitchNanosub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "Phaseadd", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at Button.v(44): inferring latch(es) for variable "Phasesub", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "Phasesub" at Button.v(50)
-Info (10041): Inferred latch for "Phaseadd" at Button.v(50)
-Info (10041): Inferred latch for "Switchsub" at Button.v(50)
-Info (10041): Inferred latch for "Switchadd" at Button.v(50)
-Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(50)
-Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(50)
-Info (10041): Inferred latch for "SwitchNanosub" at Button.v(50)
-Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(50)
-Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(50)
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "PWMDuty", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "SwitchNanoadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "SwitchNanosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "SwitchMicroadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "SwitchMicrosub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "Switchadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "Switchsub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "Phaseadd", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at Button.v(46): inferring latch(es) for variable "Phasesub", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Phasesub" at Button.v(52)
+Info (10041): Inferred latch for "Phaseadd" at Button.v(52)
+Info (10041): Inferred latch for "Switchsub" at Button.v(52)
+Info (10041): Inferred latch for "Switchadd" at Button.v(52)
+Info (10041): Inferred latch for "SwitchMicrosub" at Button.v(52)
+Info (10041): Inferred latch for "SwitchMicroadd" at Button.v(52)
+Info (10041): Inferred latch for "SwitchNanosub" at Button.v(52)
+Info (10041): Inferred latch for "SwitchNanoadd" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[0]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[1]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[2]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[3]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[4]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[5]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[6]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[7]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[8]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[9]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[10]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[11]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[12]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[13]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[14]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[15]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[16]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[17]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[18]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[19]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[20]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[21]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[22]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[23]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[24]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[25]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[26]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[27]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[28]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[29]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[30]" at Button.v(52)
+Info (10041): Inferred latch for "PWMDuty[31]" at Button.v(52)
 Info (12128): Elaborating entity "debounce" for hierarchy "Button:B1|debounce:PushButton0"
-Warning (12125): Using design file buttonedge.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: buttonedge
 Info (12128): Elaborating entity "buttonedge" for hierarchy "Button:B1|buttonedge:PushButtonedge0"
 Info (12128): Elaborating entity "ClockGenerator" for hierarchy "ClockGenerator:C1"
 Warning (10646): Verilog HDL Event Control warning at ClockGenerator.v(17): posedge or negedge of vector "Step" depends solely on its least-significant bit
@@ -1416,7 +1425,7 @@ Info (281037): Using 4 processors to synthesize 2 partitions in parallel
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sun Jun 30 14:53:03 2019
+    Info: Processing started: Sun Jun 30 16:45:53 2019
 Info: Command: quartus_map --parallel=1 --helper=0 --partition=Top DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (278001): Inferred 12 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
@@ -1699,34 +1708,34 @@ Info (21057): Implemented 3666 device resources after synthesis - the final reso
     Info (21064): Implemented 32 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 84 warnings
     Info: Peak virtual memory: 4626 megabytes
-    Info: Processing ended: Sun Jun 30 14:53:10 2019
-    Info: Elapsed time: 00:00:07
+    Info: Processing ended: Sun Jun 30 16:46:02 2019
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
-    Info: Processing started: Sun Jun 30 14:53:03 2019
+    Info: Processing started: Sun Jun 30 16:45:54 2019
 Info: Command: quartus_map --parallel=1 --helper=2 --partition=sld_hub:auto_hub DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 Info (281019): Starting Logic Optimization and Technology Mapping for Partition sld_hub:auto_hub
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
-Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 205 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 37 output pins
-    Info (21061): Implemented 145 logic cells
+    Info (21061): Implemented 149 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4592 megabytes
-    Info: Processing ended: Sun Jun 30 14:53:04 2019
+    Info: Processing ended: Sun Jun 30 16:45:55 2019
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 Info (281038): Finished parallel synthesis of all partitions
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 114 warnings
-    Info: Peak virtual memory: 4682 megabytes
-    Info: Processing ended: Sun Jun 30 14:53:11 2019
-    Info: Elapsed time: 00:00:18
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 113 warnings
+    Info: Peak virtual memory: 4678 megabytes
+    Info: Processing ended: Sun Jun 30 16:46:03 2019
+    Info: Elapsed time: 00:00:19
     Info: Total CPU time (on all processors): 00:00:19
 
 

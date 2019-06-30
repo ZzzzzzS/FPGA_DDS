@@ -1,5 +1,5 @@
 Flow report for DirectDigitalSynthesizer
-Sun Jun 30 14:53:36 2019
+Sun Jun 30 16:50:41 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Jun 30 14:53:36 2019       ;
+; Flow Status                        ; Successful - Sun Jun 30 16:50:41 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone II                                  ;
 ; Device                             ; EP2C5Q208C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,195 / 4,608 ( 91 % )                      ;
-;     Total combinational functions  ; 3,955 / 4,608 ( 86 % )                      ;
+; Total logic elements               ; 4,198 / 4,608 ( 91 % )                      ;
+;     Total combinational functions  ; 3,959 / 4,608 ( 86 % )                      ;
 ;     Dedicated logic registers      ; 674 / 4,608 ( 15 % )                        ;
 ; Total registers                    ; 674                                         ;
 ; Total pins                         ; 44 / 142 ( 31 % )                           ;
@@ -576,7 +576,14 @@ applicable agreement for further details.
 ; Assembler                 ; 00:00:01     ; 1.0                     ; 4567 MB             ; 00:00:01                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4616 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
-; Total                     ; 00:39:19     ; --                      ; --                  ; 00:40:14                           ;
+; Analysis & Synthesis      ; 00:00:18     ; 1.5                     ; 4678 MB             ; 00:00:19                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4637 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:11     ; 1.6                     ; 5280 MB             ; 00:00:15                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4567 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4617 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:04     ; 1.0                     ; 4559 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4550 MB             ; 00:00:01                           ;
+; Total                     ; 00:39:57     ; --                      ; --                  ; 00:40:55                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -1053,6 +1060,13 @@ applicable agreement for further details.
 ; Assembler                 ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; Zishun的Windows  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -1527,6 +1541,13 @@ quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSy
 quartus_asm --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
 quartus_eda --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_map --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_cdb --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_asm --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_sta DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_eda --read_settings_files=off --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer
+quartus_eda --read_settings_files=on --write_settings_files=off DirectDigitalSynthesizer -c DirectDigitalSynthesizer --gen_testbench
 
 
 

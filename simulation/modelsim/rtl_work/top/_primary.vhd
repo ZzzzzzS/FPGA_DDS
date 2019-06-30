@@ -9,6 +9,8 @@ entity top is
         FreqPhaseSelect : in     vl_logic;
         UpDownSelect    : in     vl_logic;
         PushButton      : in     vl_logic_vector(2 downto 0);
-        Step            : out    vl_logic_vector(31 downto 0)
+        led_select      : out    vl_logic_vector(7 downto 0);
+        led_numseg      : out    vl_logic_vector(7 downto 0);
+        LEDGroup        : out    vl_logic_vector(2 downto 0)
     );
 end top;
