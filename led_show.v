@@ -3,8 +3,8 @@ module led_show(clk,rst_n,data,led_numseg,led_select);
 input clk;			
 input rst_n;
 input [20:0]data;//输入数据
-output reg [7:0] led_select;
-output [7:0] led_numseg;
+output reg [7:0] led_select;//动态扫描段码
+output [7:0] led_numseg;//动态扫描位码
 reg [3:0] value;//位码
   
 reg [23:0] counter;//动态扫描计数
@@ -19,7 +19,7 @@ always@(posedge clk)
 		counter <= counter + 24'b1;
 	
 
-always@(counter[17:15])
+always@(counter[17:15])//动态扫描段码
 	case(counter[17:15])
 		3'b000 : 
 			led_select = 8'b00000001;           
@@ -40,14 +40,14 @@ always@(counter[17:15])
 		default:;             
 	endcase
   
-always@(counter[17:15])
+always@(counter[17:15])//动态扫描位码
 	case(counter[17:15])
 		3'b000 : 
 			value = data%10;
 		3'b001 : 
 			value = (data/10)%10;          
 		3'b010 : 
-			value = 0;//(data/100)%10;         
+			value = 0;//(data/100)%10;//资源不够用了         
 		3'b011 : 
 			value = (data/1000)%10;
 	    3'b100 :

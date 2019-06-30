@@ -17,35 +17,37 @@ module Button(
         output [2:0]LEDGroup
 );
 
-wire [2:0]PushButton/* synthesis keep="1" */;
-wire [2:0]PushButtonafter/* synthesis keep="1" */;
+wire [2:0]PushButton/* synthesis keep="1" */;//防止脉冲信号被综合掉
+wire [2:0]PushButtonafter/* synthesis keep="1" */;//防止脉冲信号被综合掉
+
+/***按键消抖模块***/
 debounce PushButton0(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[0]),.key_out(PushButtonafter[0]));
 debounce PushButton1(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[1]),.key_out(PushButtonafter[1]));
 debounce PushButton2(.clk(clk),.nrst(reset),.key_in(PushButtonbefore[2]),.key_out(PushButtonafter[2]));
 
 
 
-//module buttonedge(input clk , input buttonin,output buttonout);
+/***按键跳变沿检测模块***/
 buttonedge PushButtonedge0(.clk(clk),.buttonin(PushButtonafter[0]),.buttonout(PushButton[0]));
 buttonedge PushButtonedge1(.clk(clk),.buttonin(PushButtonafter[1]),.buttonout(PushButton[1]));
 buttonedge PushButtonedge2(.clk(clk),.buttonin(PushButtonafter[2]),.buttonout(PushButton[2]));
 
 
-assign LEDGroup=PushButton;
+assign LEDGroup=PushButton;//用灯来表示按键状态
 
 initial
 begin
-    PWMDuty=32'd816043786;//暂定19%
+    PWMDuty=32'd816043786;//pwm默认占空比19%(仿真)
 end
 
 always@(*)
 begin
 	
-if(reset==0)
+if(reset==0)//复位
 begin
-	PWMDuty=32'd816043786;//复位19%
+	PWMDuty=32'd816043786;//pwm默认占空比19%(实物)
 end
-else
+else//判断按键的情况
 begin
     case({UpDownSelect,FreqPhaseSelect,PushButton})
         5'b11110:begin SwitchNanoadd=0;  end //调频增加

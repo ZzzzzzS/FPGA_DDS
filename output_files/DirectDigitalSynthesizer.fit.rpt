@@ -1,5 +1,5 @@
 Fitter report for DirectDigitalSynthesizer
-Sun Jun 30 10:30:18 2019
+Sun Jun 30 14:53:25 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
 
 
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jun 30 10:30:18 2019       ;
+; Fitter Status                      ; Successful - Sun Jun 30 14:53:25 2019       ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
 ; Revision Name                      ; DirectDigitalSynthesizer                    ;
 ; Top-level Entity Name              ; top                                         ;
@@ -141,12 +141,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 1.30        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ; < 0.1%      ;
+;     Processors 2-4         ;  10.0%      ;
 +----------------------------+-------------+
 
 
@@ -2741,7 +2741,7 @@ Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.67 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.64 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 35 output pins without output pin load capacitance assignment
     Info (306007): Pin "SignalOut[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -2787,8 +2787,8 @@ Info (176045): Design uses memory blocks. Violating setup or hold times of memor
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/m1899/Desktop/DDSProject/output_files/DirectDigitalSynthesizer.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 5276 megabytes
-    Info: Processing ended: Sun Jun 30 10:30:18 2019
+    Info: Peak virtual memory: 5269 megabytes
+    Info: Processing ended: Sun Jun 30 14:53:26 2019
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:16
 
