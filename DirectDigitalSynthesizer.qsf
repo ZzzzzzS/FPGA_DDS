@@ -89,20 +89,6 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=0" -section_id auto_signaltap_0
 set_location_assignment PIN_63 -to UpDownSelect
-set_global_assignment -name VERILOG_FILE debounce.v
-set_global_assignment -name VERILOG_FILE Button.v
-set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/top.vt
-set_global_assignment -name VERILOG_FILE phase.v
-set_global_assignment -name VERILOG_FILE TriangularWave.v
-set_global_assignment -name VERILOG_FILE top.v
-set_global_assignment -name VERILOG_FILE SinWave.v
-set_global_assignment -name VERILOG_FILE PWMWave.v
-set_global_assignment -name VERILOG_FILE ControlPanel.v
-set_global_assignment -name VERILOG_FILE ClockGenerator.v
-set_global_assignment -name QIP_FILE SinROM.qip
-set_global_assignment -name QIP_FILE TriangularROM.qip
-set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
-set_global_assignment -name VERILOG_FILE Display.v
 set_location_assignment PIN_152 -to led_numseg[7]
 set_location_assignment PIN_143 -to led_numseg[6]
 set_location_assignment PIN_145 -to led_numseg[5]
@@ -162,4 +148,18 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LE
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_LOWORD=10215" -section_id auto_signaltap_0
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_NODE_CRC_HIWORD=52991" -section_id auto_signaltap_0
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE buttonedge.v
+set_global_assignment -name VERILOG_FILE debounce.v
+set_global_assignment -name VERILOG_FILE Button.v
+set_global_assignment -name VERILOG_TEST_BENCH_FILE simulation/modelsim/top.vt
+set_global_assignment -name VERILOG_FILE phase.v
+set_global_assignment -name VERILOG_FILE TriangularWave.v
+set_global_assignment -name VERILOG_FILE top.v
+set_global_assignment -name VERILOG_FILE SinWave.v
+set_global_assignment -name VERILOG_FILE PWMWave.v
+set_global_assignment -name VERILOG_FILE ControlPanel.v
+set_global_assignment -name VERILOG_FILE ClockGenerator.v
+set_global_assignment -name QIP_FILE SinROM.qip
+set_global_assignment -name QIP_FILE TriangularROM.qip
+set_global_assignment -name SIGNALTAP_FILE output_files/stp1.stp
 set_global_assignment -name SLD_FILE "C:/Users/m1899/Desktop/DDSProject/output_files/stp1_auto_stripped.stp"

@@ -5,7 +5,7 @@ module led_decoder(clk,rst_n,value,led_numseg);
 
 	wire [3:0] value;
 	reg [7:0] led_numseg;  
-	always@(value)
+	always@(value)//显示译码器解码
 		case(value)
 			4'd0 : led_numseg = 8'b00000011;
 			4'd1 : led_numseg = 8'b10011111;
