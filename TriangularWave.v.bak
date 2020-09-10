@@ -1,2 +1,0 @@
-module TriangularWave(input clk,output reg [15:0]Triangularout);
-endmodule

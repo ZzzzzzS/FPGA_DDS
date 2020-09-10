@@ -1,2 +1,0 @@
-module SinWave(input clk,output reg [15:0]Sinout);
-endmodule
